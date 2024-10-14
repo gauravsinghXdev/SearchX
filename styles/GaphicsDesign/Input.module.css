@@ -1,0 +1,117 @@
+/* Container */
+.container {
+  color: #ffffff;
+  padding: 10px 50px;
+  background-color: #2b2a2a;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Form Section */
+.form {
+  border-radius: 10px;
+}
+
+/* Form Group */
+.formGroup {
+  margin-bottom: 20px;
+  width: Fill (760px) px;
+  height: Hug (32px) px;
+  gap: 8px;
+  opacity: 0px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #c9c9c9;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.31px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px;
+  border: 0.5px solid #3a3a3a;
+  border-radius: 8px;
+  background-color: #333;
+  font-size: 14px;
+}
+
+.textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Form Group Row (for multiple inputs in one row) */
+.formGroupRow {
+  display: flex;
+  gap: 10px;
+}
+
+.formGroupRow input {
+  flex: 1;
+}
+
+/* Add More Button */
+.addMore {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.button {
+  width: 100%;
+}
+.spantext {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.73px;
+  letter-spacing: -0.02em;
+  padding-left: 5px;
+}
+.addMore button {
+  background-color: #333;
+  color: whitesmoke;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: #aaa;
+}
+.inputplaceholder {
+  color: #555555;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.31px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.middleSection {
+  color: #c9c9c9;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.31px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 0px 20px;
+}

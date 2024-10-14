@@ -1,0 +1,104 @@
+.navbar {
+    background-color: #1C1C1C;
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    border-bottom: 0.5px solid #3F3F3F;
+  }
+  .arrowIcon{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .navIcons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logoImage{
+    width: 120px !important;
+    height: 100px;
+  }
+  .token{
+    margin: 8px;
+    color: #6949FF;
+  }
+
+  .icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+  
+  .navItems {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .rightnav{
+    margin: 40px;
+  }
+  
+  .upgradeButton {
+    /* background-color: #393939; */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 8px 8px 8px 0px;
+  
+  }
+  .tokensbtn{
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 8px 8px 8px 0px;
+  }
+
+  .upgradeSection{
+    display: flex;
+    /* background-color: #393939; */
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid #6949FF; */
+    border-radius: 30px;
+  }
+  
+  .upgradeIcon{
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    color: yellow;
+    margin: 8px;
+  }
+  
+  .userIcon {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .userIcon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+
+  .rightSection{
+    display: flex;
+  }

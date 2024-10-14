@@ -1,0 +1,632 @@
+/* Container for the whole page */
+.container {
+  display: flex;
+  background: #1c1c1c;
+  font-family: "Inter", sans-serif;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  background: #1c1c1c;
+  border-right: 0.5px solid #3f3f3f;
+  width: 15%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  margin-top: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  justify-content: space-evenly;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
+.logoHeading {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.87px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.forwordicon {
+  margin-left: 60px;
+}
+
+.navLinks {
+  margin-top: 20px;
+}
+
+.navLinks li {
+  margin-bottom: 6px;
+  color: #b0b0b0;
+  cursor: pointer;
+}
+.navLinks li:hover {
+  border-radius: 10px;
+  background: #171717;
+}
+.listItem {
+  display: flex; /* Use flexbox to arrange items in a row */
+  align-items: center; /* Vertically center items */
+  padding: 10px; /* Add padding for spacing */
+  cursor: pointer;
+  gap: 15px; /* Change cursor on hover */
+  color: #686567;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.73px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.listItem svg {
+  /* Style for the icon */
+  margin-right: 8px; /* Space between icon and text */
+  width: 20px; /* Set width for the icon */
+  height: 20px; /* Set height for the icon */
+}
+
+.headingss {
+  padding-bottom: 5px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.51px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.fontSelects {
+  width: 10%;
+  height: 10%;
+  background: #1c1c1c;
+  color: #626161;
+
+  border: none;
+}
+.dropdown {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  justify-content: space-between;
+  gap: 5px; /* Space between the h2 and the select */
+}
+
+.upgradeSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  background-color: #2e2d2b;
+  border: 1px solid;
+  padding: 10px 0px;
+  box-shadow: #171717;
+  border-radius: 10px;
+}
+
+.upgradeButton {
+  width: 100%;
+  background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+  margin-top: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 168px;
+  height: 32px;
+  top: 122px;
+  left: 16px;
+  border: 0.5px solid;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.upgradetext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.73px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.upgradeSection {
+  text-align: center; /* Center text in the upgrade section */
+  padding: 20px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  padding: 20px; /* Add padding inside the box */
+  margin: 20px auto; /* Center the box itself */
+  width: 80%; /* Set a width for the box */
+  max-width: 600px; /* Set a maximum width */
+  border-radius: 8px; /* Rounded corners */
+  width: 60%;
+  display: flex;
+  justify-content: end;
+
+  background-image: url("../../public/spad.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+/* Main Content */
+.mainContent {
+  /* flex: 1; */
+  padding: 20px;
+  color: white;
+}
+.crown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.heading {
+  margin-top: 10px;
+  margin-left: 70px;
+}
+
+.createButton {
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 140px;
+  height: 33px;
+  top: 20px;
+  left: 977px;
+  padding: 8px 15.5px 8px 12.5px;
+  gap: 6.41px;
+  border-radius: 8px 0px 0px 0px;
+  border: 0.8px 0px 0px 0px;
+  opacity: 0px;
+}
+.generateButton {
+  background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+  border-top: 1px solid white;
+}
+/* AI Tools Section */
+.toolsSection {
+  margin: 0px 20px;
+  margin-top: 10px;
+}
+.toolsSection h2 {
+  color: #c9c9c9;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  margin-left: 90px;
+}
+.toolsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toolCard {
+  height: 150px;
+  background: #171717;
+  margin-top: 10px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.toolsimage {
+  width: 136px;
+  height: 102px;
+  gap: 0px;
+  border-radius: 8px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.toolsimage h1 {
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.13px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  white-space: nowrap;
+}
+.design {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.13px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* My Creations Section */
+.creationsSection {
+  margin: 50px;
+}
+.creationsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 80px;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+.creationCard {
+  width: 140%;
+  height: 180px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+  background: #171717;
+}
+.creationCard h1 {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.51px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #dadada;
+}
+.creationCard img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.creationCard p {
+  padding-left: 20px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-align: center;
+  color: #686567;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13.13px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+/* top bar */
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.paragraphss {
+  color: #656465;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+/* search box */
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background: #3e3c3c;
+  border-radius: 8px;
+  padding: 5px 15px;
+  max-width: 200px;
+  width: 196px;
+  height: 32px;
+  top: 20px;
+  left: 773px;
+
+  gap: 6.41px;
+
+  opacity: 0px;
+}
+
+.searchInput {
+  border: none;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: white;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+}
+
+.searchButton {
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  font-size: 18px; /* You can adjust the size of the icon */
+  color: #686567;
+}
+
+/* Optional styling for the input placeholder */
+.searchInput::placeholder {
+  color: #686567;
+}
+
+.generateButton {
+  background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+  margin-left: 10px;
+  border: none;
+  padding: 5px 15px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.createButton {
+  background: linear-gradient(110.25deg, #4ab4ff 14.25%, #268bff 81.2%);
+  margin-left: 10px;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* robo section */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 20px;
+  flex-wrap: wrap;
+  background: linear-gradient(0deg, #8a71ff, #8a71ff),
+    linear-gradient(31.33deg, #c0b3ff 30.82%, #6949ff 60.86%);
+  width: 1238px;
+  height: 226px;
+  gap: 0px;
+  border: 0px 0px 0.7px 0px;
+  opacity: 0px;
+}
+
+/* Container for the text */
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 40%;
+  padding: 20px;
+  color: white;
+  padding-left: 6rem;
+}
+
+.textContainer h1 {
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.73px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.textContainer p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  text-align: left;
+}
+
+/* token left */
+.tokenContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.tokenImage {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.paragraph {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin: 0;
+}
+.roboimage {
+  width: 300px; /* Increase the width as needed */
+  height: 120px; /* Use auto to maintain aspect ratio, or set a specific height */
+  gap: 0px;
+  opacity: 1;
+}
+
+.profileContainer {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.profileImage {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.profileName {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19.53px;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* drop down */
+.profileContainer {
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.profileImage {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.icon {
+  color: #ffffff; /* Adjust color as needed */
+  margin-left: 10px; /* Spacing between name and dropdown icon */
+  width: 15px; /* Adjust color as needed */
+  height: 15px;
+  margin-right: 10px;
+}
+
+.dropdownList {
+  position: absolute;
+  top: 100%;
+  left: 60%;
+  background: rgb(72, 70, 70);
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensure dropdown is above other content */
+  list-style: none; /* Remove default list styling */
+  padding: 10; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+}
+
+.dropdownItem {
+  width: 100%;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.reationsSectionc {
+  margin: 0px 40px;
+  border-top: 0.7px solid #3f3f3f;
+}
+
+.middleheadiing {
+  color: hsl(0, 4%, 67%); /* Text color */
+  position: relative; /* Allows positioning of ::before and ::after */
+  text-align: center; /* Centers the text horizontally */
+  padding: 10px 0; /* Vertical padding */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the text horizontally */
+  font-size: 10px;
+}
+
+.middleheadiing::before,
+.middleheadiing::after {
+  content: "";
+  position: absolute;
+  height: 1px; /* Thickness of the horizontal border */
+  .middleheadiing {
+    color: hsl(0, 4%, 67%); /* Text color */
+    position: relative; /* Allows positioning of ::before and ::after */
+    text-align: center; /* Centers the text horizontally */
+    padding: 10px 0; /* Vertical padding */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the text horizontally */
+  }
+
+  .middleheadiing::before,
+  .middleheadiing::after {
+    content: "";
+    position: absolute;
+    height: 1px; /* Thickness of the horizontal border */
+    background-color: #d2c6c6; /* Border color */
+    width: 50%; /* Adjust to control the width of left/right borders */
+  }
+}
+
+.middleheadiing::before {
+  left: 0; /* Position the left border correctly */
+  top: 50%; /* Vertically align */
+  transform: translateY(-50%); /* Ensures vertical centering */
+}
+
+.middleheadiing::after {
+  right: 0; /* Position the right border correctly */
+  top: 50%; /* Vertically align */
+  transform: translateY(-50%);
+}
+
+/* drop down */

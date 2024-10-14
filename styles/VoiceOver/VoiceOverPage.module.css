@@ -1,0 +1,392 @@
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* padding: 20px; */
+    background-color: #1c1c1c;
+  }
+  
+  .leftSection {
+    flex: 1;
+    padding: 20px;
+    margin: 10px 15%;
+  }
+  
+  .generateVideoContainer {
+    border-bottom: 0.5px solid #3f3f3f;
+  }
+  
+  .heading {
+    font-size: 16px;
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+    color: white;
+  }
+  
+  .subtext {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .toolGrid {
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    margin-right: 10px;
+    width: auto;
+    margin-bottom: 30px;
+  }
+  
+  
+  .createButton {
+    /* background: linear-gradient(134.14deg,#2d2d2d 46.75%,rgba(147, 147, 147, 0.6) 154.84%) !important; */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+  .toolButton {
+    background-color: #171717;
+    color: white;
+    /* border: 1px solid #444; */
+    padding: 10px 15px; /* Reduced padding to make it more proportional */
+    border-radius: 8px;
+    font-size: 13px; /* Adjusted to smaller text size */
+    text-align: left;
+    cursor: pointer;
+    width: max-content;
+    margin: 10px 10px 0px 0px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toolButton:hover {
+    /* background-color: #555; */
+    border: 1px solid#6949FF;
+  }
+  
+  .selectedButton {
+    background-color: #171717;
+    border-color: 1px solid#6949FF;
+    font-size: 13px;
+  }
+  
+  .videoScriptContainer {
+    border-bottom: 0.5px solid #3f3f3f;
+  }
+  
+  .videoScript {
+    margin-top: 20px;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: left;
+  }
+  
+  .videoScript h3 {
+    color: white;
+    font-size: 12px;
+  }
+  
+  .videoScript p {
+    color: #c9c9c9;
+    font-size: 10px;
+  }
+  
+  .textarea {
+    width: 100%;
+    height: 145px;
+    padding: 10px;
+    background-color: #333;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 8px;
+    margin: 10px 0px;
+  }
+  
+  .generateScriptButton {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    /* margin-top: 10px; */
+    background-color: #3f3f3f;
+    border: 1px solid #c5c5c5;
+    /* border: none; */
+    color: white;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .generateScriptButton:hover {
+    /* background-color: #6949ff; */
+  }
+  
+  .selectVoiceContainer {
+    border-bottom: 0.5px solid #3f3f3f;
+  }
+
+  .selectVoiceSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .voiceDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .selectVoice {
+    margin-top: 20px;
+  }
+  
+  .selectVoice h3 {
+    color: white;
+    font-size: 16px;
+  }
+  
+  .selectVoice p {
+    font-size: 10px;
+    color: #c9c9c9;
+  }
+  
+  .selectvoicebtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+  }
+  
+  .iconWrapper{
+    display: inline-block; /* To make sure the background fits the icon */
+    background-color: #2d2d2d;
+    padding: 5px; /* Adjust this to control how much space is around the icon */
+    border-radius: 8px;
+  }
+  .tune {
+    font-size: 17px; /* Adjust the icon size as needed */
+    color: white;
+  }
+  
+  .voiceSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .voiceOptions {
+    width: auto;
+    display: grid;
+    margin: 10px 0px;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .selectedVoice {
+    /* background-color: #4a90e2; */
+    border: 1px solid #6949ff;
+  }
+  
+  .voiceName {
+    font-weight: bold;
+    font-size: 13px;
+  }
+  
+  
+  
+  .userIcon {
+    border-radius: 8px; /* Circular icon styling */
+    /* border: 2px solid #6949ff; Optional border for emphasis */
+  }
+  
+  .voiceButton {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    justify-content: start;
+    align-items: center;
+    /* background-color: #333; */
+    color: white;
+    /* border: 1px solid #444; */
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 10px 0px 0px;
+    text-align: left;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .voiceButton:hover {
+    /* background-color: #555; */
+    border: 1px solid #6949FF;
+  
+  }
+
+  
+  .voiceName {
+    font-weight: bold;
+  }
+  
+  .videoScript {
+    margin-top: 20px;
+  }
+  
+  .player{
+    background: #2D2D2D;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 8px;
+    align-items: center;
+    margin: 20px 0px;
+  }
+  
+  .audioOption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .audioInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .customAudioPlayer{
+    background: #2D2D2D;
+    border-radius: 8px;
+  }
+  .audioPlayer {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    /* background: #2D2D2D; */
+    justify-content: space-between;
+    gap: 5px;
+  }
+  
+  .audioDetails {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+  
+  .audioTitle {
+    font-weight: bold;
+  }
+  
+  .audioArtist {
+    font-size: 0.8em;
+    color: gray;
+  }
+  
+  .playPauseButton {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .progressBar {
+    width: 60%;
+    height: 5px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    position: relative;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #B3A3FF;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .progressInput {
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none;
+    width: 100%; /* Full width to match .progressBar */
+    height: 5px; /* Match height with .progressBar */
+    background: transparent; /* Make input transparent */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .progressInput::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 10px; 
+    height: 10px; 
+    background: #B3A3FF; 
+    cursor: grab; 
+    border-radius: 50%;
+  }
+  
+  .progressInput::-moz-range-thumb {
+    width: 10px; 
+    height: 10px; 
+    background: #B3A3FF; 
+    border-radius: 50%;
+    cursor: grab; 
+  }
+  
+  .audioTime {
+    font-size: 0.8em;
+    color: gray;
+    margin-right: 20px;
+  }
+  
+  
+  .audioTime {
+    font-size: 0.8em;
+    color: gray;
+    margin-right: 20px;
+  }
+  
+  .uploadButton {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .uploadButton:hover {
+    background-color: #0056b3;
+  }
+
+
+  .generatebtn{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .generateButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 10px 20px;
+    background: linear-gradient(110.25deg, #8A71FF 14.25%, #6949FF 47.06%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  

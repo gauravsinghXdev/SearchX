@@ -1,0 +1,129 @@
+/* Sidebar styles */
+.sidebar {
+  background-color: black;
+  height: 100vh;
+  color: #fff;
+  padding: 20px;
+  /* position: absolute; */
+  top: 0;
+  transition: width 0.3s ease;
+  width: 300px;
+}
+
+.logoContainer {
+  cursor: pointer;
+}
+
+.logoImage {
+  transition: opacity 0.3s ease;
+}
+
+.sidebarMenu {
+  list-style-type: none;
+  padding:  20px;
+  margin-top: 50%;
+  color: #727272;
+}
+
+.sidebarMenu li {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.sidebarMenu li:hover {
+  color: white;
+}
+
+.menuIcon {
+  font-size: 24px; /* Increase icon size */
+}
+
+.section {
+  flex: 1;
+  padding: 0px;
+  position: relative;
+  background-color: #1c1c1c; /* Dark background */
+  color: #ffffff; /* White text */
+  overflow-y: auto; /* Scrollable content */;
+}
+
+.title {
+  color: #805ad5; /* Purple title color */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profileContainer {
+  padding: 20px;
+  background-color: #1a1a1a; /* Dark background */
+  color: #dcdcdc; /* Light text */
+}
+
+.title {
+  color: #805ad5; /* Purple title color */
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.formRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  width: 48%; /* Adjust width for both fields to align properly */
+}
+
+.inputField {
+  background-color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  color: #dcdcdc;
+  margin-bottom: 10px;
+}
+
+.saveButton {
+  background-color: #805ad5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background-color: #6b46c1;
+}
+
+.connectButton {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  color: #dcdcdc;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.connectButton .icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.connectButton:hover {
+  background-color: #4a5568;
+}

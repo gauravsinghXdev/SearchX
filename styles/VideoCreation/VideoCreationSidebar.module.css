@@ -1,0 +1,173 @@
+/* Sidebar styles */
+.sidebar {
+    background-color: #1C1C1C;
+    height: 100vh;
+    color: #fff;
+    border-right: 0.5px solid #3F3F3F;
+    top: 0;
+    transition: width 0.3s ease;  
+    position: sticky;
+    top: 0;
+  }
+  
+  .sidebar.open {
+    width: 220px;
+  }
+  
+  .sidebar.closed {
+    width: 80px;
+  }
+  
+  /* Logo Container */
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    /* padding: 20px 0; */
+    position: relative; /* Ensure correct positioning */
+  }
+  
+  /* Hamburger icon */
+  .icon {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  
+  /* Main logo */
+  .logoImage {
+    margin-left: 10px;
+    transition: opacity 0.3s ease; /* Smooth hiding effect */
+  }
+  
+  /* New logo for closed state */
+  .newLogoImage {
+    /* margin-left: 10px; */
+    transition: opacity 0.3s ease; /* Smooth appearance effect */
+  }
+  
+  /* Sidebar menu styles */
+  .sidebarMenu {
+    list-style-type: none;
+    padding-left: 20px ;
+    /* margin-top: 120px; */
+  }
+  
+  .sidebarMenu li {
+    display: flex;
+    align-items: center; /* Center the icon and text vertically */
+    margin: 20px 0;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease; /* Smooth transition */
+  }
+  
+  .sidebarMenu li span {
+    display: inline-block; /* For smooth hiding effect */
+    margin-left: 15px; /* Space between icon and text */
+    transition: opacity 0.3s ease; /* Smooth fade */
+    font-size: 16px;
+    color: #686567;
+  }
+  
+  .sidebar.closed .sidebarMenu li span {
+    opacity: 0; /* Hide text when sidebar is closed */
+    width: 0; /* Collapse the width of the text */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .sidebarContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 290px;
+  }
+  /* Plugin section styles */
+  .plugins {
+    font-weight: bold;
+  }
+  
+  .subMenu {
+    list-style-type: none;
+     /* Indentation */
+  }
+  
+  .addPlugin {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #f1c40f;
+  }
+  
+  .addPluginIcon {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 20px;
+  }
+  
+  .menuIcon {
+    font-size: 20px; /* Increase icon size */
+    color: #686567;
+  }
+  
+  .sidebar.closed .menuIcon {
+    font-size: 22px; /* Adjust icon size when sidebar is closed */
+    margin: 0; /* Remove margin */
+  }
+
+  .upgradeContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .upgradeIcon{
+    color: #FFCC00;
+    margin-bottom: 10px;
+  }
+  .upgradeSection {
+    margin: 10px; /* Push the upgrade section to the bottom */
+    padding: 20px;
+    text-align: center;
+    border: 0.5px solid linear-gradient(126.88deg, rgba(197, 197, 197, 0.5) 1.05%, rgba(47, 46, 46, 0.5) 98.95%);
+    border-radius: 8px;
+    /* border-image-source: linear-gradient(126.88deg, rgba(197, 197, 197, 0.5) 1.05%, rgba(47, 46, 46, 0.5) 98.95%); */
+    background-color: #2b2b2b; /* Background color for the upgrade section */
+  }
+
+  .upgradeSubText{
+    font-size: 12px;
+    color: #686567;
+  }
+  
+  .upgradeText {
+    color: white; /* Text color */
+    font-size: 14px; /* Font size */
+  }
+  
+  .upgradeButton {
+    background-color: #6c63ff; /* Button color */
+    font-size: 13px;
+    color: white; 
+    margin-top: 10px;
+    border: none; 
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+  }
+  
+  .upgradeButton:hover {
+    background-color: #5a54e2; /* Darker shade on hover */
+  }
+
+  .profileImage{
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .userProfile{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+  }
