@@ -13,7 +13,7 @@ import pen from "@/public/Home/pen-tool.png";
 import playList from "@/public/Home/play-list.png";
 import megaphone from "@/public/Home/megaphone.png";
 import webDesign from "@/public/Home/webDesign.png";
-import logo from "@/public/Home/slogo.png";
+import logo from "@/public/Home/Slogo.png";
 import slogo from "@/public/Home/shape.png";
 import boy from "@/public/Home/Frameboy.png";
 import appicons from "@/public/Home/appicons.png";
@@ -25,7 +25,7 @@ import photo5 from "@/public/Home/photo5.png";
 import photo6 from "@/public/Home/photo6.png";
 import photo7 from "@/public/Home/photo7.png";
 import avatarimg from "@/public/Home/avatar.png";
-import vector from "@/public/Home/vector.png";
+import vector from "@/public/Home/Vector.png";
 import textlogo from "@/public/Home/textlogo.png";
 import heart from "@/public/Home/heart.png";
 import heart1 from "@/public/Home/heart1.png";
@@ -483,7 +483,7 @@ const Home = () => {
     // Add more testimonials here...
   ];
   return (
-    <div className="bg-[#171717] text-white mx-auto  min-h-screen">
+    <div className="!bg-[#171717] text-white mx-auto  min-h-screen">
       <header className="p-4 px-9 flex justify-between items-center">
         <div className="flex items-center">
           <span className="text-2xl font-bold mr-2">

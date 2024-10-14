@@ -2,7 +2,7 @@ import React from "react";
 import style from "@/styles/footer/footer.module.css";
 import logo from "@/public/Home/shape.png";
 import Image from "next/image";
-import complogo from "@/public/footer/newLogo.jpg";
+// import complogo from "@/public/footer/newLogo.jpg";
 import { RiFacebookBoxLine } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
