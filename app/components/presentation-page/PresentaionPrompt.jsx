@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import style from "@/styles/presentation/presentationprompt.module.css";
+import style from "@/styles/Presentation/presentationprompt.module.css";
 import sparkle from "@/public/VoiceOver/sparkles.png";
 import Shape from "@/public/VoiceOver/Slogo.png";
 import arrow from "@/public/VoiceOver/arrow.png";

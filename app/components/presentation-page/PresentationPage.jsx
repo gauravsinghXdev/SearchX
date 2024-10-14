@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/presentation/presentationpage.module.css";
+import styles from "@/styles/Presentation/presentationpage.module.css";
 import docIcon from "@/public/VoiceOver/docIcon.png";
 import brochure from "@/public/VoiceOver/brochure.png";
 import starIcon from "@/public/VoiceOver/star.png";
