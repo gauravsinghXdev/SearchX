@@ -30,7 +30,7 @@ const GraphicsTool = () => {
   const [secondaryColors, setSecondaryColors] = useState([]);
   const [headlineFont, setHeadlineFont] = useState("Inter (Bold)");
   const [bodyFont, setBodyFont] = useState("Inter (Regular)");
-  const [generatedImageUrl, setGeneratedImageUrl] = useState(dalle); // To store the generated graphic
+  const [generatedImageUrl, setGeneratedImageUrl] = useState(offerimage); // To store the generated graphic
   const handleGenerateClick = async () => {
     // Prepare the data to send to the backend
     const data = {
@@ -395,7 +395,7 @@ const GraphicsTool = () => {
             <h1>Add Captions to video</h1>
           </div>
         </div>
-        <Image src={offerimage} alt="dalle" className={styles.imageSection} />
+        <Image src={offerimage} alt="offerimage" className={styles.imageSection} />
       </div>
     </div>
     </div>
