@@ -48,7 +48,7 @@ const Footer = () => {
               Searchpad
             </span>
           </div>
-          <div className=" flex justify-center gap-[2rem]">
+          <div className=" flex justify-center gap-[5rem]">
             <div className="">
               <h3 className="text-[16px] font-[400] text-white mb-4">
                 AI Tools

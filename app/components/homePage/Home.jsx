@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import compimg from "@/public/Home/compImg.png";
 import girl from "@/public/Home/FrameGirl.png";
 import style from "@/styles/home/home.module.css";
@@ -28,6 +29,11 @@ import vector from "@/public/Home/vector.png";
 import textlogo from "@/public/Home/textlogo.png";
 import heart from "@/public/Home/heart.png";
 import heart1 from "@/public/Home/heart1.png";
+import tiktok from "@/public/Home/tiktoklogo.png";
+import x from "@/public/Home/Xlogo.png";
+import insta from "@/public/Home/instagramlogo.png";
+import facebook from "@/public/Home/facebooklogo.png";
+import discord from "@/public/Home/discordlogo.png";
 
 import DropDown from "./DropDown";
 import Footer from "../footer/Footer";
@@ -477,7 +483,7 @@ const Home = () => {
     // Add more testimonials here...
   ];
   return (
-    <div className="bg-gray-[ #171717] text-white mx-auto  min-h-screen">
+    <div className="bg-[#171717] text-white mx-auto  min-h-screen">
       <header className="p-4 px-9 flex justify-between items-center">
         <div className="flex items-center">
           <span className="text-2xl font-bold mr-2">
@@ -685,17 +691,72 @@ const Home = () => {
           </div>
 
           {/* ------------------------------------------ */}
+
           <div
             className={`${style.showcard} max-w-md rounded overflow-hidden p-11 shadow-lg`}
           >
-            <div className={`${style.showCardImgContainer}  overflow-hidden`}>
-              <Image className="w-full" src={appicons} alt={"apps icon"} />
+            <div className={`${style.logoContainer} overflow-hidden`}>
+              <div className={`${style.appiconsfirst}`}>
+                <Link
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={tiktok}
+                    alt={"tiktok logo"}
+                    className="w-[80px] h-[108px]"
+                  />
+                </Link>
+                <Link
+                  href="https://x.com/searchpad_app?s=21&t=ROAHeI0m0fL-67vkOtDSXA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image src={x} alt={"x logo"} className="w-[69px] h-[69px]" />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/searchpad?igsh=YnQ0N2xwNDFrOG1u"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={insta}
+                    alt={"instagram logo"}
+                    className="w-[80px] h-[80px]"
+                  />
+                </Link>
+              </div>
+              <div className={`${style.appiconssecond}`}>
+                <Link
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={facebook}
+                    alt={"facebook logo"}
+                    className="w-[79px] h-[79px]"
+                  />
+                </Link>
+                <Link
+                  href="https://discord.gg/searchpad "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={discord}
+                    alt={"discord logo"}
+                    className="w-[90px] h-[70px]"
+                  />
+                </Link>
+              </div>
             </div>
             <div className={`${style.showcardtext}`}>
               <span className="text-white font-[500] tracking-tighter text-[36px] mb-2">
                 Seamless Integration
               </span>
-              <p className="text-[#c9c9c9] font-[400] text-base  leading-7 tracking-tight text-center">
+              <p className="text-[#c9c9c9] font-[400] text-base leading-7 tracking-tight text-center">
                 Export content to your platforms efficiently.
               </p>
             </div>
