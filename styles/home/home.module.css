@@ -69,7 +69,7 @@
 .bigtext {
   font-size: 156px; /* Adjust the size as needed */
   font-weight: 600;
-  background: linear-gradient(0.89deg, #000000, #343434);
+  background: linear-gradient(1.89deg, #0b0b0b, #3f3e3e);
   -webkit-background-clip: text; /* For Safari */
   background-clip: text;
   color: transparent; /* Make text color transparent */
@@ -195,6 +195,24 @@
   align-items: center;
   justify-content: center;
   position: relative; /* Positioning context for absolute elements */
+}
+.logoContainer {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16.16px;
+}
+.appiconsfirst {
+  display: flex;
+  align-items: center;
+  gap: 27.7px;
+}
+.appiconssecond {
+  display: flex;
+  align-items: center;
+  gap: 27.7px;
 }
 .button {
   width: 324px;

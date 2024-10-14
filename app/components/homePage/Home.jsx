@@ -2,6 +2,7 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import compimg from "@/public/Home/compImg.png";
 import girl from "@/public/Home/FrameGirl.png";
 import style from "@/styles/home/home.module.css";
@@ -12,7 +13,7 @@ import pen from "@/public/Home/pen-tool.png";
 import playList from "@/public/Home/play-list.png";
 import megaphone from "@/public/Home/megaphone.png";
 import webDesign from "@/public/Home/webDesign.png";
-import logo from "@/public/Home/slogo.png";
+import logo from "@/public/Home/Slogo.png";
 import slogo from "@/public/Home/shape.png";
 import boy from "@/public/Home/Frameboy.png";
 import appicons from "@/public/Home/appicons.png";
@@ -24,10 +25,15 @@ import photo5 from "@/public/Home/photo5.png";
 import photo6 from "@/public/Home/photo6.png";
 import photo7 from "@/public/Home/photo7.png";
 import avatarimg from "@/public/Home/avatar.png";
-import vector from "@/public/Home/vector.png";
+import vector from "@/public/Home/Vector.png";
 import textlogo from "@/public/Home/textlogo.png";
 import heart from "@/public/Home/heart.png";
 import heart1 from "@/public/Home/heart1.png";
+import tiktok from "@/public/Home/tiktoklogo.png";
+import x from "@/public/Home/Xlogo.png";
+import insta from "@/public/Home/instagramlogo.png";
+import facebook from "@/public/Home/facebooklogo.png";
+import discord from "@/public/Home/discordlogo.png";
 
 import DropDown from "./DropDown";
 import Footer from "../footer/Footer";
@@ -379,97 +385,97 @@ const Home = () => {
   };
   const testimonials = [
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
@@ -477,7 +483,7 @@ const Home = () => {
     // Add more testimonials here...
   ];
   return (
-    <div className="bg-gray-[ #171717] text-white mx-auto  min-h-screen">
+    <div className="!bg-[#171717] text-white mx-auto  min-h-screen">
       <header className="p-4 px-9 flex justify-between items-center">
         <div className="flex items-center">
           <span className="text-2xl font-bold mr-2">
@@ -650,7 +656,7 @@ const Home = () => {
         </div>
 
         <p className={`${style.midtext} text-center mt-4`}>
-          Engineered for Your <br /> Brand's Essence
+          Engineered for Your <br /> Brand&apos;s Essence
         </p>
 
         <div
@@ -685,17 +691,72 @@ const Home = () => {
           </div>
 
           {/* ------------------------------------------ */}
+
           <div
             className={`${style.showcard} max-w-md rounded overflow-hidden p-11 shadow-lg`}
           >
-            <div className={`${style.showCardImgContainer}  overflow-hidden`}>
-              <Image className="w-full" src={appicons} alt={"apps icon"} />
+            <div className={`${style.logoContainer} overflow-hidden`}>
+              <div className={`${style.appiconsfirst}`}>
+                <Link
+                  href="https://www.tiktok.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={tiktok}
+                    alt={"tiktok logo"}
+                    className="w-[80px] h-[108px]"
+                  />
+                </Link>
+                <Link
+                  href="https://x.com/searchpad_app?s=21&t=ROAHeI0m0fL-67vkOtDSXA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image src={x} alt={"x logo"} className="w-[69px] h-[69px]" />
+                </Link>
+                <Link
+                  href="https://www.instagram.com/searchpad?igsh=YnQ0N2xwNDFrOG1u"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={insta}
+                    alt={"instagram logo"}
+                    className="w-[80px] h-[80px]"
+                  />
+                </Link>
+              </div>
+              <div className={`${style.appiconssecond}`}>
+                <Link
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={facebook}
+                    alt={"facebook logo"}
+                    className="w-[79px] h-[79px]"
+                  />
+                </Link>
+                <Link
+                  href="https://discord.gg/searchpad "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={discord}
+                    alt={"discord logo"}
+                    className="w-[90px] h-[70px]"
+                  />
+                </Link>
+              </div>
             </div>
             <div className={`${style.showcardtext}`}>
               <span className="text-white font-[500] tracking-tighter text-[36px] mb-2">
                 Seamless Integration
               </span>
-              <p className="text-[#c9c9c9] font-[400] text-base  leading-7 tracking-tight text-center">
+              <p className="text-[#c9c9c9] font-[400] text-base leading-7 tracking-tight text-center">
                 Export content to your platforms efficiently.
               </p>
             </div>

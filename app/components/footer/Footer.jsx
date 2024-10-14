@@ -2,7 +2,7 @@ import React from "react";
 import style from "@/styles/footer/footer.module.css";
 import logo from "@/public/Home/shape.png";
 import Image from "next/image";
-import complogo from "@/public/footer/newLogo.jpg";
+// import complogo from "@/public/footer/newLogo.jpg";
 import { RiFacebookBoxLine } from "react-icons/ri";
 import { FaXTwitter } from "react-icons/fa6";
 import { CiLinkedin } from "react-icons/ci";
@@ -48,7 +48,7 @@ const Footer = () => {
               Searchpad
             </span>
           </div>
-          <div className=" flex justify-center gap-[2rem]">
+          <div className=" flex justify-center gap-[5rem]">
             <div className="">
               <h3 className="text-[16px] font-[400] text-white mb-4">
                 AI Tools
