@@ -24,10 +24,10 @@ const ImageCreationNavbar = () => {
 
      <div className={styles.rightcontaint}>
      
-        <Image src={coins} ></Image>
+        <Image src={coins} alt='Image' />
         <h1 className={styles.heading}>25 Tokens Left</h1>
       <button className={styles.button}>
-        <Image src={crown}></Image>
+        <Image src={crown} alt='Image'/>
         <h1  className={styles.heading}>Upgrade</h1>
         </button>
     </div>

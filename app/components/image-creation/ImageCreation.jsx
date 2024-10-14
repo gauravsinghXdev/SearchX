@@ -117,28 +117,28 @@ const ImageCreation = () => {
           <div>
           <div className={styles.imageContainer}>
            <div className={styles.combineimage}> 
-            <Image src={image1} className={styles.image}/>
-            <Image src={image7} />
-            <Image src={image8} />
+            <Image src={image1} className={styles.image} alt='Image'/>
+            <Image src={image7} alt='Image'/>
+            <Image src={image8} alt='Image' />
            </div>  
 
            <div className={styles.combineimage}>
-            <Image src={image2} />
-            <Image src={image3} />
-            <Image src={image9} />
+            <Image src={image2} alt='Image'/>
+            <Image src={image3} alt='Image'/>
+            <Image src={image9} alt='Image'/>
            </div>
 
            <div className={styles.combineimage}>
-           <Image src={image4} />
-           <Image src={image10} />
+           <Image src={image4} alt='Image'/>
+           <Image src={image10} alt='Image'/>
 
            </div>
 
            <div className={styles.combineimage}>
-           <Image src={image5} />
-           <Image src={image6} />
-            <Image src={image11} />
-            <Image src={image12} />
+           <Image src={image5} alt='Image'/>
+           <Image src={image6} alt='Image'/>
+            <Image src={image11} alt='Image'/>
+            <Image src={image12} alt='Image'/>
            </div>
 
           </div>

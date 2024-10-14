@@ -56,7 +56,7 @@ const WebsiteDesign = () => {
             </div>
           </div>
           <div className={styles.rightImg}>
-            <Image src={heroImg} />
+            <Image src={heroImg} alt="Image"/>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ const WebsiteDesign = () => {
             <button className={styles.projectBtnn}>View Project</button>
           </div>
           <div className={styles.boxImg}>
-            <Image src={projectImg}></Image>
+            <Image src={projectImg} alt="Image"/>
           </div>
         </div>
         {/* project box 1 */}
@@ -112,7 +112,7 @@ const WebsiteDesign = () => {
             <button className={styles.projectBtnn}>View Project</button>
           </div>
           <div className={styles.boxImg}>
-            <Image src={Rectangle2Img}></Image>
+            <Image src={Rectangle2Img} alt="Image"/>
           </div>
         </div>
         {/* project box 3 */}
@@ -124,18 +124,21 @@ const WebsiteDesign = () => {
               width={34.32}
               height={34.32}
               className={styles.socialIcon}
+              alt="Image"
             />
             <Image
               src={linkedinImg}
               width={34.32}
               height={34.32}
               className={styles.socialIcon}
+              alt="Image"
             />
             <Image
               src={emailImg}
               width={34.32}
               height={34.32}
               className={styles.socialIcon}
+              alt="Image"
             />
           </div>
           <div className={styles.footername}>

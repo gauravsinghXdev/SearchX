@@ -12,7 +12,7 @@ import portfolio from '../../../public/portfolio.png';
 import weddingshoot from '../../../public/weddingshoot.png';
 import funding from '../../../public/funding.png';
 import homes from '../../../public/icons/home-06.png';
-import myinspretion from '../../../public/icons/myinspretion.png';
+import myinspretion from '../../../public/icons/myInspretion.png';
 import crown from '../../../public/icons/crown.png';
 import profile from '../../../public/profile.png';
 import logospad from '../../../public/logospad.png';
@@ -50,7 +50,7 @@ const VideoCreationPage = () => {
       <p className={styles.paragraph}>25 Tokens Left</p>
     </div>
     <button className={styles.createButtons}>
-      <Image src={crown} className={styles.crownButton} /> <p className={styles.paragraph}>Upgrade</p>
+      <Image src={crown} className={styles.crownButton} alt="Image" /> <p className={styles.paragraph}>Upgrade</p>
     </button>
   </div>
 </div>
@@ -60,17 +60,17 @@ const VideoCreationPage = () => {
      <nav className={styles.sidebar}>
       <ul className={styles.navLinks}>
           
-        <li className={styles.listItem}> <Image src={homes}/>  Home </li>
+        <li className={styles.listItem}> <Image src={homes} alt="Image"/>  Home </li>
          
-        <li className={styles.listItem}><Image src={myinspretion}/> Templates</li>
+        <li className={styles.listItem}><Image src={myinspretion} alt="Image"/> Templates</li>
 
-        <li  className={styles.listItem}><Image src={myinspretion}/> Projects</li>
+        <li  className={styles.listItem}><Image src={myinspretion} alt="Image"/> Projects</li>
 
       </ul>
 
        
 <div className={styles.upgradeSection}>
-  <Image src={crown} className={styles.crown}/>
+  <Image src={crown} className={styles.crown} alt="Image"/>
   <h1 className={styles.headingss}>Unlock the full power of Generative AI</h1>
   <p className={styles.paragraphss}>Go limitless with Searchpad</p>
   <button className={styles.upgradeButton}>Upgrade Plan</button>
@@ -116,15 +116,15 @@ const VideoCreationPage = () => {
           </div>
 
           <div className={styles.toolsContainer}>
-            <div className={styles.toolCard}><Image src={graphicsimage} className={styles.toolsimage}/>
+            <div className={styles.toolCard}><Image src={graphicsimage} className={styles.toolsimage} alt="Image"/>
             <h1 className={styles.design}>Graphic Design</h1></div>
-            <div className={styles.toolCard}><Image src={adcreativeimage} className={styles.toolsimage}/>
+            <div className={styles.toolCard}><Image src={adcreativeimage} className={styles.toolsimage} alt="Image"/>
             <h1 className={styles.design}>Ad Creative</h1></div>
-            <div className={styles.toolCard}><Image src={presentationimage} className={styles.toolsimage}/>
+            <div className={styles.toolCard}><Image src={presentationimage} className={styles.toolsimage} alt="Image"/>
             <h1 className={styles.design}>Presentation</h1></div>
-            <div className={styles.toolCard}><Image src={ websideDesign} className={styles.toolsimage}/>
+            <div className={styles.toolCard}><Image src={ websideDesign} className={styles.toolsimage} alt="Image"/>
             <h1 className={styles.design}>Webside Design</h1></div>
-            <div className={styles.toolCard}><Image src={ dataVisualization} className={styles.toolsimage}/>
+            <div className={styles.toolCard}><Image src={ dataVisualization} className={styles.toolsimage} alt="Image"/>
             <h1 className={styles.design}>Data Visualization</h1></div>
             
           </div>

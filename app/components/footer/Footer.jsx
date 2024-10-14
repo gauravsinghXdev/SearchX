@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 import styles from "@/styles/footer/footer.module.css";
-import slogo from "@/public/Home/slogo.png";
+import slogo from "@/public/Home/Slogo.png";
 import { BiLogoFacebookSquare } from "react-icons/bi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { CiLinkedin } from "react-icons/ci";

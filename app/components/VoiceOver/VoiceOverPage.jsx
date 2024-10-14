@@ -67,7 +67,7 @@ const CustomAudioPlayer = ({ audioFile, title, artist }) => {
       audio.removeEventListener("timeupdate", handleTimeUpdate);
       audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
     };
-  }, []);
+  }, [handleTimeUpdate]);
 
   return (
     <div className={styles.customAudioPlayer}>

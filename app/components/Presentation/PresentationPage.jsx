@@ -143,7 +143,7 @@ const PresentationPage = () => {
                     transparency.
                   </li>
                   <li>
-                    <strong>Customer-Centricity</strong> – Our customers' needs
+                    <strong>Customer-Centricity</strong> – Our customers&apos; needs
                     are central.
                   </li>
                   <li>
@@ -165,7 +165,7 @@ const PresentationPage = () => {
                 <h2>Closing Statement</h2>
                 <p>
                   Driven by our mission, inspired by our vision, and guided by
-                  our values, we're here to make a difference.
+                  our values, we&apos;re here to make a difference.
                 </p>
               </div>
             </div>

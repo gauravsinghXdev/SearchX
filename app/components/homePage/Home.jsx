@@ -10,7 +10,7 @@ import pen from "@/public/Home/pen-tool.png";
 import playList from "@/public/Home/play-list.png";
 import megaphone from "@/public/Home/megaphone.png";
 import webDesign from "@/public/Home/webDesign.png";
-import logo from "@/public/Home/slogo.png";
+import logo from "@/public/Home/Slogo.png";
 import boy from "@/public/Home/Frameboy.png";
 import appicons from "@/public/Home/appicons.png";
 import photo1 from "@/public/Home/photo1.png";
@@ -28,97 +28,97 @@ import Footer from "../footer/Footer";
 const Home = () => {
   const testimonials = [
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I've saved so much time on my ad creatives and graphic design projects!",
+      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatar },
     },
     {
-      text: "As a small business owner, Searchpad's website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatar },
@@ -330,7 +330,7 @@ const Home = () => {
           </div>
         </div>
         <p className={`${style.midtext} text-center mt-4`}>
-          Engineered for Your <br /> Brand's Essence
+          Engineered for Your <br /> Brand&apos;s Essence
         </p>
 
         <div
@@ -421,10 +421,12 @@ const Home = () => {
           <div className="flex justify-center items-center mb-4">
             <div className="flex -space-x-2">
               {[...Array(5)].map((_, i) => (
-                <img
+                <Image
                   key={i}
                   src="/api/placeholder/32/32"
                   alt="Creator"
+                  width={20}
+                  height={20}
                   className="w-8 h-8 rounded-full border-2 border-gray-900"
                 />
               ))}

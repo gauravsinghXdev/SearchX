@@ -22,7 +22,7 @@ import funding from "../../../public/funding.png";
 import home from "../../../public/home.png";
 import { IoHomeOutline } from "react-icons/io5";
 import homes from "../../../public/icons/home-06.png";
-import myinspretion from "../../../public/icons/myinspretion.png";
+import myinspretion from "../../../public/icons/myInspretion.png";
 import image from "../../../public/icons/image.png";
 import videocreation from "../../../public/icons/videocreation.png";
 import mic from "../../../public/icons/mic.png";
@@ -62,22 +62,22 @@ export default function ToolsHomeSidebar() {
           <Image
             src={forwordicon}
             style={{ width: "15px", height: "15px" }}
-            alt="forword icon "
+            alt="forword icon"
             className={styles.forwordicon}
           />
         </div>
         <ul className={styles.navLinks}>
           <li className={styles.listItem}>
             {" "}
-            <Image src={homes} /> Home{" "}
+            <Image src={homes} alt="Image" /> Home{" "}
           </li>
 
           <li className={styles.listItem}>
-            <Image src={myinspretion} /> Creations
+            <Image src={myinspretion} alt="Image" /> Creations
           </li>
 
           <li className={styles.listItem}>
-            <Image src={myinspretion} /> Inspirations
+            <Image src={myinspretion} alt="Image"/> Inspirations
           </li>
 
           <div className={styles.dropdown}>
@@ -91,27 +91,27 @@ export default function ToolsHomeSidebar() {
           </div>
 
           <li className={styles.listItem}>
-            <Image src={image} />
+            <Image src={image} alt="Image"/>
             Image Creation
           </li>
 
           <li className={styles.listItem}>
-            <Image src={videocreation} />
+            <Image src={videocreation} alt="Image"/>
             Video Creation
           </li>
 
           <li className={styles.listItem}>
-            <Image src={mic} />
+            <Image src={mic} alt="Image"/>
             Voiceover
           </li>
 
           <li className={styles.listItem}>
-            <Image src={ideas} />
+            <Image src={ideas} alt="Image"/>
             Idea Generation
           </li>
 
           <li className={styles.listItem}>
-            <Image src={document} />
+            <Image src={document} alt="Image"/>
             Document Creation
           </li>
 
@@ -122,33 +122,33 @@ export default function ToolsHomeSidebar() {
           </div>
 
           <li className={styles.listItem}>
-            <Image src={graphics} />
+            <Image src={graphics} alt="Image"/>
             Graphic Design
           </li>
 
           <li className={styles.listItem}>
-            <Image src={adcreatives} />
+            <Image src={adcreatives} alt="Image"/>
             Ad Creative
           </li>
 
           <li className={styles.listItem}>
-            <Image src={webdesign} />
+            <Image src={webdesign} alt="Image" />
             Website UI
           </li>
 
           <li className={styles.listItem}>
-            <Image src={slide} />
+            <Image src={slide} alt="Image"/>
             Slide Creation
           </li>
 
           <li className={styles.listItem}>
-            <Image src={chartrose} />
+            <Image src={chartrose} alt="Image"/>
             Data VisualiZation
           </li>
         </ul>
 
         <div className={styles.upgradeSection}>
-          <Image src={crown} className={styles.crown} />
+          <Image src={crown} className={styles.crown} alt="Image"/>
           <h1 className={styles.headingss}>
             Unlock the full power of Generative AI
           </h1>
@@ -234,31 +234,31 @@ export default function ToolsHomeSidebar() {
           </h2>
           <div className={styles.toolsContainer}>
             <div className={styles.toolCard}>
-              <Image src={imageCreation} className={styles.toolsimage} />
+              <Image src={imageCreation} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Image Creation</h1>
             </div>
             <div className={styles.toolCard}>
-              <Image src={videoCreation} className={styles.toolsimage} />
+              <Image src={videoCreation} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Video Creation</h1>
             </div>
             <div className={styles.toolCard}>
-              <Image src={adCreation} className={styles.toolsimage} />
+              <Image src={adCreation} className={styles.toolsimage} alt="Image" />
               <h1 className={styles.design}>Ad Creative</h1>
             </div>
             <div className={styles.toolCard}>
-              <Image src={visualization} className={styles.toolsimage} />
+              <Image src={visualization} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Design & Visualization</h1>
             </div>
             <div className={styles.toolCard}>
-              <Image src={voiceover} className={styles.toolsimage} />
+              <Image src={voiceover} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Voiceover</h1>
             </div>
             <div className={styles.toolCard}>
-              <Image src={idea} className={styles.toolsimage} />
+              <Image src={idea} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Idea Generation</h1>
             </div>
             <div className={styles.toolCard}>
-              <Image src={documents} className={styles.toolsimage} />
+              <Image src={documents} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Document Creation</h1>
             </div>
           </div>

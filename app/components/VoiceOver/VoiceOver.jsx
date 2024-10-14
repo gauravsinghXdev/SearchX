@@ -47,7 +47,7 @@ const VoiceOver = () => {
             </div>
           </div>
           <div className={styles.rightImg}>
-            <Image src={heroImg} />
+            <Image src={heroImg} alt="Image" />
           </div>
         </div>
 
@@ -72,14 +72,14 @@ const VoiceOver = () => {
             <button className={styles.projectBtnn}>View Project</button>
           </div>
           <div className={styles.boxImg}>
-            <Image src={projectImg}></Image>
+            <Image src={projectImg} alt="Image"/>
           </div>
         </div>
         {/* project box 1 */}
         {/* project box 2 */}
         <div className={`${styles.containerBox} ${styles.anotherClass}`}>
           <div className={styles.boxImg}>
-            <Image src={RectangleImg}></Image>
+            <Image src={RectangleImg} alt="Image"/>
           </div>
           <div className={`${styles.leftbox} ${styles.leftbox2}`}>
             <h2 className={styles.projectName}>Project Name</h2>
@@ -103,7 +103,7 @@ const VoiceOver = () => {
             <button className={styles.projectBtnn}>View Project</button>
           </div>
           <div className={styles.boxImg}>
-            <Image src={Rectangle2Img}></Image>
+            <Image src={Rectangle2Img} alt="Image" />
           </div>
         </div>
         {/* project box 3 */}
@@ -112,17 +112,20 @@ const VoiceOver = () => {
           <div className={styles.socialcontainer}>
             <Image
               src={instaImg}
+              alt="Image"
               width={34.32}
               height={34.32}
               className={styles.socialIcon}
             />
             <Image
+            alt="Image"
               src={linkedinImg}
               width={34.32}
               height={34.32}
               className={styles.socialIcon}
             />
-            <Image
+            <Image 
+            alt="Image"
               src={emailImg}
               width={34.32}
               height={34.32}
