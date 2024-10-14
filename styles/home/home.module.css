@@ -67,14 +67,15 @@
 }
 
 .bigtext {
-  background-image: linear-gradient(15.89deg, #171717 -0.76%, #272727 87.17%);
+  font-size: 156px; /* Adjust the size as needed */
+  font-weight: 600;
+  background: linear-gradient(0.89deg, #000000, #343434);
+  -webkit-background-clip: text; /* For Safari */
   background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-  font-size: 10.375rem;
-  font-weight: bolder;
+  color: transparent; /* Make text color transparent */
+  display: inline-block; /* Ensures the gradient is applied correctly */
 }
+
 .bigCard {
   /* max-width: 73.4375rem; */
   display: flex;
@@ -94,33 +95,48 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 24px;
+
   color: #383838;
+  border: 2px solid transparent; /* Initial border to maintain layout */
+  transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
 }
+
 .listitem:hover {
-  border: 1px solid transparent; /* Necessary for border-image to work */
+  cursor: pointer;
+  color: #ffff; /* Change text color on hover */
+  border-color: transparent; /* Keeps it transparent until hover */
   border-radius: 24px;
+}
+
+.listitem:hover {
   border-image-source: linear-gradient(
     31.33deg,
     #c0b3ff 31.96%,
     #6949ff 60.21%
   );
   border-image-slice: 1;
-  background-color: #171717;
-  color: #ffff;
+  border-style: solid; /* Ensure a solid border style on hover */
+  border-width: 2px; /* Adjust width as needed */
+  border-radius: 24px;
 }
 
 .bigCardDivTwo {
-  width: 100%;
+  max-width: 1158px;
   display: flex;
   gap: 2rem;
   padding: 3rem;
+
   border-radius: 24px;
   background-color: #1c1c1c;
 }
 .bigCardDivinnerIOne {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  justify-content: space-between;
+}
+.bigCardDivinnerITwo {
+  min-width: 720px;
+  min-height: 576px;
 }
 .innerOneA {
   width: 20.375rem;
@@ -151,22 +167,83 @@
   height: 568px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(15.89deg, #171717 -0.76%, #272727 87.17%);
   border-radius: 24px;
 }
 
 .showCardImgContainer {
-  margin: auto;
-  /* padding: 40px;
-  max-width: 284px;
-  max-height: 177px; */
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.showcardtext {
+  min-height: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buttonccontainer {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Positioning context for absolute elements */
+}
+.button {
+  width: 324px;
+  height: 74px;
+  border-radius: 60px;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s; /* Smooth transition */
+}
+.firstbutton {
+  background: linear-gradient(189.26deg, #6949ff -69.3%, #3f2c99 140.07%);
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 24px;
+  position: relative; /* Needed for overlap */
+  margin: -10px 0; /* Adjust margin to overlap */
+  z-index: 1; /* Bring it above other buttons */
+}
+.middlebutton {
+  background: linear-gradient(55.28deg, #55175e -8.78%, #fc5d5d 89.55%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 276px;
+  position: relative; /* Needed for overlap */
+  transform: rotate(10deg); /* Tilt the middle button */
+  margin: 5px 0; /* Adjust margin to overlap */
+  z-index: 2; /* Bring it above other buttons */
+}
+.thirdbutton {
+  background: linear-gradient(165.91deg, #ddffb3 -2.74%, #0e5816 81.02%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative; /* Needed for overlap */
+  margin: -10px 0; /* Adjust margin to overlap */
+  z-index: 3; /* Bring it below the middle button */
+}
+.buttontext {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  text-align: left;
 }
 .showOfSection {
+  min-width: 1158px;
   margin: auto;
   margin-top: 3rem;
   display: flex;
@@ -185,10 +262,10 @@
 }
 .thirdSection {
   display: flex;
-  gap: 3rem;
-  justify-content: center;
+  gap: 7rem;
+  justify-content: space-between;
   align-items: center;
-  padding: 2rem 8rem;
+  padding: 2rem 5rem;
 }
 .thirdSectionsecond {
   display: flex;
@@ -199,4 +276,20 @@
 
 .smallCard {
   background: linear-gradient(15.89deg, #171717 -0.76%, #272727 87.17%);
+}
+.scrollcontainer {
+  width: 240px; /* Width of the container */
+  height: 154px; /* Height of the container */
+  overflow: hidden; /* Prevent default scrollbar */
+  position: relative; /* Required for pseudo-element */
+}
+
+.scrollcontent {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling */
+  padding-right: 15px; /* Space for hidden scrollbar */
+}
+.scrollcontent::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
