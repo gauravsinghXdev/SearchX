@@ -114,6 +114,7 @@ const VoiceOver = () => {
   const [outputFormat, setOutputFormat] = useState("mp3"); // For output format
   const [generatedAudio, setGeneratedAudio] = useState(null); // For storing the audio file URL
   const [loading, setLoading] = useState(false); // For loading state
+  const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app"
 
   const tools = [
     "AI Voice for Blogs",
@@ -170,48 +171,6 @@ const VoiceOver = () => {
     setSelectedTool(tool);
   };
 
-  // const handleGenerateAudio = async () => {
-  //   if (!prompt.trim() || !voiceEngine.trim() || !voice.trim() || !outputFormat.trim()) {
-  //     alert("Please fill in all the fields before generating audio.");
-  //     return;
-  //   }
-
-  //   setLoading(true);
-  //   try {
-  //     const postData = {
-  //       text: prompt,           // Sending the text (prompt)
-  //       voice_engine: voiceEngine, // Sending the selected voice engine
-  //       voice: voice,           // Sending the selected voice
-  //       output_format: outputFormat // Send the prompt as the request body
-  //     };
-  //     console.log("POST DATA => ", postData);
-  //     const response = await fetch("http://192.168.31.54:8004/text-to-speech/", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(postData),
-  //     });
-
-  //     console.log("RESPONSE => ", response);
-
-  //     if (!response.ok) {
-  //       throw new Error("Failed to generate audio");
-  //     }
-
-  //     const blob = await response.blob();
-  //     const url = URL.createObjectURL(blob);
-  //     console.log(url)
-  //     setGeneratedAudio(url); // Assuming the response includes an audio URL
-  //   } catch (error) {
-  //     console.error("Error generating audio:", error);
-  //     alert("There was an issue generating the audio. Please try again.");
-  //   } finally {
-  //     setLoading(false);
-  //   }
-  // };
-
-  // ---------------------------
 
   const handleGenerateAudio = async () => {
     if (
@@ -232,17 +191,15 @@ const VoiceOver = () => {
         output_format: outputFormat, // Send the prompt as the request body
       };
 
-      const response = await fetch(
-        "http://192.168.31.54:8004/text-to-speech/",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(postData),
-        }
-      );
+      const response = await fetch(`${backendURL}/text-to-speech/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(postData)
+      });
 
+      
       console.log("RESPONSE =>", response);
 
       if (!response.ok) {

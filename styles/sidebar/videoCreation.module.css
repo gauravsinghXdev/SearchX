@@ -123,6 +123,64 @@
   color: #fff;
 }
 
+.upgradeSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  background-color: #2e2d2b;
+  border: 1px solid;
+  padding: 10px 0px;
+  box-shadow: #171717;
+  border-radius: 10px;
+}
+
+.upgradeButton {
+  width: 100%;
+  background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+  margin-top: 10px;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  border-top: 2px solid gray;
+}
+
+.upgradeSection {
+  text-align: center;
+  padding: 5px;
+}
+
+.imageContainer {
+  background-image: url("../../public/spad.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  padding: 0px 20px;
+  color: #ffffff;
+}
+
+.crown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 0rem;
+  margin-bottom: 10px;
+}
 
 .upgradeSection {
   display: flex;
