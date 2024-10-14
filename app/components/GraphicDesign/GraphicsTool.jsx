@@ -34,13 +34,14 @@ const GraphicsTool = () => {
   const [bodyFont, setBodyFont] = useState("Inter (Regular)");
   const [generatedImageUrl, setGeneratedImageUrl] = useState(offerimage); // To store the generated graphic
   const handleGenerateClick = async () => {
+    const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app"
     // Prepare the data to send to the backend
     const data = {
       prompt,
     };
     try {
       // API call to generate the graphic
-      const response = await fetch("http://192.168.1.30:8004/graphic/", {
+      const response = await fetch(`${backendURL}/graphic/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
