@@ -25,6 +25,7 @@ import education from "../../../public/education.png";
 import creative from "../../../public/creative.png";
 import arow from "../../../public/graphics/arow.png";
 
+
 const GraphicsTool = () => {
   const [prompt, setPrompt] = useState("");
   const [primaryColors, setPrimaryColors] = useState([]);
@@ -87,12 +88,15 @@ const GraphicsTool = () => {
                  <div className={styles.brandingGuidelines}>
                  <div className={styles.designBranding}>
                   <h2>Design Preferences & Branding Guidelines</h2>
+                 
+                  <div className={styles.arrowdropdown}>
                   <select className={styles.fontSelects}>
-                    <option></option>
+                  <option></option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                   </select>
+                 </div>
                  </div>
                  <p>
                   Maintain brand consistency through colors, fonts, logos, and
@@ -141,12 +145,14 @@ const GraphicsTool = () => {
                         </select>
                       </div>
                       <div className={styles.typography}>
-                        <label>Body text (Primary Font)</label>
+                        <label className={styles.lableText}>Body text (Primary Font)</label>
+                        <div className={styles.fontdropdown}>
                         <select className={styles.fontSelect}>
                           <option>Inter (Bold)</option>
                           <option>Roboto (Regular)</option>
                           <option>Arial (Regular)</option>
                         </select>
+                        </div>
                       </div>
                     </div>
                     <div className={styles.logoUpload}>
@@ -172,12 +178,14 @@ const GraphicsTool = () => {
                       visual appeal.
                     </p>
                   </div>
+                  <div className={styles.arrowdropdown}>
                   <select className={styles.fontSelects}>
                     <option></option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
                   </select>
+                  </div>
                  </div>
                   { /* Icon Style */}
                  <div className={styles.iconStyles}>
@@ -186,7 +194,7 @@ const GraphicsTool = () => {
                       <div className={styles.box1}></div>
                       <div className={styles.iconContainer}>
                         <h className={styles.heading}>Portrait(9:16)</h>
-                        <small>Reels, shorts, TikTok, Stories, etc</small>
+                        <small className={styles.smallheading}>Reels, shorts, TikTok, Stories, etc</small>
                       </div>
                     </div>
                     <div className={styles.optionCard}>
@@ -195,19 +203,19 @@ const GraphicsTool = () => {
                       </div>
                       <div className={styles.iconContainer}>
                         <h className={styles.heading}>Squqre(1:1)</h>
-                        <small>Meta Ads, Instagram, Facebook, etc</small>
+                        <small className={styles.smallheading}>Meta Ads, Instagram, Facebook, etc</small>
                       </div>
                     </div>
-                    <div className={styles.optionCard}>
+                    <div className={styles.optionCard1}>
                       <div className={styles.box3}></div>
                       <div className={styles.iconContainer}>
                         <h className={styles.heading}>Landscape(16:9)</h>
-                        <small>Youtube, Linkedin,Tv, etc/</small>
+                        <small className={styles.smallheading}>Youtube, Linkedin,Tv, etc</small>
                       </div>
                     </div>
-                    <div className={styles.optionCard}>
+                    <div className={`${styles.optionCardtext} ${styles.optionCard2}`}>
                       <div className={`${styles.cardIcons} ${styles.headings}`}>
-                        <Image src={arow} alt="arow" width={16} height={16} />
+                        <Image src={arow} alt="arow" width={16} height={16} className={styles.arowtext}/>
                       </div>
                       <div
                         className={`${styles.iconContainer} ${styles.headings}`}
@@ -228,12 +236,14 @@ const GraphicsTool = () => {
                         visual appeal.
                       </p>
                     </div>
+                    <div className={styles.arrowdropdown}>
                     <select className={styles.fontSelects}>
                       <option></option>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
                     </select>
+                    </div>
                   </div>
                   {/* Icon Style */}
                   <div className={styles.iconStyle}>
@@ -255,9 +265,10 @@ const GraphicsTool = () => {
                           <Image
                             src={robos}
                             alt="robo"
-                            width={200}
-                            height={200}
+                            width={56}
+                            height={34}
                             layout="responsive"
+                            className={styles.roboimagess}
                           />
                         </div>
                         <div className={styles.iconContainer}>
@@ -301,11 +312,11 @@ const GraphicsTool = () => {
                 </div>
                 <div className={styles.iconContainer}>
                   <h>Premium stock photos</h>
-                   <small className={styles.smallheading}>Generic images to represent abstract concepts</small>
+                   <small className={styles.smallheading}>Generic images to represent <br></br>abstract concepts</small>
                 </div>
               </div>
               <div className={styles.optionCard}>
-                <div className={styles.imagecardIcon}>
+                <div className={styles.imagecardIcons}>
                   <Image
                     src="/Images/Custom.png"
                     alt="robo"
@@ -318,7 +329,7 @@ const GraphicsTool = () => {
                 <div className={styles.iconContainer}>
                   <h>Custom Images</h>
                 
-                  <small className={styles.smallheading} >Unique images tailored to your brand</small>
+                  <small className={styles.smallheading} >Unique images tailored to <br></br>your brand</small>
                 </div>
               </div>
               <div className={styles.optionCard}>
@@ -335,7 +346,7 @@ const GraphicsTool = () => {
                 <div className={styles.iconContainer}>
                   <h>AI Generated Image</h>
                 
-                  <small className={styles.smallheading}>Generic images to represent abstract concepts</small>
+                  <small className={styles.smallheading}>Generic images to represent<br></br> abstract concepts</small>
                 </div>
               </div>
             </div>
@@ -440,7 +451,7 @@ const GraphicsTool = () => {
                 </div>
                 <div className={styles.iconContainer}>
                   <h>Business-Oriented Presentations</h>
-                  <small className={styles.smallheading}>Business Pitch, Investor Deck
+                  <small className={styles.smallheading}>Business Pitch, Investor Deck<br></br>
                   Sales Presentation, Product Demo</small>
                 
                 </div>
@@ -457,7 +468,7 @@ const GraphicsTool = () => {
                   />
                 </div>
                 <div className={styles.iconContainer}>
-                  <h>Educational & Training Presentations</h>
+                  <h>Educational & Training <br></br>Presentations</h>
                   <small className={styles.smallheading}> 
                   Educational, Training, Workshop, etc.</small>
                 </div>
@@ -474,7 +485,7 @@ const GraphicsTool = () => {
                   />
                 </div>
                 <div className={styles.iconContainer}>
-                  <h>Creative & Conceptual Presentations</h>
+                  <h>Creative & Conceptual <br></br>Presentations</h>
                   <small className={styles.smallheading}>Creative Pitch, Product Demo, etc.</small>
                 </div>
               </div>
