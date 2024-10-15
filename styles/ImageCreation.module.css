@@ -57,17 +57,9 @@
   height: 32px;
   padding: 8px 81px 8px 81px;
   gap: 6.41px;
-<<<<<<< Updated upstream
   /* border-radius: 8px; */
   border: 0.8px solid;
   border-image-source: linear-gradient(180deg, #c5c5c5 0%, #1c1c1c 100%);
-=======
-  border: 0.5px solid;
-  border-top: linear-gradient(180deg, #c5c5c5 0%, #1c1c1c 100%);
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
->>>>>>> Stashed changes
 }
 
 .sidebar .section {
@@ -122,15 +114,6 @@
   padding: 8px 16px 8px 26px;
   gap: 6.41px;
   border-radius: 8px;
-<<<<<<< Updated upstream
-=======
-  color: #686567;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 13.31px;
-  letter-spacing: -0.02em;
-  text-align: left;
->>>>>>> Stashed changes
 }
 .optionButtons {
   flex: 1;
