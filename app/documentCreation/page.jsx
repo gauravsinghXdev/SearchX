@@ -8,7 +8,7 @@ const page = () => {
     <>
       <DocumentCreation>
         <div>
-          <DocumentCreationFirst />
+          <DocumentCreationFourth />
         </div>
       </DocumentCreation>
     </>
