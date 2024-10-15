@@ -13,13 +13,23 @@ import SeparatorWithText from "../Seperators/Seperators";
 
 const PresentationPage = () => {
   const [prompt, setPrompt] = useState("");
-  const [primary_color, setPrimary_color] = useState("");
-  const [secondary_color, setSecondary_color] = useState("");
+  const [primary_color, setPrimary_color] = useState("#ffffff");
+  const [secondary_color, setSecondary_color] = useState("#000000");
   const [sections, setSections] = useState([]);
   const [loading, setLoading] = useState(false);
+  const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app"
 
   // Function to handle API call
   const handleGeneratePresentation = async () => {
+    if (!/^#[0-9A-F]{6}$/i.test(primary_color) || !/^#[0-9A-F]{6}$/i.test(secondary_color)) {
+      console.error("Invalid color format. Colors must be in '#rrggbb' format.");
+      return;
+    }
+
+    if (!prompt.trim()) {
+      console.error("Prompt is required.");
+      return;
+    }
     console.log("Prompt:", prompt, "Type:", typeof prompt);
     console.log("Primary Color:", primary_color, "Type:", typeof primary_color);
     console.log(
@@ -36,15 +46,19 @@ const PresentationPage = () => {
         secondary_color: secondary_color
       }
       const response = await fetch(
-        "http://192.168.1.30:8004/generate-presentation/",
+       `${backendURL}/generate-presentation/`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify( dataGen ),
-        }
-      );
+          body: JSON.stringify({
+            prompt: prompt,
+            primary_color: primary_color,
+            secondary_color: secondary_color,
+          }),
+        });
+    
 
       const data = await response.json();
       if (response.ok) {

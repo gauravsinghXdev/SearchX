@@ -113,10 +113,12 @@
   align-items: center;
   margin-top: auto;
   background-color: #2e2d2b;
-  border: 1px solid;
-  padding: 10px 0px;
+  padding: 10px 20px;
   box-shadow: #171717;
-  border-radius: 10px;
+  border-radius: 8px;
+  border: 0.1px solid #535353;
+  border-bottom: none;
+  border-right: none;
 }
 
 .upgradeButton {
