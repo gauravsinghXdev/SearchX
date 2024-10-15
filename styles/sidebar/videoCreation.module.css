@@ -15,7 +15,6 @@
   height: 72px;
   gap: 0px;
   border-bottom: 0.7px solid #3F3F3F;
-  opacity: 0px;
 
 }
 
@@ -272,7 +271,6 @@
   height: 104px;
   gap: 0px;
   border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
 }
 
 .toolsimage h1 {
@@ -439,7 +437,6 @@
   height: 226px;
   gap: 0px;
   border: 0px 0px 0.7px 0px;
-  opacity: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -506,7 +503,6 @@ linear-gradient(128.33deg, #171C5E 28.92%, #855DFC 72.08%);
   height: 106px;
   gap: 0px;
   border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
 }
 
 .profileContainer {

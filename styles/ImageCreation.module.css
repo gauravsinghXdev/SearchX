@@ -41,7 +41,6 @@
   padding: 11px 137px 62px 16px;
   gap: 6.41px;
   border: 8px;
-  opacity: 0px;
 }
 
 .sidebar .generateButton {
@@ -60,7 +59,6 @@
   padding: 8px 81px 8px 81px;
   gap: 6.41px;
   /* border-radius: 8px; */
-  opacity: 0px;
   border: 0.8px solid;
   border-image-source: linear-gradient(180deg, #c5c5c5 0%, #1c1c1c 100%);
 }
@@ -87,7 +85,6 @@
   padding: 3.5px 11px 3.5px 11px;
   gap: 6.41px;
   border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
 }
 
 .sidebar .optionButton {
@@ -104,7 +101,6 @@
   padding: 8px 16px 8px 26px;
   gap: 6.41px;
   border-radius: 8px;
-  opacity: 0px;
 }
 .optionButtons {
   flex: 1;
@@ -289,7 +285,6 @@
   padding: 3.5px 11px 3.5px 11px;
   gap: 6.41px;
   border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
 }
 .heading {
   font-size: 14px;
