@@ -51,7 +51,6 @@
   top: 1.67px;
   left: 1.67px;
   gap: 0px;
-  opacity: 0px;
 }
 .text {
   margin-left: 10px;
@@ -710,7 +709,6 @@
   height: 32px;
   gap: 6.41px;
   border-radius: 4px;
-  opacity: 0px;
   border: 0.5px solid white;
 }
 .box3 {
@@ -723,7 +721,6 @@
   height: 24px;
   gap: 6.41px;
   border-radius: 4px;
-  opacity: 0px;
   border: 0.5px solid white;
 }
 .heading {
@@ -756,7 +753,6 @@
   top: 0.16px;
   gap: 0px;
   border-radius: 8px 0px 0px 0px;
-  opacity: 0px;
 }
 .smallheading {
   margin-top: 3px;

@@ -157,6 +157,14 @@
   font-size: 20px; /* Increase icon size */
   color: #686567;
 }
+.voiceIcon{
+  border: 1.5px solid #686567;
+  font-size: 20px; /* Increase icon size */
+  color: #686567;
+  padding: 2px;
+  border-radius: 5px;
+
+}
 
 .sidebar.closed .menuIcon {
   font-size: 22px; /* Adjust icon size when sidebar is closed */
