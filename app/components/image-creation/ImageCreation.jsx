@@ -26,6 +26,8 @@ import image9 from '../../../public/image9.png';
 import image10 from '../../../public/image10.png';
 import image11 from '../../../public/image11.png';
 import image12 from '../../../public/image12.png';
+import { FiCopy } from "react-icons/fi";
+import { VscRegex } from "react-icons/vsc";
 
 const myCreationsData = [
   {
@@ -54,12 +56,17 @@ const myCreationsData = [
   }
 ];
 
-
-
 const ImageCreation = () => {
   const [isMyCreations, setIsMyCreations] = useState(true);
-
+  const [selectedImage, setSelectedImage] = useState(null); // Track clicked image
   
+  const handleImageClick = (image) => {
+    setSelectedImage(image); // Set clicked image
+  };
+  
+  const closeModal = () => {
+    setSelectedImage(null); // Close modal
+  };
 
   return (
     <div className={styles.imageCreationSection}>
@@ -85,71 +92,109 @@ const ImageCreation = () => {
           <div className={styles.myCreations}>
             <div className={styles.creationGallery}>
             {myCreationsData.map((creation, index) => (
-          <div key={index} className={styles.row}>
-            <div className={styles.creationText}>
-              <div className="flex gap-2 items-center mb-1">
-                <p>{creation.prompt}</p>
-                <IoIosRefresh className={styles.icon} />
-                <IoCopyOutline className={styles.icon} />
+              <div key={index} className={styles.row}>
+                <div className={styles.creationText}>
+                  <div className="flex gap-2 items-center mb-1">
+                    <p>{creation.prompt}</p>
+                    <IoIosRefresh className={styles.icon} />
+                    <IoCopyOutline className={styles.icon} />
+                  </div>
+                  <div className={styles.icons}>
+                    <FaShareAlt className={styles.icon} />
+                    <FaTrash className={styles.icon} />
+                    <FaEllipsisV className={styles.icon} />
+                  </div>
+                </div>
+                <div className={styles.images}>
+                  {creation.images.map((image, idx) => (
+                    <Image
+                      key={idx}
+                      src={image}
+                      alt={creation.title}
+                      className={styles.creationImage}
+                      onClick={() => handleImageClick(image)} // Handle image click
+                    />
+                  ))}
+                </div>
               </div>
-              <div className={styles.icons}>
-                <FaShareAlt className={styles.icon} />
-                <FaTrash className={styles.icon} />
-                <FaEllipsisV className={styles.icon} />
-              </div>
-            </div>
-            <div className={styles.images}>
-              {creation.images.map((image, idx) => (
-                <Image
-                  key={idx}
-                  src={image}
-                  alt={creation.title}
-                  className={styles.creationImage}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+            ))}
             </div>
           </div>
         ) : (
-          
           <div>
-          <div className={styles.imageContainer}>
-           <div className={styles.combineimage}> 
-            <Image src={image1} className={styles.image} alt='Image'/>
-            <Image src={image7} alt='Image'/>
-            <Image src={image8} alt='Image' />
-           </div>  
+            <div className={styles.imageContainer}>
+              <div className={styles.combineimage}> 
+                <Image src={image1} className={styles.image} alt='Image' onClick={() => handleImageClick(image1)} />
+                <Image src={image7} alt='Image' onClick={() => handleImageClick(image7)} />
+                <Image src={image8} alt='Image' onClick={() => handleImageClick(image8)} />
+              </div>  
 
-           <div className={styles.combineimage}>
-            <Image src={image2} alt='Image'/>
-            <Image src={image3} alt='Image'/>
-            <Image src={image9} alt='Image'/>
-           </div>
+              <div className={styles.combineimage}>
+                <Image src={image2} alt='Image' onClick={() => handleImageClick(image2)} />
+                <Image src={image3} alt='Image' onClick={() => handleImageClick(image3)} />
+                <Image src={image9} alt='Image' onClick={() => handleImageClick(image9)} />
+              </div>
 
-           <div className={styles.combineimage}>
-           <Image src={image4} alt='Image'/>
-           <Image src={image10} alt='Image'/>
+              <div className={styles.combineimage}>
+                <Image src={image4} alt='Image' onClick={() => handleImageClick(image4)} />
+                <Image src={image10} alt='Image' onClick={() => handleImageClick(image10)} />
+              </div>
 
-           </div>
-
-           <div className={styles.combineimage}>
-           <Image src={image5} alt='Image'/>
-           <Image src={image6} alt='Image'/>
-            <Image src={image11} alt='Image'/>
-            <Image src={image12} alt='Image'/>
-           </div>
-
-          </div>
-          
+              <div className={styles.combineimage}>
+                <Image src={image5} alt='Image' onClick={() => handleImageClick(image5)} />
+                <Image src={image6} alt='Image' onClick={() => handleImageClick(image6)} />
+                <Image src={image11} alt='Image' onClick={() => handleImageClick(image11)} />
+                <Image src={image12} alt='Image' onClick={() => handleImageClick(image12)} />
+              </div>
+            </div>
           </div>
         )}
       </div>
+
+      {/* Modal for image popup */}
+     
+
+      {selectedImage && (
+      <div className={styles.modalOverlay} onClick={closeModal}>
+      <div className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>
+      <div className={styles.imageSection}>
+        <Image src={selectedImage} alt="Selected" className={styles.selectedImage} />
+      </div>
+
+      <div className={styles.contentSection}>
+        <h1>Cat Concept Mobile App</h1>
+        <button className={styles.mobileApp}>Cat concept mobile app</button>
+
+       <div className={styles.buttonscopy}>
+      <button className={styles.primaryButton}>
+        <FiCopy /> Copy Prompt
+      </button>
+      <button className={styles.secondaryButton}>
+        <VscRegex /> Regenerate
+      </button>
+    </div>
+
+        <h2>Rendering Preferences</h2>
+        <ul className={styles.unorderlist}>
+          <li>Style: Anime Fantasy</li>
+          <li>Lighting: Dynamic</li>
+          <li>Focus: Medium Close</li>
+          <li>Resolution: 4K</li>
+          <li>Color Mode: Vibrant</li>
+        </ul>
+        <div className={styles.actionButtons}>
+          <button className={styles.downloadButton} onClick={closeModal}>Download</button>
+          <button className={styles.closeButton} onClick={closeModal}>Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 };
 
 export default ImageCreation;
-
 
