@@ -554,6 +554,13 @@
   border: 1px solid #ddd;
 }
 
+.audioTagsContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
 .audioInfo {
   display: flex;
   flex-direction: column;
