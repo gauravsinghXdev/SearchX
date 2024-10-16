@@ -60,7 +60,7 @@ Creation</Link> <br />
                 <Link href={'/voiceOver'}>Voiceover</Link> <br />
                 <Link href={'/documentcreation'}>Document Creation</Link><br />
                 <Link href={'/adscreative'}>Ad Creative</Link><br />
-                <Link href={'/slidecreation'}>Slide Creation</Link> <br />
+                <Link href={'/Presentation'}>Slide Creation</Link> <br />
               </ul>
             </div>
             <div className="mr-16">
@@ -69,7 +69,7 @@ Creation</Link> <br />
               </h3>
               <ul className={`${style.listItem} text-[#686567] leading-10`}>
                 <Link href={'/tools'}>Video Creation</Link><br />
-                <Link href={'/tools/image-creation'}>Idea Generation</Link> <br />
+                <Link href={'/ideageneration'}>Idea Generation</Link> <br />
                 <Link href={'/graphicstool'}>Graphic Design</Link> <br />
                 <Link href={'#'}>Website UI</Link><br />
                 <Link href={'#'}>Data Visualization</Link>

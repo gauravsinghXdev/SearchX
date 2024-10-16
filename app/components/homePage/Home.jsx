@@ -502,11 +502,12 @@ const Home = () => {
           
           </ul>
         </nav>
-        <button
+        <Link
+          href={'/ToolsHome'}
           className={` ${style.button1} px-5 py-1 rounded-[39px] font-[400] text-[13px]`}
         >
           Start for free
-        </button>
+        </Link>
       </header>
 
       <main className="container mx-auto flex flex-col justify-center   py-12">
@@ -520,11 +521,12 @@ const Home = () => {
           and elevates your creative <br /> process.
         </p>
         <div className="flex justify-center mb-12">
-          <button
+          <Link
+            href={'/ToolsHome'}
             className={` ${style.button1} px-9 py-3 rounded-[39px] text-[16px]`}
           >
             Start for free
-          </button>
+          </Link>
         </div>
         <div className={`${style.parent} `}>
           <div className={`${style.first}`}>
@@ -875,7 +877,7 @@ const Home = () => {
 
 const FeatureCard = ({ icon, title, description }) => (
   <div
-    className={`${style.box} bg-[#1C1C1C] flex justify-center  items-center gap-[24px] p-10 rounded-[24px]`}
+    className={`${style.box} bg-[#1C1C1C] flex justify-center  items-center gap-[24px] p-10 rounded-[24px] cursor-pointer`}
   >
     <div className="">
       <Image src={icon} alt="robo" width={56} className="rounded-lg mr-1" />
@@ -904,7 +906,6 @@ const FeatureCard = ({ icon, title, description }) => (
 // );
 
 const SmallCard = ({ text, author, role, avatar }) => {
-  console.log("avatar is =>", avatar);
   return (
   <div className={`${style.smallCard} p-8 mb-3 rounded-[24px]`}>
     <div className={`${style.scrollcontainer}`}>
@@ -915,7 +916,7 @@ const SmallCard = ({ text, author, role, avatar }) => {
       </div>
     </div>
     <div className="flex items-center gap-4">
-      <Image width={40} height={40} scr={avatar.avatarimg.src} alt={author} className="w-10 h-10 rounded-full" />
+      <Image width={40} height={40} src={avatar.avatarimg.src} alt={author} className="w-10 h-10 rounded-full" />
       <div>
         <p className=" text-[14px] text-[#c9c9c9]-[500]">{author}</p>
         <p className="text-[11px] text-[#c9c9c9]-300 italic">{role}</p>
