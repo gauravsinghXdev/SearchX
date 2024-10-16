@@ -15,6 +15,14 @@
 .button1 {
   background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
 }
+
+.button1:hover {
+  background: linear-gradient(110.25deg, #6949FF 14.25%, #8A71FF 47.06%);
+}
+.listitem {
+  border-radius: 24px;
+  /* other styles */
+}
 .parent {
   margin: auto;
   /* width: 70.3125rem !important;
@@ -101,24 +109,14 @@
   transition: color 0.3s, border-color 0.3s; /* Smooth transition for color and border */
 }
 
-.listitem:hover {
+.listitem:hover,.listitem.active  {
+  border: 1px solid #855DFC;
   cursor: pointer;
-  color: #ffff; /* Change text color on hover */
-  border-color: transparent; /* Keeps it transparent until hover */
-  border-radius: 24px;
-}
-
-.listitem:hover {
-  border-image-source: linear-gradient(
-    31.33deg,
-    #c0b3ff 31.96%,
-    #6949ff 60.21%
-  );
-  border-image-slice: 1;
+  color: #ffff; 
   border-style: solid; /* Ensure a solid border style on hover */
   border-width: 2px; /* Adjust width as needed */
   border-radius: 24px;
-}
+  box-shadow: inset 0px 2px 3px #6949FF66; /* Increased shadow size and color */}
 
 .bigCardDivTwo {
   max-width: 1158px;
@@ -294,10 +292,11 @@
 
 .smallCard {
   background: linear-gradient(15.89deg, #171717 -0.76%, #272727 87.17%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .scrollcontainer {
-  width: 240px; /* Width of the container */
-  height: 154px; /* Height of the container */
   overflow: hidden; /* Prevent default scrollbar */
   position: relative; /* Required for pseudo-element */
 }
@@ -311,3 +310,18 @@
 .scrollcontent::-webkit-scrollbar {
   display: none; /* Hide scrollbar */
 }
+
+.hoverGradientBorder {
+  padding: 10px;
+    gap: 10px;
+    border-radius: 15px;
+    border: 1px solid transparent; /* Border initially transparent */
+    transition: all 0.10s ease-in-out; 
+  }
+  
+  
+  .hoverGradientBorder:hover{
+    border-radius: 15px;
+    border: 1px solid #855DFC;
+    cursor: pointer;
+  }

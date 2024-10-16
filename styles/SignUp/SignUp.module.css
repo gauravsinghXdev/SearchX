@@ -1,0 +1,362 @@
+.mainHead {
+    background-color: #171717;
+    min-height: 130vh;
+    color: #C8C8C8;
+  
+  }
+  
+  .logo {
+    margin-bottom: 9.375rem; /* 150px to rem */
+   }
+  
+  .logo img {
+    position: relative;
+    width: 9.94rem !important; /* 159.03px to rem */
+    top: 2.65rem; /* 42.36px to rem */
+    left: 8.73rem; /* 139.7px to rem */
+    gap: 0px;
+    opacity: 1;
+  
+  }
+  
+  .CreateAc {
+    margin-top: 1.875rem; /* 30px to rem */
+    width: 22.5rem; /* 360px to rem */
+    height: 32.5rem; /* 520px to rem */
+    top: 17.25rem; /* 276px to rem */
+    left: 7.44rem; /* 119px to rem */
+    padding: 1.5625rem 0px 0px 0px; /* 25px to rem */
+    gap: 0px;
+    border-radius: 1.5rem; /* 24px to rem */
+    opacity: 0px;
+    background-color: #1C1C1C;
+    top: 2rem; /* 32px to rem */
+    left: 2rem; /* 32px to rem */
+    gap: 1.25rem; /* 20px to rem */
+    opacity: 0px;
+  }
+  
+  .Container {
+    display: flex;
+    justify-content: right;
+    gap: 0.9375rem; /* 15px to rem */
+  }
+  
+  .rightsection {
+    /* position: absolute; */
+    width: 63rem; /* 1008px to rem */
+    height: 41rem; /* 656px to rem */
+    /* left: 405px; */
+    padding: 0px 0px 1.375rem 1.9375rem; /* 22px and 31px to rem */
+    gap: 0px;
+    border-radius: 1.5rem 0px 0px 0px; /* 24px to rem */
+    opacity: 0px;
+  
+  
+  
+  }
+  
+  .CreateH1 {
+    font-size: 1.25rem; /* 20px to rem */
+    font-weight: 500;
+    line-height: 1.5125rem; /* 24.2px to rem */
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #C9C9C9;
+  }
+  
+  .createPara {
+    margin-top: 0.3125rem; /* 5px to rem */
+    font-size: 0.6875rem; /* 11px to rem */
+    font-weight: 500;
+    line-height: 0.95rem; /* 15.2px to rem */
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #C9C9C9;
+  }
+  
+  .allbtn {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem; /* 10px to rem */
+    margin: 1.25rem auto 0; /* 20px to rem */
+    width: 100%;
+  }
+  
+  .allbtn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem; /* 40px to rem */
+    padding: 0.75rem 1.25rem; /* 12px 20px to rem */
+    border-radius: 1rem; /* 16px to rem */
+    background-color: #171717;
+    color: #C8C8C8;
+    font-size: 0.8125rem; /* 13px to rem */
+    border: none;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .allbtn button img {
+    margin-right: 0.625rem; /* 10px to rem */
+    width: 1.25rem; /* 20px to rem */
+    height: auto;
+  }
+  
+  .allbtn button:hover {
+    background-color: #333333;
+    cursor: pointer;
+  }
+  .orContainer {
+    margin-top: 0.3125rem; /* 5px to rem */
+    margin-bottom: 0.3125rem; /* 5px to rem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem; /* 10px to rem */
+    width: 12.5rem; /* 200px to rem */
+    margin-left: auto;  /* Center the entire container */
+    margin-right: auto; /* Center the entire container */
+  }
+  
+  .orContainer p {
+    margin: 0;
+    padding: 0 0.625rem; /* 10px to rem */
+    font-size: 0.875rem; /* 14px to rem */
+    color: #C8C8C8;
+    text-align: center; /* Center text */
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 0.0625rem; /* 1px to rem */
+    background-color: #3F3F3F;
+  }
+  
+  
+  
+  .inputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem; /* 8px to rem */
+    width: 80%;
+    margin-left: 2.1875rem; /* 35px to rem */
+    margin-right: 2.1875rem; /* 35px to rem */
+  }
+  
+  .icon {
+    position: absolute;
+    left: 1.25rem; /* 20px to rem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .emailInput {
+    padding: 0.5rem 0.625rem 0.5rem 2.5rem; /* 8px 10px 8px 40px to rem */
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 0.8125rem; /* 13px to rem */
+    border-radius: 1rem; /* 16px to rem */
+    background-color: #2D2D2D;
+    color: #C8C8C8;
+    height: 2.5rem; /* 40px to rem */
+  }
+  
+  .emailInput::placeholder {
+    color: #888;
+  }
+  
+  .emailInput:focus {
+    border-color: #007BFF;
+  }
+  
+  .signupbtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem; /* 40px to rem */
+    padding: 0.75rem 1.25rem; /* 12px 20px to rem */
+    border-radius: 2.4375rem; /* 39px converted to rem */
+  
+    background: linear-gradient(110.25deg, #8A71FF 14.25%, #6949FF 47.06%);
+    color: #FFFFFF;
+    font-size: 0.8125rem; /* 13px to rem */
+    border: none;
+    width: 80%;
+    margin: auto;
+    margin-top: 0.9375rem; /* 15px to rem */
+    cursor: pointer;
+  }
+  
+  .signupbtn:hover {
+    background: linear-gradient(110.25deg, #6949FF 14.25%, #8A71FF 47.06%);
+  }
+  
+  .termsText {
+    font-size: 0.6875rem; /* 11px to rem */
+    font-weight: 300;
+    line-height: 1.0625rem; /* 17px to rem */
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-top: 1.25rem; /* 20px to rem */
+    margin-left: 2.5rem; /* 40px to rem */
+    margin-right: 2.5rem; /* 40px to rem */
+  }
+  
+  .link {
+    text-decoration: underline;
+  }
+  
+  .hrline {
+    margin-top: 1.25rem; /* 20px to rem */
+    border: none;
+    height: 0.0625rem; /* 1px to rem */
+    background-color: #3F3F3F;
+  }
+  
+  .signInText {
+    text-align: center;
+    margin-top: 1.25rem; /* 20px to rem */
+    font-size: 0.8125rem; /* 13px to rem */
+    color: #C8C8C8;
+  }
+  
+  .signInLink {
+    color: #6949FF;
+    text-decoration: none;
+  }
+  
+  .signInLink:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .bigCard {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bigCardDivOne {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* Creates 5 equal columns */
+    list-style-type: none;
+    background-color: #1c1c1c;
+    border-radius: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .listitem {
+    padding: 1.25rem 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 1.5rem;
+    color: #383838;
+  }
+  
+  .listitem:hover {
+    border: 0.0625rem solid transparent;
+    border-radius: 1.5rem;
+    border-image-source: linear-gradient(31.33deg,
+        #c0b3ff 31.96%,
+        #6949ff 60.21%);
+    border-image-slice: 1;
+    background-color: #171717;
+    color: #ffff;
+  }
+  
+  .bigCardDivTwo {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    padding-right: 0;
+    border-radius: 1.5rem;
+    background-color: #1c1c1c;
+  }
+  
+  .bigCardDivinnerIOne {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  }
+  
+  .innerOneA {
+    width: 20.375rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  }
+  
+  .innerOneAboxes {
+    background-color: #171717;
+    padding: 1.2rem 1.5rem;
+    border-radius: 1rem;
+    color: #c9c9c9;
+    font-size: 0.875rem;
+  }
+  
+  .innerOneAboxes {
+    position: relative;
+    padding: 1rem;
+  }
+  
+  .button {
+    position: relative;
+    z-index: 1;
+    padding: 1rem;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(90deg, rgba(179, 163, 255, 0.02) 25.49%,
+  #6949FF 100%);
+    border-radius: 0.5rem;
+    width: 80%;
+  }
+  
+  .bigCardDivinnerITwo {
+    flex: 1; /* This allows it to take up remaining space */
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: flex-end; /* Aligns to the end (right side) */
+  }
+  
+  .bigCardDivinnerITwo img {
+    width: 100%; /* Increases the image width to fill the container */
+    height: 33.125rem; /* Set a fixed height */
+    border-radius: 0.5rem; /* Rounded corners */
+    object-fit: cover; /* Ensures the image covers its container without
+  stretching */
+  }
