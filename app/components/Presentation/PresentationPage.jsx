@@ -1,4 +1,3 @@
-// components/PresentationPage.jsx
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -9,63 +8,58 @@ import { RiRobot2Line } from "react-icons/ri";
 import styles from "@/styles/Presentation/Presentation.module.css";
 import { RiRobot2Fill } from "react-icons/ri";
 import SeparatorWithText from "../Seperators/Seperators";
-// import { BsStars } from "react-icons/bs";
 
 const PresentationPage = () => {
   const [prompt, setPrompt] = useState("");
-  const [primary_color, setPrimary_color] = useState("#ffffff");
-  const [secondary_color, setSecondary_color] = useState("#000000");
-  const [sections, setSections] = useState([]);
+  const [primaryColor, setPrimaryColor] = useState("#c7f7f7");
+  const [secondaryColor, setSecondaryColor] = useState("#a92adc");
   const [loading, setLoading] = useState(false);
-  const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app"
+  const [sections, setSections] = useState([]);
+  const backendURL =
+    process.env.NEXT_PUBLIC_BACKEND_URL ||
+    "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app";
 
-  // Function to handle API call
   const handleGeneratePresentation = async () => {
-    if (!/^#[0-9A-F]{6}$/i.test(primary_color) || !/^#[0-9A-F]{6}$/i.test(secondary_color)) {
-      console.error("Invalid color format. Colors must be in '#rrggbb' format.");
-      return;
-    }
-
-    if (!prompt.trim()) {
-      console.error("Prompt is required.");
-      return;
-    }
-    console.log("Prompt:", prompt, "Type:", typeof prompt);
-    console.log("Primary Color:", primary_color, "Type:", typeof primary_color);
-    console.log(
-      "Secondary Color:",
-      secondary_color,
-      "Type:",
-      typeof secondary_color
-    );
     setLoading(true);
     try {
-      const dataGen={
-        prompt: prompt,
-        primary_color: primary_color,
-        secondary_color: secondary_color
-      }
-      const response = await fetch(
-       `${backendURL}/generate-presentation/`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            prompt: prompt,
-            primary_color: primary_color,
-            secondary_color: secondary_color,
-          }),
-        });
-    
+      const requestBody = {
+        prompt,
+        primary_color: primaryColor,
+        secondary_color: secondaryColor,
+      };
 
-      const data = await response.json();
+      console.log("Request body:", requestBody); // Log the request body
+
+      const response = await fetch(`${backendURL}/generate-presentation/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      const contentType = response.headers.get("Content-Type");
+
       if (response.ok) {
-        // Update sections with the API response data
-        setSections(data.sections);
+        if (
+          contentType === "application/zip" ||
+          contentType ===
+            "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+        ) {
+          const blob = await response.blob();
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "presentation.pptx"; // Set the appropriate filename
+          document.body.appendChild(a);
+          a.click();
+          a.remove();
+        } else {
+          console.error("Unexpected response format:", contentType);
+        }
       } else {
-        console.error("Error generating presentation:", data.message);
+        const errorData = await response.json();
+        console.error("Error generating presentation:", errorData);
       }
     } catch (error) {
       console.error("API call failed:", error);
@@ -157,8 +151,8 @@ const PresentationPage = () => {
                     transparency.
                   </li>
                   <li>
-                    <strong>Customer-Centricity</strong> – Our customers&apos; needs
-                    are central.
+                    <strong>Customer-Centricity</strong> – Our customers&apos;
+                    needs are central.
                   </li>
                   <li>
                     <strong>Innovation</strong> – We seek creative solutions to
@@ -188,7 +182,7 @@ const PresentationPage = () => {
         <div className={styles.addSection}>+ Add Section</div>
       </div>
 
-      <SeparatorWithText text="Prefrences" />
+      <SeparatorWithText text="Preferences" />
       <div className={styles.brandingGuidelines}>
         <h2>Design Preferences & Branding Guidelines</h2>
         <p>
@@ -203,15 +197,15 @@ const PresentationPage = () => {
               <label>Color</label>
               <input
                 type="color"
-                value={primary_color}
-                onChange={(e) => setPrimary_color(e.target.value)}
+                value={primaryColor}
+                onChange={(e) => setPrimaryColor(e.target.value)}
                 className={styles.colorInput}
               />
               <label>Secondary Color</label>
               <input
                 type="color"
-                value={secondary_color}
-                onChange={(e) => setSecondary_color(e.target.value)}
+                value={secondaryColor}
+                onChange={(e) => secondaryColor(e.target.value)}
                 className={styles.colorInput}
               />
             </div>
@@ -222,7 +216,7 @@ const PresentationPage = () => {
                 <div className={styles.colorblockcontainer}>
                   <div
                     className={styles.colorBlock}
-                    style={{ backgroundColor: { primary_color } }}
+                    style={{ backgroundColor: primaryColor }}
                   >
                     +
                   </div>
@@ -272,15 +266,14 @@ const PresentationPage = () => {
                   Drag & drop or <span>Choose file</span>
                 </p>
                 <p className={styles.uploadNote}>
-                  For better result upload: PNG, SVG files
+                  For better results upload: PNG, SVG files
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Logo Upload Section */}
-
+        {/* Visual Elements Section */}
         <div className={styles.visualElements}>
           <h2>Visual Elements</h2>
           <p>
@@ -389,22 +382,22 @@ const PresentationPage = () => {
 
           {/* AI Generated Images */}
           <div className={styles.videoGenerationStyle}>
-            <h3>Ai generated Image</h3>
+            <h3>AI Generated Image</h3>
             <div className={styles.styleOptions}>
               <div className={styles.styleOption}>
                 <Image
-                  src="/Images/VideoCreation/Realistic.png" // Update with the actual image path
+                  src="/Images/VideoCreation/Realistic.png"
                   alt="Realistic"
                   layout="responsive"
-                  width={100} // Adjust width according to your design
-                  height={100} // Adjust height according to your design
+                  width={100}
+                  height={100}
                   className={styles.styleImage}
                 />
                 <span>Realistic</span>
               </div>
               <div className={styles.styleOption}>
                 <Image
-                  src="/Images/VideoCreation/illustration.png" // Update with the actual image path
+                  src="/Images/VideoCreation/illustration.png"
                   alt="Illustration"
                   width={100}
                   height={100}
@@ -415,7 +408,7 @@ const PresentationPage = () => {
               </div>
               <div className={styles.styleOption}>
                 <Image
-                  src="/Images/VideoCreation/Anime.png" // Update with the actual image path
+                  src="/Images/VideoCreation/Anime.png"
                   alt="Anime"
                   width={100}
                   height={100}
@@ -426,7 +419,7 @@ const PresentationPage = () => {
               </div>
               <div className={styles.styleOption}>
                 <Image
-                  src="/Images/VideoCreation/Water Painting.png" // Update with the actual image path
+                  src="/Images/VideoCreation/Water Painting.png"
                   alt="Water Painting"
                   width={100}
                   height={100}
@@ -437,7 +430,7 @@ const PresentationPage = () => {
               </div>
               <div className={styles.styleOption}>
                 <Image
-                  src="/Images/VideoCreation/Sci-fi.png" // Update with the actual image path
+                  src="/Images/VideoCreation/Sci-fi.png"
                   alt="Sci-fi"
                   width={100}
                   height={100}
@@ -448,7 +441,7 @@ const PresentationPage = () => {
               </div>
               <div className={styles.styleOption}>
                 <Image
-                  src="/Images/VideoCreation/Realistic.png" // Update with the actual image path
+                  src="/Images/VideoCreation/Realistic.png"
                   alt="Imaginative"
                   width={100}
                   height={100}
@@ -530,11 +523,9 @@ const PresentationPage = () => {
             <button
               className={styles.generateBtn}
               onClick={handleGeneratePresentation}
-              disabled={loading}
             >
               <BsStars />
-              {loading ? "Generating..." : "Generate Presentation"}
-              {/* Generate Presentation */}
+              Generate Presentation
             </button>
           </div>
         </div>
