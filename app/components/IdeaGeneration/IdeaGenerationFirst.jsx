@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "@/styles/Ideageneration/IdeaGenerationFirst.module.css";
 import element from "@/public/SlideCreationImg/elements.png";
-import { json } from "react-router-dom";
 
 
 const IdeaGenerationFirst = () => {
