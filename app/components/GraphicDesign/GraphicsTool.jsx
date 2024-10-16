@@ -24,6 +24,7 @@ import business from "../../../public/business.png";
 import education from "../../../public/education.png";
 import creative from "../../../public/creative.png";
 import arow from "../../../public/graphics/arow.png";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner"; // Import the spinner
 
 
 const GraphicsTool = () => {
@@ -32,15 +33,17 @@ const GraphicsTool = () => {
   const [secondaryColors, setSecondaryColors] = useState([]);
   const [headlineFont, setHeadlineFont] = useState("Inter (Bold)");
   const [bodyFont, setBodyFont] = useState("Inter (Regular)");
-  const [generatedImageUrl, setGeneratedImageUrl] = useState(offerimage); // To store the generated graphic
+  const [loading, setLoading] = useState(false); // New loading state
+  const [generatedImageUrl, setGeneratedImageUrl] = useState(""); // To store the generated graphic
+
+
   const handleGenerateClick = async () => {
-    const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app"
-    // Prepare the data to send to the backend
-    const data = {
-      prompt,
-    };
+    const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app";
+    const data = { prompt };
+    
+    setLoading(true); 
+
     try {
-      // API call to generate the graphic
       const response = await fetch(`${backendURL}/graphic/`, {
         method: "POST",
         headers: {
@@ -48,17 +51,21 @@ const GraphicsTool = () => {
         },
         body: JSON.stringify(data),
       });
+
       if (response.ok) {
         const result = await response.text();
         console.log("RESULT => ", result);
-        setGeneratedImageUrl(result); // Assuming the API returns a URL or base64 image
+        setGeneratedImageUrl(`${result}`); // Adjust this based on how your backend serves the images
       } else {
         console.error("Failed to generate the graphic");
       }
     } catch (error) {
       console.error("Error generating the graphic:", error);
+    } finally {
+      setLoading(false); 
     }
   };
+
   return (
 
     <div className={styles.container}>
@@ -371,7 +378,7 @@ const GraphicsTool = () => {
               </div>
               <div className={styles.styleOption}>
                 <Image
-                  src="/Images/VideoCreation/illustration.png" // Update with the actual image path
+                  src="/Images/VideoCreation/Illustration.png" // Update with the actual image path
                   alt="Illustration"
                   width={100}
                   height={100}
@@ -498,8 +505,7 @@ const GraphicsTool = () => {
                       className={styles.generateBtn}
                       onClick={handleGenerateClick}
                     >
-                      <BsStars />
-                      Generate 
+                      {loading ? <LoadingSpinner /> : <><BsStars /> Generate</>}
                     </button>
                    </div>
 
@@ -519,12 +525,15 @@ const GraphicsTool = () => {
                   <h1>Add Captions to video</h1>
                 </div>
               </div>
+              
               <Image
-                src={offerimage}
-                alt="offerimage"
+                src={generatedImageUrl}
+                alt="Generated Graphic"
                 className={styles.imageSection}
+                width={500}
+                height={300}
+                layout="responsive"
               />
-      
           </div>
          </div>
       </div>

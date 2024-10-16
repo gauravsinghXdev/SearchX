@@ -63,6 +63,7 @@
 }
 .rightcontainer {
   padding: 0px 20px;
+  width: 90%;
 }
 .leftsection {
   width: 60%;
@@ -117,7 +118,9 @@
 }
 
 .textarea::placeholder {
-  color: white;
+  color: #686567;
+  font-size: 15.77px;
+  font-family: Inter;
 }
 .regenerate {
   padding: 10px;
