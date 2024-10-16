@@ -103,9 +103,9 @@ const ImageCreationSidebar = () => {
       <div className={styles.section}>
         <label className={styles.label}>focus Area</label>
         <div className={styles.buttonGroup}>
-          <button className={styles.optionButtons}>human Figures</button>
-          <button className={styles.optionButtons}>Animals</button>
-          <button className={styles.optionButtons}>No Characters</button>
+          <button className={styles.optionButtons}>Minimal</button>
+          <button className={styles.optionButtons}>Moderate <Image src={crownn} alt='crownn' className={styles.queenicon}/></button>
+          <button className={styles.optionButtons}>High    <Image src={crownn}  alt='crownn'/></button>
           {/* <button className={styles.optionButtons}>No Characters</button> */}
         </div>
       </div>
@@ -119,9 +119,9 @@ const ImageCreationSidebar = () => {
       <div className={styles.section}>
         <label className={styles.label}>character Presence</label>
         <div className={styles.buttonGroup}>
-          <button className={styles.optionButtons}>human Figures</button>
-          <button className={styles.optionButtons}>Animals</button>
-          <button className={styles.optionButtons}>No Characters</button>
+        <button className={styles.optionButtons}>Minimal</button>
+          <button className={styles.optionButtons}>Moderate <Image src={crownn} alt='crownn' className={styles.queenicon}/></button>
+          <button className={styles.optionButtons}>High    <Image src={crownn}  alt='crownn'/></button>
         </div>
       </div>
 
@@ -135,8 +135,8 @@ const ImageCreationSidebar = () => {
         <label className={styles.label}>Pattern Density</label>
         <div className={styles.buttonGroup}>
           <button className={styles.optionButtons}>Minimal</button>
-          <button className={styles.optionButtons}>Moderate  <Image src={crownn}  alt='crownn' className={styles.queenicon}/></button>
-          <button className={styles.optionButtons}>High   <Image src={crownn}  alt='crownn'/></button>
+          <button className={styles.optionButtons}>Moderate <Image src={crownn} alt='crownn' className={styles.queenicon}/></button>
+          <button className={styles.optionButtons}>High    <Image src={crownn}  alt='crownn'/></button>
         </div>
      
 
