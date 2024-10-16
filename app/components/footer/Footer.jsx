@@ -9,6 +9,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { TbBrandTelegram } from "react-icons/tb";
 import { CiYoutube } from "react-icons/ci";
 import { FaTiktok } from "react-icons/fa6";
+import Link from "next/link";
 const SearchpadLogo = ({ className }) => (
   <svg
     className={className}
@@ -54,11 +55,12 @@ const Footer = () => {
                 AI Tools
               </h3>
               <ul className={`${style.listItem} text-[#686567] leading-10`}>
-                <li>Image Creation</li>
-                <li>Voiceover</li>
-                <li>Document Creation</li>
-                <li>Ad Creative</li>
-                <li>Slide Creation</li>
+                <Link href={'/tools/image-creation'}>Image
+Creation</Link> <br />
+                <Link href={'/voiceOver'}>Voiceover</Link> <br />
+                <Link href={'/documentcreation'}>Document Creation</Link><br />
+                <Link href={'/adscreative'}>Ad Creative</Link><br />
+                <Link href={'/slidecreation'}>Slide Creation</Link> <br />
               </ul>
             </div>
             <div className="mr-16">
@@ -66,11 +68,11 @@ const Footer = () => {
                 AI Tools
               </h3>
               <ul className={`${style.listItem} text-[#686567] leading-10`}>
-                <li>Video Creation</li>
-                <li>Idea Generation</li>
-                <li>Graphic Design</li>
-                <li>Website UI</li>
-                <li>Data Visualization</li>
+                <Link href={'/tools'}>Video Creation</Link><br />
+                <Link href={'/tools/image-creation'}>Idea Generation</Link> <br />
+                <Link href={'/graphicstool'}>Graphic Design</Link> <br />
+                <Link href={'#'}>Website UI</Link><br />
+                <Link href={'#'}>Data Visualization</Link>
               </ul>
             </div>
             <div className={`flex gap-[9rem]`}>
@@ -79,8 +81,8 @@ const Footer = () => {
                   Product
                 </h3>
                 <ul className={`${style.listItem} text-[#686567] leading-10`}>
-                  <li>API</li>
-                  <li>Pricing</li>
+                  <Link href={'#'}>API</Link>
+                  <Link href={'#'}>Pricing</Link>
                 </ul>
               </div>
               <div className={` `}>
@@ -88,8 +90,8 @@ const Footer = () => {
                   Product
                 </h3>
                 <ul className={`${style.listItem} text-[#686567] leading-10`}>
-                  <li>API</li>
-                  <li>Pricing</li>
+                  <Link href={'#'}>API</Link>
+                  <Link href={'#'}>Pricing</Link>
                 </ul>
               </div>
             </div>

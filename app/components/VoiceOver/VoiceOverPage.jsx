@@ -8,7 +8,7 @@ import { GoInfo } from "react-icons/go";
 import { MdOutlineTune } from "react-icons/md";
 import { MdInfoOutline } from "react-icons/md";
 import AudioPlayer from '../AudioPlayer/AudioPlayer'; // Import the audio player component
-import 'react-h5-audio-player/lib/styles.css';
+// import 'react-h5-audio-player/lib/styles.css';
 import Image from "next/image";
 import AudioPlayerSidebar from '../AudioPlayerSidebar/Player'
 
