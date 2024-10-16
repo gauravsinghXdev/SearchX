@@ -11,6 +11,8 @@ import emailImg from "@/public/email.png";
 import linkedinImg from "@/public/linkdin.png";
 import instaImg from "@/public/insta.png";
 const VoiceOver = () => {
+
+ 
   return (
     <>
       <div className={styles.voiceOverContainer}>

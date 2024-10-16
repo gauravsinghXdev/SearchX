@@ -482,6 +482,8 @@ const Home = () => {
     },
     // Add more testimonials here...
   ];
+  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
   return (
     <div className="!bg-[#171717] text-white mx-auto  min-h-screen">
       <header className="p-4 px-9 flex justify-between items-center">
@@ -501,11 +503,13 @@ const Home = () => {
             <li>Pricing</li>
           </ul>
         </nav>
+        <Link  href="/ToolsHome">
         <button
           className={` ${style.button1} px-5 py-1 rounded-[39px] font-[400] text-[13px]`}
-        >
+        > 
           Start for free
         </button>
+        </Link>
       </header>
 
       <main className="container mx-auto flex flex-col justify-center   py-12">
@@ -518,32 +522,37 @@ const Home = () => {
           From video creation to web design, our AI-driven platform simplifies
           and elevates your creative <br /> process.
         </p>
+        
         <div className="flex justify-center mb-12">
+        <Link  href="/ToolsHome">
           <button
             className={` ${style.button1} px-9 py-3 rounded-[39px] text-[16px]`}
           >
             Start for free
           </button>
+           </Link>
         </div>
         <div className={`${style.parent} `}>
           <div className={`${style.first}`}>
+          <Link  href="/tools">
             <FeatureCard
               icon={playList}
               title="Video Creation"
               description="Harness AI to instantly generate  engaging videos and short clips with ease."
             />
-
+            </Link>
             <FeatureCard
               icon={megaphone}
               title="Ad Creative"
               description="Create attention-grabbing ads effortlessly with the power of AI."
             />
-
+            <Link href='Presentation'>
             <FeatureCard
               icon={note}
               title="Slide Creation"
               description="Generate polished, professional slides instantly with AI assistance."
             />
+            </Link>
           </div>
           <div className={`${style.second} `}>
             <div className={`${style.secondA} ${style.imgBox}`}>
@@ -563,23 +572,26 @@ const Home = () => {
             />
           </div>
           <div className={`${style.third} `}>
+          <Link href='/voiceOver'>
             <FeatureCard
               icon={mic}
               title="Voiceover"
               description="Let AI produce perfectly tailored voiceovers for your content in seconds."
             />
+            </Link>
 
             <FeatureCard
               icon={webDesign}
               title="Website Design"
               description="Use AI to design beautiful, user-friendly websites in no time."
             />
-
+            <Link href='/graphicstool'>
             <FeatureCard
               icon={pen}
               title="Graphic Design"
               description="AI generates stunning ads and designs that captivate and elevate your brand."
             />
+            </Link>
           </div>
         </div>
 

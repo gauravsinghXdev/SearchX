@@ -65,39 +65,33 @@ const VideoToolSelection = () => {
   const voiceOptions = [
     {
       name: "Nigel",
-      description:
-        "Warm & Friendly (Young Adult Female, American, Midwestern Accent)",
-      audioFile: "/Audio/Audio.mp3",
+      description: "Warm & Friendly (Young Adult Female, American, Midwestern Accent)",
+      audioFile: "s3://voice-cloning-zero-shot/f6c4ed76-1b55-4cd9-8896-31f7535f6cdb/original/manifest.json",
     },
     {
       name: "Valentine",
-      description:
-        "Authoritative & Confident (Middle-Aged Male, British Accent)",
-      audioFile: "/Audio/Audio.mp3",
+      description: "Authoritative & Confident (Middle-Aged Male, British Accent)",
+      audioFile: "s3://voice-cloning-zero-shot/valentine/audio/manifest.json", // Replace with actual URL
     },
     {
       name: "Daphne",
-      description:
-        "Conversational & Relatable (Young Adult Male, Irish Accent)",
-      audioFile: "/Audio/Audio.mp3",
+      description: "Conversational & Relatable (Young Adult Male, Irish Accent)",
+      audioFile: "s3://voice-cloning-zero-shot/daphne/audio/manifest.json", // Replace with actual URL
     },
     {
       name: "Dahlia",
-      description:
-        "Sophisticated & Elegant (Middle-Aged Female, French Accent)",
-      audioFile: "/Audio/Audio.mp3",
+      description: "Sophisticated & Elegant (Middle-Aged Female, French Accent)",
+      audioFile: "s3://voice-cloning-zero-shot/dahlia/audio/manifest.json", // Replace with actual URL
     },
     {
       name: "Gwendolyn",
-      description:
-        "Crisp & Professional (Adult Male, Indian, Neutral Indian Accent)",
-      audioFile: "/Audio/Audio.mp3",
+      description: "Crisp & Professional (Adult Male, Indian, Neutral Indian Accent)",
+      audioFile: "s3://voice-cloning-zero-shot/gwendolyn/audio/manifest.json", // Replace with actual URL
     },
     {
       name: "Marjory",
-      description:
-        "Inspiring & Motivational (Adult Male, Nigerian, Neutral Nigerian Accent)",
-      audioFile: "/Audio/Audio.mp3",
+      description: "Inspiring & Motivational (Adult Male, Nigerian, Neutral Nigerian Accent)",
+      audioFile: "s3://voice-cloning-zero-shot/marjory/audio/manifest.json", // Replace with actual URL
     },
   ];
 
@@ -150,7 +144,7 @@ const VideoToolSelection = () => {
           </div>
         </div>
 
-        {/* Video Script Section */}
+        {/* Audio Script Section */}
         <div className={styles.videoScriptContainer}>
           <div className={styles.videoScript}>
             <div>
@@ -214,6 +208,7 @@ const VideoToolSelection = () => {
             </div>
           </div>
         </div>
+
 
         <div className={styles.generatebtn}>
           <button className={styles.generateButton}>
