@@ -40,6 +40,7 @@ import green from "../../../public/green.png";
 import logoss from "../../../public/icons/logo.png";
 import aiIcon from "../../../public/icons/aiIcon.png";
 import forwordicon from "../../../public/icons/forwordicon.png";
+import Link from "next/link";
 
 export default function ToolsHomeSidebar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -233,10 +234,12 @@ export default function ToolsHomeSidebar() {
             it easy.
           </h2>
           <div className={styles.toolsContainer}>
+          <Link href=''>
             <div className={styles.toolCard}>
               <Image src={imageCreation} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Image Creation</h1>
             </div>
+            </Link>
             <div className={styles.toolCard}>
               <Image src={videoCreation} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Video Creation</h1>
@@ -249,10 +252,12 @@ export default function ToolsHomeSidebar() {
               <Image src={visualization} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Design & Visualization</h1>
             </div>
+            <Link href='/voiceOver'>
             <div className={styles.toolCard}>
               <Image src={voiceover} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Voiceover</h1>
             </div>
+            </Link>
             <div className={styles.toolCard}>
               <Image src={idea} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Idea Generation</h1>
