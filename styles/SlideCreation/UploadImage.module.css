@@ -1,0 +1,122 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    /* padding: 20px; */
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  .title {
+    color: #C9C9C9;
+    font-size: 10px;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .sectionsContainer {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 10px 0px;
+   
+  }
+  .firstBox{
+    width: 32px;
+    /* height: 180px; */
+    border-radius: 8px;
+    background-color:#2B2A2A;
+    ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+    transition: transform 0.2s ease;
+  }
+  .sectionBox {
+    width: 136px;
+    /* height: 180px; */
+    border-radius: 10px;
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .sectionBox:hover {
+    transform: scale(1.05);
+  }
+  
+  .sectionImage {
+    width: 136px;
+    height: 102px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
+  
+  .sectionLabel {
+    font-size: 11px;
+    font-weight: 400;
+    color:#DADADA;
+  
+  }
+  
+  .addSection {
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .addSectionContainer{
+    width: 136px;
+    height: 102px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#2B2A2A;
+  }
+  
+  
+  .lastBox{
+    width: 68px;
+    /* height: 180px; */
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: #171717;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: end;
+    text-align: right;
+    color: #fff;
+    padding-bottom: 10px;
+    transition: transform 0.2s ease;
+  }
+  
+  .imageIcon{
+    width: 136px;
+    height: 102px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 8px;
+  }
