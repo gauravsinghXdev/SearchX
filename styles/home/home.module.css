@@ -149,6 +149,35 @@
   border-radius: 16px;
   color: #c9c9c9;
   font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+/* .button {
+  position: relative; 
+  z-index: 1;
+  padding: 1rem;
+} */
+
+.innerOneAboxes::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 20px;
+  bottom: 0;
+  z-index: -1;
+  width: 80%;
+  border-radius: 0.5rem;
+  background: linear-gradient(90deg, rgba(179, 163, 255, 0.02) 25.49%, #6949FF 100%);
+  opacity: 0;
+}
+.innerOneAboxes:hover::before {
+  opacity: 1; /* Show the before element on hover */
+}
+
+.innerOneAboxes:hover {
+  cursor: pointer;
 }
 
 .midtext {
