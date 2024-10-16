@@ -320,3 +320,41 @@ visibility 0s ease-out 0.5s;
     transform: translateY(20px);
     transition: opacity 0.5s ease-in, transform 0.5s ease-in;
   }
+
+
+  .resultContainer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+    width: 45%;
+    margin-top: 80px;
+  }
+  
+  .resultTitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .resultText {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Animation for fade-in effect */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
