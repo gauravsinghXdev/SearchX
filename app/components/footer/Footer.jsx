@@ -65,7 +65,7 @@ const Footer = () => {
                 <Link href={'/tools/image-creation'}>Image
 Creation</Link> <br />
                 <Link href={'/voiceOver'}>Voiceover</Link> <br />
-                <Link href={'/documentcreation'}>Document Creation</Link><br />
+                <Link href={'/documentCreation'}>Document Creation</Link><br />
                 <Link href={'/adscreative'}>Ad Creative</Link><br />
                 <Link href={'/Presentation'}>Slide Creation</Link> <br />
               </ul>
