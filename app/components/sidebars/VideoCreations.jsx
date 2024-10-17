@@ -34,15 +34,28 @@ const VideoCreationPage = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen(prev => !prev);
   };
+// back arrow 
+
+  const handleBack = () => {
+    if (window.history.length > 1) {
+      window.history.back(); 
+    } else {
+      window.location.href = '/'; 
+    }
+    };
+
   return (
     <>
   <div className={styles.navsection}>
   <div className={styles.logo}>
-    <FaArrowLeftLong style={{ width: '16px', height: '16px' }} className={styles.arrow} />
 
+  <div className={styles.arrowIcon} onClick={handleBack} style={{ cursor: 'pointer' }}>
+    <FaArrowLeftLong style={{ width: '16px', height: '16px' }} className={styles.arrow} />
+  </div>
     <Image src={logoss} alt="Logo Spad" style={{ width: '40px', height: '40px' }} />
     <h1 className={styles.logoHeading}>Searchpad</h1>
   </div>
+ 
   
   <div className={styles.buttons}>
     <div className={styles.tokenContainer}>

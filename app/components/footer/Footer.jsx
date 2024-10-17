@@ -9,7 +9,9 @@ import { CiLinkedin } from "react-icons/ci";
 import { TbBrandTelegram } from "react-icons/tb";
 import { CiYoutube } from "react-icons/ci";
 import { FaTiktok } from "react-icons/fa6";
+import spadlogo from '../../../public/Home/logo.png'
 import Link from "next/link";
+
 const SearchpadLogo = ({ className }) => (
   <svg
     className={className}
@@ -43,12 +45,17 @@ const Footer = () => {
     <footer className="bg-[#1c1c1c]  py-16 px-[10rem]">
       <div className="container px-18 mx-auto">
         <div className="flex justify-between  items-start mb-12">
-          <div className="flex-shrink-0 flex gap-1">
+          {/* <div className="flex-shrink-0 flex gap-1">
             <Image src={logo} alt={logo} width={40} />
+        
             <span className="text-[33.93px] font-[500] text-white">
               Searchpad
             </span>
-          </div>
+          </div> */}
+<div style={{ display: 'flex', alignItems: 'center' }}>
+  <Image src={spadlogo} alt="Logo Spad" style={{ width: '40px', height: '40px' }} />
+  <h1 className={style.logoHeading } style={{ marginLeft: '0px' }}>Searchpad</h1>
+</div>
           <div className=" flex justify-center gap-[5rem]">
             <div className="">
               <h3 className="text-[16px] font-[400] text-white mb-4">

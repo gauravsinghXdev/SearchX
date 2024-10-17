@@ -1,5 +1,6 @@
 import styles from '../../../styles/GaphicsDesign/GraphicsDesign.module.css';
 import Image from 'next/image';
+import Link from "next/link";
 import frame1 from '../../../public/graphics/frame1.png';
 import frame2 from '../../../public/graphics/frame2.png';
 import frame3 from '../../../public/graphics/Frame3.png';
@@ -22,6 +23,7 @@ const GraphicDesign = () => {
         </p>
       </header>
 
+      <Link href={'/graphicstool'}>
       <section className={styles.section}>
         <div className={styles.headingRow}>
           <h2 className={styles.sectionHeading}>Marketing & Promotional Graphics</h2>
@@ -299,6 +301,7 @@ const GraphicDesign = () => {
         </div>
 
       </section>
+      </Link>
     </div>
     </>
   );
