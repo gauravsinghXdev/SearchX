@@ -1,15 +1,12 @@
 'use client'
 
 import React, {useState} from "react";
-import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import style from "@/styles/documentCreation/documentcreationsecon.module.css";
 import sparkle from "@/public/VoiceOver/sparkles.png";
 
 const DocumentCreationSecond = () => {
   const [inputText, setInputText] = useState("");
-  const [loading, setLoading] = useState(false);
-  const router = useRouter();
   const [editorContent, setEditorContent] = useState("");
 
   // Function to handle API call for document generation
@@ -21,7 +18,6 @@ const DocumentCreationSecond = () => {
     }
 
     try {
-      setLoading(true);
       const response = await fetch(`${backendURL}/document_generation/`, {
         method: "POST",
         headers: {
@@ -41,10 +37,7 @@ const DocumentCreationSecond = () => {
 
         // Default file name for the downloaded document
         let fileName = "generated_document.docx"; // For .docx files
-        router.push({
-          pathname: '/documentCreation/DocumentCreationThird',
-          query: { fileUrl: url, fileName }
-        });
+
         // If the server sends a Content-Disposition header with filename
         const contentDisposition = response.headers.get("Content-Disposition");
         if (contentDisposition) {
@@ -64,11 +57,8 @@ const DocumentCreationSecond = () => {
       }
     } catch (error) {
       console.error("Error in document generation:", error);
-    } finally {
-      setLoading(false);
     }
   };
-
 
   return (
     <div className="bg-[#1C1C1C] text-white min-h-screen">
@@ -93,7 +83,6 @@ const DocumentCreationSecond = () => {
         <button
           onClick={handleGenerateDocument}
           className={`${style.icon} w-full text-white font-[300] text-[13px] py-2 px-4 rounded-lg flex items-center justify-center mb-8`}
-          disabled={loading}
         >
           <Image
             src={sparkle}
