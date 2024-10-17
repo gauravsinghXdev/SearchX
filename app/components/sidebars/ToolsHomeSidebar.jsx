@@ -282,7 +282,7 @@ export default function ToolsHomeSidebar() {
               <h1 className={styles.design}>Idea Generation</h1>
             </div>
             </Link>
-            <Link href='/documentcreation'>
+            <Link href='/documentCreation'>
             <div className={styles.toolCard}>
               <Image src={documents} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Document Creation</h1>
