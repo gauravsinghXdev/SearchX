@@ -482,8 +482,6 @@ const Home = () => {
     },
     // Add more testimonials here...
   ];
-  // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
   return (
     <div className="!bg-[#171717] text-white mx-auto  min-h-screen">
       <header className="p-4 px-9 flex justify-between items-center">
@@ -493,23 +491,22 @@ const Home = () => {
           </span>
           {/* <span className="text-xl">Searchpad</span> */}
         </div>
-        <nav>
+        <nav className={style.borderstyle}>
           <ul className="flex space-x-6 font-[400]">
-            <li className="">Home</li>
-            <li>
+            <li className={style.hoverGradientBorder}>Home</li>
+            <li className={style.hoverGradientBorder}>
               <DropDown />
             </li>
-            <li>About us</li>
-            <li>Pricing</li>
+            <li className={style.hoverGradientBorder}>About us</li>
+            <li className={style.hoverGradientBorder}>Pricing</li>
+          
           </ul>
         </nav>
-        <Link  href="/ToolsHome">
         <button
           className={` ${style.button1} px-5 py-1 rounded-[39px] font-[400] text-[13px]`}
-        > 
+        >
           Start for free
         </button>
-        </Link>
       </header>
 
       <main className="container mx-auto flex flex-col justify-center   py-12">
@@ -522,37 +519,32 @@ const Home = () => {
           From video creation to web design, our AI-driven platform simplifies
           and elevates your creative <br /> process.
         </p>
-        
         <div className="flex justify-center mb-12">
-        <Link  href="/ToolsHome">
           <button
             className={` ${style.button1} px-9 py-3 rounded-[39px] text-[16px]`}
           >
             Start for free
           </button>
-           </Link>
         </div>
         <div className={`${style.parent} `}>
           <div className={`${style.first}`}>
-          <Link  href="/tools">
             <FeatureCard
               icon={playList}
               title="Video Creation"
               description="Harness AI to instantly generate  engaging videos and short clips with ease."
             />
-            </Link>
+
             <FeatureCard
               icon={megaphone}
               title="Ad Creative"
               description="Create attention-grabbing ads effortlessly with the power of AI."
             />
-            <Link href='Presentation'>
+
             <FeatureCard
               icon={note}
               title="Slide Creation"
               description="Generate polished, professional slides instantly with AI assistance."
             />
-            </Link>
           </div>
           <div className={`${style.second} `}>
             <div className={`${style.secondA} ${style.imgBox}`}>
@@ -572,26 +564,23 @@ const Home = () => {
             />
           </div>
           <div className={`${style.third} `}>
-          <Link href='/voiceOver'>
             <FeatureCard
               icon={mic}
               title="Voiceover"
               description="Let AI produce perfectly tailored voiceovers for your content in seconds."
             />
-            </Link>
 
             <FeatureCard
               icon={webDesign}
               title="Website Design"
               description="Use AI to design beautiful, user-friendly websites in no time."
             />
-            <Link href='/graphicstool'>
+
             <FeatureCard
               icon={pen}
               title="Graphic Design"
               description="AI generates stunning ads and designs that captivate and elevate your brand."
             />
-            </Link>
           </div>
         </div>
 
@@ -609,7 +598,9 @@ const Home = () => {
             ].map((option) => (
               <li
                 key={option}
-                className={`${style.listitem}`}
+                className={`${style.listitem} ${
+                  selectedOption===option ? style.active:""
+                }`}
                 onClick={() => handleOptionChange(option)}
               >
                 {option}
@@ -644,7 +635,9 @@ const Home = () => {
             ].map((option) => (
               <li
                 key={option}
-                className={`${style.listitem}`}
+                className={`${style.listitem} ${
+                  currentSelection===option ? style.active:""
+                }`}
                 onClick={() => changeSelection(option)}
               >
                 {option}
@@ -868,7 +861,7 @@ const Home = () => {
           >
             Start for free
           </button>
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 gap-5 px-5">
             {testimonials.map((testimonial, index) => (
               <SmallCard key={index} {...testimonial} />
             ))}
@@ -910,23 +903,26 @@ const FeatureCard = ({ icon, title, description }) => (
 //   </div>
 // );
 
-const SmallCard = ({ text, author, role, avatar }) => (
+const SmallCard = ({ text, author, role, avatar }) => {
+  console.log("avatar is =>", avatar);
+  return (
   <div className={`${style.smallCard} p-8 mb-3 rounded-[24px]`}>
     <div className={`${style.scrollcontainer}`}>
       <div className={`${style.scrollcontent}`}>
-        <p className="text-[14px] text-[#c9c9c9]-[400] opacity-85 leading-[22px] mb-4">
+      <p className="text-[14px] text-[#c9c9c9]-[400] opacity-85 leading-[22px]">
           {text}
         </p>
       </div>
     </div>
-    <div className="flex items-center">
-      <Image scr={avatar} alt={author} className="w-8 h-8 rounded-full mr-2" />
+    <div className="flex items-center gap-4">
+      <Image width={40} height={40} scr={avatar.avatarimg.src} alt={author} className="w-10 h-10 rounded-full" />
       <div>
         <p className=" text-[14px] text-[#c9c9c9]-[500]">{author}</p>
         <p className="text-[11px] text-[#c9c9c9]-300 italic">{role}</p>
       </div>
     </div>
   </div>
-);
+)
+};
 
 export default Home;
