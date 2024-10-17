@@ -4,9 +4,10 @@ import React, { useState } from 'react';
 import styles from '@/styles/ImageCreation.module.css';
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { IoIosArrowForward } from "react-icons/io";
+
 import crownn from '../../../public/icon/crownn.png';
 import Image from 'next/image';
+import { IoIosArrowForward } from "react-icons/io";
 
 
 
@@ -30,7 +31,7 @@ const ImageCreationSidebar = () => {
 
       <div className={styles.section}>
         <label className={styles.label}>Color Palette</label>
-        <button className={styles.optionButton}>Monochromatic <IoIosArrowForward/></button>
+        <button className={styles.optionButtoncolor}>Monochromatic <IoIosArrowForward className={styles.ioiosicon}/></button>
       </div>
 
       <div className={styles.section}>
@@ -40,8 +41,7 @@ const ImageCreationSidebar = () => {
           <button className={styles.optionButtons}>Medium <span className={styles.spantext}>1080p</span></button>
           <button className={styles.optionButtons}>High <span className={styles.spantext}>4K</span></button>
         </div>
-     
-      </div>
+     </div>
 
       
 
@@ -72,7 +72,7 @@ const ImageCreationSidebar = () => {
       </div>
 
         <div className={styles.flexContainer}>
-           <h>More tools</h>
+           <h className={styles.moreoption}>More tools</h>
             <MdKeyboardArrowDown />
         </div>
   
@@ -95,21 +95,16 @@ const ImageCreationSidebar = () => {
         <button className={styles.optionButton}>Smooth<MdKeyboardArrowRight/></button>
       </div>
 
-      <div className={styles.section}>
-        <label className={styles.label}>Texture</label>
-        <button className={styles.optionButton}>Smooth<MdKeyboardArrowRight/></button>
-      </div>
-      
-      <div className={styles.section}>
-        <label className={styles.label}>focus Area</label>
-        <div className={styles.buttonGroup}>
-          <button className={styles.optionButtons}>Minimal</button>
-          <button className={styles.optionButtons}>Moderate <Image src={crownn} alt='crownn' className={styles.queenicon}/></button>
-          <button className={styles.optionButtons}>High    <Image src={crownn}  alt='crownn'/></button>
-          {/* <button className={styles.optionButtons}>No Characters</button> */}
-        </div>
-      </div>
      
+<div className={styles.section}>
+  <label className={styles.label}>Focus Area</label>
+  <div className={styles.buttonGroup4}>
+    <button className={styles.optionButtons4}>Central</button>
+    <button className={styles.optionButtons4}>Off-center</button>
+    <button className={styles.optionButtons4}>Symmetrical</button>
+    <button className={styles.optionButtons4}> Rule of Thirds</button>
+  </div>
+</div>
 
       <div className={styles.section}>
         <label className={styles.label}>Primary Focus</label>
@@ -118,10 +113,10 @@ const ImageCreationSidebar = () => {
 
       <div className={styles.section}>
         <label className={styles.label}>character Presence</label>
-        <div className={styles.buttonGroup}>
-        <button className={styles.optionButtons}>Minimal</button>
-          <button className={styles.optionButtons}>Moderate <Image src={crownn} alt='crownn' className={styles.queenicon}/></button>
-          <button className={styles.optionButtons}>High    <Image src={crownn}  alt='crownn'/></button>
+        <div className={styles.buttonGroup4}>
+        <button className={styles.optionButtons4}>Human figures</button>
+          <button className={styles.optionButtons4}>Anlmas </button>
+          <button className={styles.optionButtons4}>No Characters </button>
         </div>
       </div>
 
@@ -131,21 +126,21 @@ const ImageCreationSidebar = () => {
       </div>
 
       
-      <div className={styles.section}>
+       <div className={styles.section}>
         <label className={styles.label}>Pattern Density</label>
         <div className={styles.buttonGroup}>
           <button className={styles.optionButtons}>Minimal</button>
-          <button className={styles.optionButtons}>Moderate <Image src={crownn} alt='crownn' className={styles.queenicon}/></button>
-          <button className={styles.optionButtons}>High    <Image src={crownn}  alt='crownn'/></button>
+          <button className={styles.optionButtons}>Moderate</button>
+          <button className={styles.optionButtons}>High</button>
         </div>
      
 
-      <div className={styles.section}>
+       <div className={styles.section}>
         <label className={styles.label}>Mood</label>
-        <button className={styles.optionButton}>cheerful<MdKeyboardArrowRight/>
-        <Image src={crownn}  alt='crownn'/>
+        <button className={styles.optionButton} >cheerful<MdKeyboardArrowRight/>
+       
         </button>
-      </div>
+       </div>
       </div>
     </div>
   );

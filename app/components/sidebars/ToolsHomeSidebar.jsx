@@ -68,19 +68,25 @@ export default function ToolsHomeSidebar() {
           />
         </div>
         <ul className={styles.navLinks}>
+        <Link href={'/tools'} >
           <li className={styles.listItem}>
             {" "}
             <Image src={homes} alt="Image" /> Home{" "}
           </li>
+          </Link>
 
+          <Link href={'tools/image-creation'} >
           <li className={styles.listItem}>
-            <Image src={myinspretion} alt="Image" /> Creations
+            <Image src={myinspretion} alt="Image" />My Creations
           </li>
-
+          </Link>
+         
+          <Link href={'tools/image-creation'} >
           <li className={styles.listItem}>
             <Image src={myinspretion} alt="Image"/> Inspirations
           </li>
-
+          </Link>
+  
           <div className={styles.dropdown}>
             <h2 className={styles.headingss}>AI Tools</h2>
             <select className={styles.fontSelects}>
@@ -122,25 +128,31 @@ export default function ToolsHomeSidebar() {
             <div class="flex-1 border-t border-[#3F3F3F] border-[0.61px]"></div>
           </div>
 
+          <Link href={'/graphicstool'}>
           <li className={styles.listItem}>
             <Image src={graphics} alt="Image"/>
             Graphic Design
           </li>
+          </Link>
 
+          <Link href={'/adscreative'}>
           <li className={styles.listItem}>
             <Image src={adcreatives} alt="Image"/>
             Ad Creative
           </li>
+          </Link>
 
           <li className={styles.listItem}>
             <Image src={webdesign} alt="Image" />
             Website UI
           </li>
 
+          <Link href={'/Presentation'}>
           <li className={styles.listItem}>
             <Image src={slide} alt="Image"/>
             Slide Creation
           </li>
+          </Link>
 
           <li className={styles.listItem}>
             <Image src={chartrose} alt="Image"/>

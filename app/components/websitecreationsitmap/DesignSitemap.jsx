@@ -80,7 +80,7 @@ const DesignSitemap = () => {
               <div className={styles.lineheight}>
                 <h2>Hero Header Section</h2>
                 <p>
-                Bold and engaging visual header with a background image of the designer's work and a tagline.
+                Bold and engaging visual header with a background image of the designer&apos;s work and a tagline.
                 </p>
               </div>
             </div>
@@ -159,7 +159,7 @@ const DesignSitemap = () => {
                 <h2>Closing Statement</h2>
                 <p>
                   Driven by our mission, inspired by our vision, and guided by
-                  our values, we're here to make a difference.
+                  our values, we&apos;re here to make a difference.
                 </p>
               </div>
             </div>

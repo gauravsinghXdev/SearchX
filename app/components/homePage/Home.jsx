@@ -34,9 +34,13 @@ import x from "@/public/Home/Xlogo.png";
 import insta from "@/public/Home/instagramlogo.png";
 import facebook from "@/public/Home/facebooklogo.png";
 import discord from "@/public/Home/discordlogo.png";
-
+import spadlogo from '../../../public/Home/logo.png'
 import DropDown from "./DropDown";
 import Footer from "../footer/Footer";
+import frame1 from '../../../public/Home/frame1.png'
+import frameimage from '../../../public/Home/frameimage.png';
+
+
 const Home = () => {
   const [selectedOption, setSelectedOption] = useState("Image Creation");
   const [currentSelection, setCurrentSelection] = useState("Website design");
@@ -424,7 +428,7 @@ const Home = () => {
       text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
-      avatar: { avatarimg },
+      avatar:{ avatarimg },
     },
     {
       text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
@@ -484,10 +488,15 @@ const Home = () => {
   ];
   return (
     <div className="!bg-[#171717] text-white mx-auto  min-h-screen">
-      <header className="p-4 px-9 flex justify-between items-center">
+      <header className={`${style.navsection} "p-4 px-9 flex justify-between items-center "`}>
         <div className="flex items-center">
           <span className="text-2xl font-bold mr-2">
-            <Image src={logo} alt={"logo"} />
+            {/* <Image src={logo} alt={"logo"} /> */}
+          
+ <div style={{ display: 'flex', alignItems: 'center' }}>
+  <Image src={spadlogo} alt="Logo Spad" style={{ width: '40px', height: '40px' }} />
+  <h1 className={style.logoHeading } style={{ marginLeft: '0px' }}>Searchpad</h1>
+</div>
           </span>
           {/* <span className="text-xl">Searchpad</span> */}
         </div>
@@ -515,7 +524,7 @@ const Home = () => {
           <br />
           <span className={`${style.headingspan}`}>AI-Powered Solutions</span>
         </h1>
-        <p className="text-center text-[16px] text-[#c9c9c9] font-[400] opacity-90 mt-5 mb-8">
+        <p className={`${style.paragraph}`}>
           From video creation to web design, our AI-driven platform simplifies
           and elevates your creative <br /> process.
         </p>
@@ -859,7 +868,8 @@ const Home = () => {
               {[...Array(5)].map((_, i) => (
                 <Image
                   key={i}
-                  src={avatarimg}
+                  // src={avatarimg}
+                  src={frameimage}
                   alt="Creator"
                   className="w-[64px] h-[64px] rounded-full border-2 border-gray-900"
                 />
@@ -900,21 +910,7 @@ const FeatureCard = ({ icon, title, description }) => (
   </div>
 );
 
-// const ShowCard = ({ photo, title, description }) => (
-//   <div
-//     className={`${style.showcard} max-w-md rounded overflow-hidden p-11 shadow-lg`}
-//   >
-//     <div className={`${style.showCardImgContainer}  overflow-hidden`}>
-//       <Image className="w-full" src={photo} alt={title} />
-//     </div>
-//     <div className={`${style.showcardtext}py-4 mt-6 text-center`}>
-//       <span className="text-white-500 text-[36px] mb-2">{title}</span>
-//       <p className="text-[#c9c9c9]-400 opacity-70   text-[16px] text-base">
-//         {description}
-//       </p>
-//     </div>
-//   </div>
-// );
+
 
 const SmallCard = ({ text, author, role, avatar }) => {
   return (
@@ -928,6 +924,7 @@ const SmallCard = ({ text, author, role, avatar }) => {
       </div>
       <div className="flex items-center gap-4">
       <Image width={40} height={40} src={avatar.avatarimg.src} alt={author} className="w-10 h-10 rounded-full" />
+    
       <div>
         <p className=" text-[14px] text-[#c9c9c9]-[500]">{author}</p>
         <p className="text-[11px] text-[#c9c9c9]-300 italic">{role}</p>
