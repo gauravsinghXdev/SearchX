@@ -1,25 +1,21 @@
 "use client";
 import styles from "@/styles/VoiceOver/VoiceOverPage.module.css";
 import { IoIosImages } from "react-icons/io";
-import { MdOutlineTune } from "react-icons/md";
-import { MdInfoOutline } from "react-icons/md";
-import AudioPlayer from "../AudioPlayer/AudioPlayer"; // Import the audio player component
-// import 'react-h5-audio-player/lib/styles.css';
-import Image from "next/image";
 import { BsStars } from "react-icons/bs";
 import React, { useState } from "react";
-// import AudioPlayer from "../AudioPlayer/AudioPlayer";
-import AudioPlayerSidebar from "../AudioPlayerSidebar/Player";
-// import { MdInfoOutline } from "react-icons/md";
+import AudioPlayer from "../AudioPlayer/AudioPlayer";
+import AudioPlayerResult from "./AudioPlayerResult";
+import Image from "next/image";
 
 const VoiceOver = () => {
   const [selectedTool, setSelectedTool] = useState("Short / Reel Creator");
-  const [prompt, setPrompt] = useState(""); // For the script prompt
-  const [voiceEngine, setVoiceEngine] = useState("Play3.0"); // For the voice engine
-  const [voice, setVoice] = useState(""); // For the voice selection
-  const [outputFormat, setOutputFormat] = useState("mp3"); // For output format
-  const [generatedAudio, setGeneratedAudio] = useState(null); // For storing the audio file URL
-  const [loading, setLoading] = useState(false); // For loading state
+  const [prompt, setPrompt] = useState("");
+  const [voiceEngine, setVoiceEngine] = useState("Play3.0");
+  const [voice, setVoice] = useState("");
+  const [voiceName, setVoiceName] = useState(""); // New state for voice name
+  const [outputFormat, setOutputFormat] = useState("mp3");
+  const [generatedAudio, setGeneratedAudio] = useState(null);
+  const [loading, setLoading] = useState(false);
   const backendURL =
     process.env.NEXT_PUBLIC_BACKEND_URL ||
     "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app";
@@ -83,22 +79,27 @@ const VoiceOver = () => {
       name: "Marjory",
       description:
         "Inspiring & Motivational (Adult Male, Nigerian, Neutral Nigerian Accent)",
-      audioFile: "https://parrot-samples.s3.amazonaws.com/gargamel/Sumita.wav",
-      voiceKey: "s3://voice-cloning-zero-shot/marjory/audio/manifest.json",
+      audioFile:
+        "https://parrot-samples.s3.amazonaws.com/gargamel/Baptiste.wav",
+      voiceKey:
+        "s3://voice-cloning-zero-shot/1d26f4fe-1d08-4cfe-a7c1-d28e4e913ff9/original/manifest.json",
     },
   ];
 
-  // Function to handle tool selection
   const handleToolClick = (tool) => {
     setSelectedTool(tool);
   };
 
-  // Function to handle voice selection
   const handleVoiceSelect = (audioFile) => {
+    const selectedVoice = voiceOptions.find(
+      (option) => option.voiceKey === audioFile
+    );
     setVoice(audioFile);
+    if (selectedVoice) {
+      setVoiceName(selectedVoice.name);
+    }
   };
 
-  // Function to generate audio based on prompt and selected voice
   const handleGenerateAudio = async () => {
     if (!prompt.trim() || !voice.trim() || !outputFormat.trim()) {
       alert("Please fill in all the fields before generating audio.");
@@ -109,8 +110,8 @@ const VoiceOver = () => {
 
     try {
       const postData = {
-        text: prompt, // Sending the text (prompt)
-        voice: voice, // Sending the selected voice audio key
+        text: prompt,
+        voice: voice,
       };
 
       const response = await fetch(`${backendURL}/text-to-speech/`, {
@@ -120,18 +121,14 @@ const VoiceOver = () => {
         },
         body: JSON.stringify(postData),
       });
-      console.log("first");
-      console.log("The respo", response);
+
       if (!response.ok) {
         throw new Error("Failed to generate audio");
       }
-      console.log("second");
+
       const audioBlob = await response.blob();
       const audioUrl = URL.createObjectURL(audioBlob);
-
-      console.log("third audio URL=>", audioBlob);
-      setGeneratedAudio(audioUrl); // Set the generated audio URL
-      console.log("fourth");
+      setGeneratedAudio(audioUrl);
     } catch (error) {
       console.error("Error generating audio:", error);
       alert("There was an issue generating the audio. Please try again.");
@@ -164,7 +161,6 @@ const VoiceOver = () => {
           </div>
         </div>
 
-        {/* Audio Script Section */}
         <div className={styles.videoScriptContainer}>
           <div className={styles.videoScript}>
             <div>
@@ -185,7 +181,6 @@ const VoiceOver = () => {
           />
         </div>
 
-        {/* Select Voice Section */}
         <div className={styles.selectVoiceContainer}>
           <div className={styles.selectVoice}>
             <h3>Select Voice</h3>
@@ -202,7 +197,7 @@ const VoiceOver = () => {
                   <div className={styles.selectVoiceSection}>
                     <div className={styles.voiceDetails}>
                       <Image
-                        src="/Images/VideoCreation/userIcon.png" // Replace with actual path to the user icon
+                        src="/Images/VideoCreation/userIcon.png"
                         alt="User Icon"
                         width={30}
                         height={30}
@@ -233,68 +228,14 @@ const VoiceOver = () => {
             {loading ? "Generating..." : "Generate Audio"}
           </button>
         </div>
-
-        {generatedAudio && (
-          <>
-            <div className={styles.audioPlayerContainer}>
-              <h3>Generated Audio</h3>
-              <audio
-                controls
-                src={generatedAudio}
-                className={styles.audioPlayer}
-              />
-            </div>
-          </>
-        )}
       </div>
       <div>
-
-      {generatedAudio && (
-          <>
-            <div className={styles.audioPlayerContainer}>
-              <h3>Generated Audio</h3>
-              <audio
-                controls
-                src={generatedAudio}
-                className={styles.audioPlayer}
-              />
-            </div>
-          </>
-        )}
-        {/* <div className={styles.audioPlayerContainer}>
-          <h3>Generated Audio</h3>
-          <audio controls src={generatedAudio} className={styles.audioPlayer} />
-        </div> */}
-
-        <div className={styles.rightSection}>
-          <div className={styles.preview}>
-            <MdInfoOutline className={styles.leftinfoIcon} />
-            <div>
-              <h3>Sample Preview</h3>
-              <p>News Narration sample</p>
-            </div>
-          </div>
-          <AudioPlayerSidebar
-            audioSrc="Audio/Audio.mp3"
-            title="Sample Audio"
-            description="This is a sample description for the audio"
-          />
-        </div>
-      </div>
-      {/* <div className={styles.rightSection}>
-        <div className={styles.preview}>
-          <MdInfoOutline className={styles.leftinfoIcon} />
-          <div>
-            <h3>Sample Preview</h3>
-            <p>News Narration sample</p>
-          </div>
-        </div>
-        <AudioPlayerSidebar
-          audioSrc="Audio/Audio.mp3"
-          title="Sample Audio"
-          description="This is a sample description for the audio"
+        <AudioPlayerResult
+          audio={generatedAudio}
+          voiceName={voiceName}
+          promptSnippet={prompt.slice(0, 10)} // Adjust snippet length for better visibility
         />
-      </div> */}
+      </div>
     </div>
   );
 };
