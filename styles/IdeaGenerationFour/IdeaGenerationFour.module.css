@@ -1,0 +1,214 @@
+/* SearchHistory.module.css */
+
+.sidebar {
+   
+    padding: 26px 12px 938px 12px;
+    border-right: 0.5px solid #3F3F3F;
+    padding: 26px 95px 938px 12px;
+    gap: 0px;
+    border: 0px 0.5px 0px 0px;
+    opacity: 0px;
+    width: Fixed (824px)px;
+height: Hug (1,035px)px;
+padding: 40px 100px 40px 100px;
+gap: 16px;
+border-radius: 9.72px 0px 0px 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+
+  }
+  
+  .newSearchButton {
+    background: linear-gradient(134.14deg, #3C3C3C 46.75%, rgba(147, 147, 147, 0.8) 154.84%);
+    padding: 9px 51px;
+    border-radius: 8px;
+    border: 0px 0px 0px 4px;
+    width: 197px;
+    height: 34px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    left: 51px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: background 0.3s ease;
+  }
+  
+  .newSearchButton:hover {
+    background: linear-gradient(134.14deg, #4C4C4C 46.75%, rgba(147, 147, 147, 1) 154.84%);
+    opacity: 1;
+  }
+  
+  
+  .para {
+    margin-bottom: 8px;
+  }
+  
+  .para p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.73px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    width: 280px;
+    height: 16px;
+    margin-top: 20px;
+    opacity: 0px;
+    color: #FFFFFF;
+  }
+  
+  .todaychatAll {
+    max-width: 280px; /* Fixed width */
+    min-height: 400px; /* Hug height */
+    top: 155px;
+    left: 12px;
+    gap: 8px;
+    opacity: 0;
+    color: #686567;
+
+  }
+  
+  .chatpara {
+    display: flex;
+    align-items: center;
+    gap: 6.41px;
+    min-width: 280px;
+    height: 40px;
+    padding: 8px 14px 8px 16px;
+    border-radius: 8px;
+  cursor: pointer;
+    opacity: 0.9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .chatpara:hover {
+    background-color: #171717; /* Dark background on hover */
+    color: #FFFFFF; /* Text color changes to white on hover */
+  }
+  
+  .chatpara img {
+    min-width: 20px;
+    min-height: 20px;
+  }
+  
+  .chatpara p {
+    flex-grow: 1;
+    color: #C9C9C9;
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+  }
+  
+  .chatpara:hover p {
+    color: #FFFFFF; /* Change text color to white on hover */
+  }
+  
+  .BsThreeDotsVertical {
+    cursor: pointer;
+    color: #C9C9C9;
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 4px 0 0 0;
+    border-radius: 4px 0 0 0;
+    opacity: 0.9;
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+  
+  .BsThreeDotsVertical:hover {
+    opacity: 1;
+    color: #FFFFFF; /* Change the color of the three dots to white on hover */
+  }
+  
+  .threeDotsIcon {
+    color: #C9C9C9; /* Initial color */
+    transition: color 0.3s ease;
+  }
+  
+  .threeDotsIcon:hover {
+    color: #FFFFFF; /* White color on hover */
+  }
+  
+  
+  /* Right section */
+  
+  .mainContent {
+    flex: 1;
+    margin-top: 2.5rem;
+  }
+  
+  .questionuser {
+    display: flex;
+    justify-content: right;
+    margin-right: 100px;
+    align-items: center;
+    gap: 10px;
+    min-width: 588px;
+    max-height: 59px;
+    padding: 0px 58px 0px 28px;
+    border-radius: 9.72px 0px 0px 0px;
+    opacity: 0.9;
+
+  }
+  
+  .questionText {
+    background-color: #2B2A2A;
+    color: #FFFFFF;
+    padding: 8px;
+    border-radius: 8px;
+  }
+  
+  .avatarImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    opacity: 0.9;
+  }
+  .sidebar {
+    max-width: 804px;
+    min-height: 198px;
+    padding: 26px 12px; /* Fixed the padding */
+    border-right: 0.5px solid #3F3F3F;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+    gap: 0px;
+    opacity: 1; /* Make it visible */
+  }
+  
+  .inputBoxWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.2); /* Transparent background for input box area */
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .inputBox {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: transparent; /* Transparent input box */
+    color: white;
+    border: 1px solid #3F3F3F;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .sendButton {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sendButton:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker hover effect */
+  }
+  .questionuser{
+    margin-bottom: 20px;
+  }

@@ -12,7 +12,7 @@ const SignUp = () => {
       <div className={styles.mainHead}>
       <div className={styles.logo} style={{ backgroundImage: "none" }}>
           <Image
-            src="/logowithname.png"
+            src="/logospad.png"
             alt="Logo"
             width={159.03}
             height={58.29}
@@ -51,11 +51,9 @@ const SignUp = () => {
               </button>
 
               <button>
-                {/* <FaMicrosoft style={{ color: "#00a4ef" }} />
-Microsoft icon with blue color */}
+                {/* <FaMicrosoft style={{ color: "#00a4ef" }} /> Microsoft icon with blue color */}
                 <Image
-                  src="/SignUp/microsoft-iconlogo.png" // Static path
-from the public directory
+                  src="/SignUp/microsoft-iconlogo.png" // Static path from the public directory
                   alt="Microsoft Icon"
                   width={20}
                   height={20}
@@ -116,10 +114,8 @@ from the public directory
                   </h3>
                   <p className="text-[0.875rem] text-[#c8c8c8]">
                     Create content with ease and let AI do the heavy <br />{" "}
-                    lifting for you. Searchpad is designed to provide
-<br />{" "}
-                    fast and high-quality results for all your content
-<br />{" "}
+                    lifting for you. Searchpad is designed to provide <br />{" "}
+                    fast and high-quality results for all your content <br />{" "}
                     needs.
                   </p>
                   <div className={`${styles.innerOneA}`}>
@@ -128,19 +124,19 @@ from the public directory
                     >
                       <p>Image Creation</p>
                     </div>
-                    <div className={`${styles.innerOneAboxes}`}>
+                    <div className={`${styles.innerOneAboxes} ${styles.button}`}>
                       <p>Video Creation</p>
                     </div>
-                    <div className={`${styles.innerOneAboxes}`}>
+                    <div className={`${styles.innerOneAboxes} ${styles.button}`}>
                       <p>Graphic Design</p>
                     </div>
-                    <div className={`${styles.innerOneAboxes}`}>
+                    <div className={`${styles.innerOneAboxes} ${styles.button}`}>
                       <p>Ad Creatives</p>
                     </div>
-                    <div className={`${styles.innerOneAboxes}`}>
+                    <div className={`${styles.innerOneAboxes} ${styles.button}`}>
                       <p> Data Visualization</p>
                     </div>
-                    <div className={`${styles.innerOneAboxes}`}>
+                    <div className={`${styles.innerOneAboxes} ${styles.button}`}>
                       <p>And More</p>
                     </div>
                   </div>
