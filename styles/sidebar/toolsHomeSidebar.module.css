@@ -80,6 +80,8 @@
   line-height: 15.51px;
   letter-spacing: -0.02em;
   text-align: center;
+  align-items: flex-start;
+  margin-left: 10px;
 }
 
 .paragraph {
@@ -434,8 +436,10 @@
   align-items: start;
   padding: 20px;
   flex-wrap: wrap;
-  background: linear-gradient(0deg, #8a71ff, #8a71ff),
-    linear-gradient(31.33deg, #c0b3ff 30.82%, #6949ff 60.86%);
+  /* background: linear-gradient(0deg, #8a71ff, #8a71ff),
+    linear-gradient(31.33deg, #c0b3ff 30.82%, #6949ff 60.86%); */
+    background: linear-gradient(0deg, #2308ac, #1a077a),
+    linear-gradient(31.33deg, #c0b3ff 30.82%, #9e9ba8 60.86%);
   width: 1238px;
   height: 226px;
   gap: 0px;

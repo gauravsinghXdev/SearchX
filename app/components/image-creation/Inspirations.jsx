@@ -58,7 +58,7 @@ const myCreationsData = [
   }
 ];
 
-const ImageCreation = () => {
+const  Inspirations = () => {
   const [isMyCreations, setIsMyCreations] = useState(true);
   const [selectedImage, setSelectedImage] = useState(null); // Track clicked image
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -266,5 +266,5 @@ const handleCloseModal = () => {
   );
 };
 
-export default ImageCreation;
+export default Inspirations;
 
