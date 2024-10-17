@@ -1,0 +1,710 @@
+.container {
+    background-color: #1c1c1c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+   }
+  
+  .navbar {
+    width: 100%;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    padding: 20px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .sidebar {
+    position: sticky;
+    top: 20;
+    height: 100%;
+    padding: 20px;
+    background-color: #1c1c1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-right: 0.5px solid rgba(255, 255, 255, 0.3);
+    }
+  
+  .sidebar .promptInput {
+    width: 100%;
+    padding: 12px;
+    background-color: #2c2c2e;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-bottom: 12px;
+    width: 233px;
+    height: 88px;
+    padding: 11px 137px 62px 16px;
+    gap: 6.41px;
+    border: 8px;
+  }
+  
+  .sidebar .generateButton {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+    width: 233px;
+    height: 32px;
+    padding: 8px 81px 8px 81px;
+    gap: 6.41px;
+    border: 0.8px solid;
+    border-image-source: linear-gradient(180deg, #c5c5c5 0%, #1c1c1c 100%);
+  }
+  
+  .sidebar .section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar .label {
+    margin-bottom: 5px;
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.73px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #ffffff;
+  }
+  
+  .sidebar .buttonGroup {
+    display: flex;
+    justify-content: space-between;
+    width: 82px;
+    height: 32px;
+    gap: 10px;
+    gap: 6.41px;
+    border-radius: 8px 0px 0px 0px;
+  }
+  .buttonGroups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 82px;
+    height: 32px;
+    gap: 10px;
+    gap: 6.41px;
+    border-radius: 8px 0px 0px 0px;
+  }
+  
+  .sidebar .optionButton {
+    flex: 1;
+    margin: 0 5px;
+    padding: 8px;
+    background-color: #2c2c2e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 230px;
+    height: 32px;
+    padding: 8px 16px 8px 26px;
+    gap: 6.41px;
+    border-radius: 8px;
+    
+    color: #686567;
+   font-size: 11px;
+    font-weight: 500;
+    line-height: 13.31px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  .optionButtons {
+    flex: 1;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-self: center;
+    justify-items: center;
+    padding: 10px 25px;
+    background-color: #2c2c2e;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    width: 430px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 9.68px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  
+  .optionButtonsbox {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-items: center;
+    padding: 10px 30px;
+    background-color: #2c2c2e;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    width: 330px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 9.68px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  .spantext {
+    margin-top: 2px;
+    color: grey;
+  }
+  .sidebar .optionButton:first-child {
+    margin-left: 0;
+  }
+  
+  .sidebar .optionButton:last-child {
+    margin-right: 0;
+  }
+  
+  .sidebar .customSizeButton,
+  .moreRatiosButton {
+    width: 100%;
+    padding: 8px;
+    background-color: #2c2c2e;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .customSizeButton {
+    color: #c9c9c9;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.31px;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+  
+  .sidebar .imageCount {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2d2d2d;
+    width: 233px;
+    height: 32px;
+    padding: 8px;
+    gap: 6.41px;
+    border-radius: 8px;
+  }
+  .flexContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebar .counterButton {
+    padding: 6px;
+    background-color: #2c2c2e;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .sidebar .counterDisplay {
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  
+  .imageCreationSection {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .imageCreationSection .topbar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+  }
+  
+  .imageCreationSection .topbar span {
+    border-bottom: 2px solid transparent;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .myCreations .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .myCreations .creationText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #c9c9c9;
+  }
+  
+  .myCreations .icons {
+    display: flex;
+    gap: 14px; /* Spacing between icons */
+  }
+  
+  .myCreations .icon {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .myCreations .icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .myCreations .images {
+    display: flex;
+    gap: 12px; /* Spacing between images */
+  }
+  
+  .myCreations .creationImage {
+    height: 250px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  /*insprasion */
+  .imageContainer {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+  }
+  .imageContainer img {
+    border-radius: 10px;
+  }
+  .combineimage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  /* nav */
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  .logoContainer svg {
+    margin-right: 20px;
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .rightcontaint {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .rightcontaint h1 {
+    margin: 0;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    gap: 10px;
+    width: 72px;
+    height: 32px;
+    padding: 3.5px 11px 3.5px 11px;
+    gap: 6.41px;
+    border-radius: 8px 0px 0px 0px;
+  }
+  .heading {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #ffffff;
+  }
+  .centerHeading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  .button img {
+    width: 20px; /* Set a fixed width for the icon */
+    height: auto;
+  }
+  /* bg blue */
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start; /* Ensures even spacing between label and button */
+  }
+  
+  .optionButton {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px; /* Adjust as necessary */
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .optionButton svg {
+    margin-left: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .arrowicon {
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .box1 {
+    width: 50%;
+    height: 100%;
+    padding: 5px;
+    border-radius: 2px;
+    border: 0.5px solid white;
+  }
+  .box2 {
+    width: 50%;
+    height: 50%;
+    padding: 5px;
+    border-radius: 2px;
+    border: 0.5px solid white;
+  }
+  .box3 {
+    width: 150%;
+    height: 50%;
+    padding: 5px;
+    border-radius: 2px;
+    border: 0.5px solid white;
+  }
+  
+  /* popup */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1c1c1ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContainer {
+    display: flex;
+    background: #1c1c1c;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    /* width: 705px;
+    height: 455pc; */
+  }
+  
+  .imageSection {
+    /* flex: 1; */
+    margin-right: 20px; /* Space between image and content */
+  }
+  
+  .selectedImage {
+    border-radius: 8px;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .contentSection {
+    /* flex: 1; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+  }
+  
+  .contentSection h1 {
+    margin-bottom: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15.73px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #ffffff;
+  }
+  
+  .contentSection p {
+    margin-bottom: 5px;
+    color: #c9c9c9;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  
+  .unorderlist {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .unorderlist li {
+    margin-bottom: 8px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .primaryButton {
+    background: #2d2d2d;
+    color: white;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .secondaryButton {
+    background: #2d2d2d;
+    color: #ffffff;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .actionButtons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .downloadButton {
+    background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 50%;
+  }
+  
+  .closeButton {
+    border-top: 1px solid white;
+    color: white;
+    padding: 10px 40px;
+    background: linear-gradient(110.25deg, #2d2d2d 14.25%, #2d2d2d 47.06%);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    width: 50%;
+  }
+  .mobileApp {
+    margin-bottom: 10px;
+    background: #2d2d2d;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* margin-right: 10px; */
+  }
+  
+  .buttonscopy {
+    display: flex;
+  }
+  .primaryButton,
+  .secondaryButton {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 8px;
+  }
+  
+  .secondaryButton {
+    background-color: #3c3c3c; /* Secondary button color */
+  }
+  
+  .primaryButton:hover,
+  .secondaryButton:hover {
+    background-color: #5a4acb; /* Lighter shade for hover */
+  }
+  /* charactore details */
+  .characterDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .characterDetails h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .characterDetails p {
+    margin: 0.25rem 0;
+    color: #777;
+  }
+  .characterDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  /* */
+  .flexContainers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-right: 2rem;
+  }
+  
+  .para {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  
+    color: #555;
+  }
+  
+  .flexContainers h1 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .labelText {
+    color: #686567;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 9.68px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  
+  .valueText {
+    color: #686567;
+    font-size: 8px;
+    font-weight: 500;
+    line-height: 9.68px;
+    letter-spacing: -0.02em;
+    text-align: right;
+  }
+  
+  .labelText1 {
+    color: #c9c9c9;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.31px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+  
+  .valueText1 {
+    color: #c9c9c9;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.31px;
+    letter-spacing: -0.02em;
+    text-align: right;
+  }
+  .mainHeading {
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13.31px;
+    letter-spacing: -0.02em;
+    text-align: start;
+  }
+  .crossIcon {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .actionButtons {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons with space between */
+    gap: 10px; /* Optional: Adds space between buttons */
+  }
+  
+  .downloadButton,
+  .closeButton {
+    display: flex;
+    align-items: center; /* Vertically aligns icon and text */
+    gap: 8px; /* Space between icon and text */
+    background-color: #6949ff; /* Button background color */
+    color: white;
+    padding: 10px 20px; /* Button padding */
+    border: none;
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer;
+  }
+  
+  .downloadButton:hover,
+  .closeButton:hover {
+    background-color: #5738d3; /* Optional: Darken on hover */
+  }
+  
+  .icon {
+    font-size: 18px; /* Adjust icon size */
+  }
+  
