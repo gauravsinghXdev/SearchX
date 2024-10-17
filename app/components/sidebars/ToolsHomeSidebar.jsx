@@ -91,30 +91,30 @@ export default function ToolsHomeSidebar() {
             </select>
           </div>
 
-          <li className={styles.listItem}>
+          <Link href={'/tools/image-creation'} className={styles.listItem}>
             <Image src={image} alt="Image"/>
             Image Creation
-          </li>
+          </Link>
 
-          <li className={styles.listItem}>
+          <Link href={'/tools'} className={styles.listItem}>
             <Image src={videocreation} alt="Image"/>
             Video Creation
-          </li>
+          </Link>
 
-          <li className={styles.listItem}>
+          <Link href={'/voiceOver'} className={styles.listItem}>
             <Image src={mic} alt="Image"/>
             Voiceover
-          </li>
+          </Link>
 
-          <li className={styles.listItem}>
+          <Link href={'/ideageneration'} className={styles.listItem}>
             <Image src={ideas} alt="Image"/>
             Idea Generation
-          </li>
+          </Link>
 
-          <li className={styles.listItem}>
+          <Link href={'/documentcreation'} className={styles.listItem}>
             <Image src={document} alt="Image"/>
             Document Creation
-          </li>
+          </Link>
 
           <div className="flex items-center">
             <div className="flex-1 border-t border-[#3F3F3F] border-[0.61px]"></div>
@@ -234,38 +234,48 @@ export default function ToolsHomeSidebar() {
             it easy.
           </h2>
           <div className={styles.toolsContainer}>
-          <Link href=''>
+          <Link href='/tools/image-creation'>
             <div className={styles.toolCard}>
               <Image src={imageCreation} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Image Creation</h1>
             </div>
             </Link>
+            <Link href={'/tools'}>
             <div className={styles.toolCard}>
               <Image src={videoCreation} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Video Creation</h1>
             </div>
+            </Link>
+            <Link href={'/adscreative'}>
             <div className={styles.toolCard}>
               <Image src={adCreation} className={styles.toolsimage} alt="Image" />
               <h1 className={styles.design}>Ad Creative</h1>
             </div>
+            </Link>
+            <Link href={'#'}>
             <div className={styles.toolCard}>
               <Image src={visualization} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Design & Visualization</h1>
             </div>
+            </Link>
             <Link href='/voiceOver'>
             <div className={styles.toolCard}>
               <Image src={voiceover} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Voiceover</h1>
             </div>
             </Link>
+            <Link href='/ideageneration'>
             <div className={styles.toolCard}>
               <Image src={idea} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Idea Generation</h1>
             </div>
+            </Link>
+            <Link href='/documentcreation'>
             <div className={styles.toolCard}>
               <Image src={documents} className={styles.toolsimage} alt="Image"/>
               <h1 className={styles.design}>Document Creation</h1>
             </div>
+            </Link>
           </div>
         </section>
 

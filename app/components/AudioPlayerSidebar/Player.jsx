@@ -15,23 +15,48 @@ const CustomAudioPlayer = ({ audioSrc, title, description }) => {
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
 
+  useEffect(() => {
+    console.log("Audio src =>",audioSrc)
+
+  
+    return () => {
+      
+    }
+  }, [])
+
+  const playAudio = () => {
+    const audio = audioRef.current;
+    console.log("Audio readyState:", audio.readyState); // Log the readyState
+    if (audio.readyState >= 2) { // HAVE_ENOUGH_DATA
+      audio.play().catch((error) => {
+        console.error("Playback error:", error);
+      });
+    } else {
+      console.error("Audio is not ready to play");
+    }
+  }
+  
+
   const togglePlayPause = () => {
     const audio = audioRef.current;
+    console.log("Toggling play/pause:", isPlaying);
     if (isPlaying) {
-      audio.pause();
-      cancelAnimationFrame(animationRef.current);
+        audio.pause();
+        cancelAnimationFrame(animationRef.current);
+        console.log("Paused audio");
     } else {
-      audio
-        .play()
-        .then(() => {
-          animateWaveform();
-        })
-        .catch((error) => {
-          console.error("Audio playback failed:", error);
-        });
+        audio.play()
+            .then(() => {
+                console.log("Playing audio");
+                animateWaveform();
+            })
+            .catch((error) => {
+                console.error("Audio playback failed:", error);
+            });
     }
     setIsPlaying(!isPlaying);
-  };
+};
+
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -175,7 +200,7 @@ const CustomAudioPlayer = ({ audioSrc, title, description }) => {
           <button onClick={skipBackward} className={styles.skipBtn}>
           <Image src="/VoiceOver/Skip.png" alt="Play" width={20} height={20} layout="responsive" className={styles.secbtn}/>
           </button>
-          <button onClick={togglePlayPause} className={styles.playPauseBtn}>
+          <button onClick={playAudio} className={styles.playPauseBtn}>
             {isPlaying ? <Image src="/VoiceOver/Pause.png" alt="Play" width={200} height={200} layout="responsive" className={styles.pausebtn}/> :  <Image src="/VoiceOver/Pause.png" alt="Play" width={200} height={200} layout="responsive" className={styles.pausebtn}/>}
           </button>
 

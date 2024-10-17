@@ -499,14 +499,14 @@ const Home = () => {
             </li>
             <li className={style.hoverGradientBorder}>About us</li>
             <li className={style.hoverGradientBorder}>Pricing</li>
-          
           </ul>
         </nav>
-        <button
+        <Link
+          href={'/ToolsHome'}
           className={` ${style.button1} px-5 py-1 rounded-[39px] font-[400] text-[13px]`}
         >
           Start for free
-        </button>
+        </Link>
       </header>
 
       <main className="container mx-auto flex flex-col justify-center   py-12">
@@ -520,31 +520,37 @@ const Home = () => {
           and elevates your creative <br /> process.
         </p>
         <div className="flex justify-center mb-12">
-          <button
+          <Link
+            href={'/ToolsHome'}
             className={` ${style.button1} px-9 py-3 rounded-[39px] text-[16px]`}
           >
             Start for free
-          </button>
+          </Link>
         </div>
         <div className={`${style.parent} `}>
           <div className={`${style.first}`}>
-            <FeatureCard
-              icon={playList}
-              title="Video Creation"
-              description="Harness AI to instantly generate  engaging videos and short clips with ease."
-            />
+            <Link href="/tools">
+              <FeatureCard
+                icon={playList}
+                title="Video Creation"
+                description="Harness AI to instantly generate  engaging videos and short clips with ease."
+              />
+            </Link>
 
-            <FeatureCard
-              icon={megaphone}
-              title="Ad Creative"
-              description="Create attention-grabbing ads effortlessly with the power of AI."
-            />
-
-            <FeatureCard
-              icon={note}
-              title="Slide Creation"
-              description="Generate polished, professional slides instantly with AI assistance."
-            />
+            <Link href="/adscreative">
+              <FeatureCard
+                icon={megaphone}
+                title="Ad Creative"
+                description="Create attention-grabbing ads effortlessly with the power of AI."
+              />
+            </Link>
+            <Link href="/Presentation">
+              <FeatureCard
+                icon={note}
+                title="Slide Creation"
+                description="Generate polished, professional slides instantly with AI assistance."
+              />
+            </Link>
           </div>
           <div className={`${style.second} `}>
             <div className={`${style.secondA} ${style.imgBox}`}>
@@ -556,31 +562,38 @@ const Home = () => {
                 className={`${style.imgBox} rounded-lg `}
               />
             </div>
-
-            <FeatureCard
-              icon={rose}
-              title="Data Visualization"
-              description="Transform raw data into visually clear insights, powered by AI."
-            />
+            <Link href="">
+              <FeatureCard
+                icon={rose}
+                title="Data Visualization"
+                description="Transform raw data into visually clear insights, powered by AI."
+              />
+            </Link>
           </div>
           <div className={`${style.third} `}>
-            <FeatureCard
-              icon={mic}
-              title="Voiceover"
-              description="Let AI produce perfectly tailored voiceovers for your content in seconds."
-            />
+            <Link href="/voiceOver">
+              <FeatureCard
+                icon={mic}
+                title="Voiceover"
+                description="Let AI produce perfectly tailored voiceovers for your content in seconds."
+              />
+            </Link>
 
-            <FeatureCard
-              icon={webDesign}
-              title="Website Design"
-              description="Use AI to design beautiful, user-friendly websites in no time."
-            />
+            <Link href="">
+              <FeatureCard
+                icon={webDesign}
+                title="Website Design"
+                description="Use AI to design beautiful, user-friendly websites in no time."
+              />
+            </Link>
 
-            <FeatureCard
-              icon={pen}
-              title="Graphic Design"
-              description="AI generates stunning ads and designs that captivate and elevate your brand."
-            />
+            <Link href="/graphicstool">
+              <FeatureCard
+                icon={pen}
+                title="Graphic Design"
+                description="AI generates stunning ads and designs that captivate and elevate your brand."
+              />
+            </Link>
           </div>
         </div>
 
@@ -599,7 +612,7 @@ const Home = () => {
               <li
                 key={option}
                 className={`${style.listitem} ${
-                  selectedOption===option ? style.active:""
+                  selectedOption === option ? style.active : ""
                 }`}
                 onClick={() => handleOptionChange(option)}
               >
@@ -636,7 +649,7 @@ const Home = () => {
               <li
                 key={option}
                 className={`${style.listitem} ${
-                  currentSelection===option ? style.active:""
+                  currentSelection === option ? style.active : ""
                 }`}
                 onClick={() => changeSelection(option)}
               >
@@ -875,7 +888,7 @@ const Home = () => {
 
 const FeatureCard = ({ icon, title, description }) => (
   <div
-    className={`${style.box} bg-[#1C1C1C] flex justify-center  items-center gap-[24px] p-10 rounded-[24px]`}
+    className={`${style.box} bg-[#1C1C1C] flex justify-center  items-center gap-[24px] p-10 rounded-[24px] cursor-pointer`}
   >
     <div className="">
       <Image src={icon} alt="robo" width={56} className="rounded-lg mr-1" />
@@ -904,25 +917,24 @@ const FeatureCard = ({ icon, title, description }) => (
 // );
 
 const SmallCard = ({ text, author, role, avatar }) => {
-  console.log("avatar is =>", avatar);
   return (
-  <div className={`${style.smallCard} p-8 mb-3 rounded-[24px]`}>
-    <div className={`${style.scrollcontainer}`}>
-      <div className={`${style.scrollcontent}`}>
-      <p className="text-[14px] text-[#c9c9c9]-[400] opacity-85 leading-[22px]">
-          {text}
-        </p>
+    <div className={`${style.smallCard} p-8 mb-3 rounded-[24px]`}>
+      <div className={`${style.scrollcontainer}`}>
+        <div className={`${style.scrollcontent}`}>
+          <p className="text-[14px] text-[#c9c9c9]-[400] opacity-85 leading-[22px]">
+            {text}
+          </p>
+        </div>
       </div>
-    </div>
-    <div className="flex items-center gap-4">
-      <Image width={40} height={40} scr={avatar.avatarimg.src} alt={author} className="w-10 h-10 rounded-full" />
+      <div className="flex items-center gap-4">
+      <Image width={40} height={40} src={avatar.avatarimg.src} alt={author} className="w-10 h-10 rounded-full" />
       <div>
         <p className=" text-[14px] text-[#c9c9c9]-[500]">{author}</p>
         <p className="text-[11px] text-[#c9c9c9]-300 italic">{role}</p>
       </div>
     </div>
-  </div>
-)
+    </div>
+  );
 };
 
 export default Home;
