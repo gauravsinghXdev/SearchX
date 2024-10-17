@@ -1,57 +1,77 @@
-import React from "react";
+'use client'
+
+import React, {useState} from "react";
+import { useRouter } from 'next/navigation';
 import Image from "next/image";
 import style from "@/styles/documentCreation/documentcreationsecon.module.css";
 import sparkle from "@/public/VoiceOver/sparkles.png";
-import Shape from "@/public/VoiceOver/Slogo.png";
-import arrow from "@/public/VoiceOver/arrow.png";
-import coins from "@/public/VoiceOver/coins.png";
-import crown from "@/public/VoiceOver/crown.png";
+
 const DocumentCreationSecond = () => {
+  const [inputText, setInputText] = useState("");
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
+  const [editorContent, setEditorContent] = useState("");
+
+  // Function to handle API call for document generation
+  const handleGenerateDocument = async () => {
+    const backendURL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://decisive-cody-brandsmashers-c1c962cb.koyeb.app";
+    if (!inputText) {
+      alert("Please enter a prompt");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      const response = await fetch(`${backendURL}/document_generation/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ prompt: inputText }),
+      });
+
+      if (response.ok) {
+        // Handling the response as a blob (binary data)
+        const blob = await response.blob();
+
+        // Create a download link for the file
+        const url = window.URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+
+        // Default file name for the downloaded document
+        let fileName = "generated_document.docx"; // For .docx files
+        router.push({
+          pathname: '/documentCreation/DocumentCreationThird',
+          query: { fileUrl: url, fileName }
+        });
+        // If the server sends a Content-Disposition header with filename
+        const contentDisposition = response.headers.get("Content-Disposition");
+        if (contentDisposition) {
+          const fileNameMatch = contentDisposition.match(/filename="(.+)"/);
+          if (fileNameMatch?.length === 2) {
+            fileName = fileNameMatch[1];
+          }
+        }
+
+        // Set the file name and trigger the download
+        link.download = fileName;
+        link.click(); // Automatically download the document
+        window.URL.revokeObjectURL(url); // Clean up the URL after download
+
+      } else {
+        console.error("Error fetching document:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error in document generation:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+
   return (
-    <div className="bg-[#1C1C1C] text-white min-h-screen  ">
-      {/* <nav className="bg-[#1C1C1C] text-white p-4">
-        <div className="max-w-[full] mx-auto flex justify-between items-center">
-          <div className="flex items-center">
-            <button className="mr-4">
-              <Image
-                src={arrow}
-                alt="star-icon"
-                width={16}
-                height={16}
-                className="rounded-lg mr-1"
-              />
-            </button>
-            <div className="flex flex-row gap-1">
-              <Image src={Shape} alt="star-icon" />
-            </div>
-          </div>
-          <div className="text-center flex-grow">
-            <span className="font-[500] text-[16px]">Presentation</span>
-          </div>
-          <div className="flex items-center">
-            <span className="mr-4 text-[#ffff] text-[14px] flex items-center">
-              <Image
-                src={coins}
-                alt="coins-icon"
-                width={24}
-                height={24}
-                className="rounded-lg mr-1"
-              />
-              25 Tokens Left
-            </span>
-            <span className="mr-4 text-[#ffff] text-[14px] flex items-center">
-              <Image
-                src={crown}
-                alt="crown-icon"
-                width={16}
-                height={16}
-                className="rounded-lg mr-1"
-              />
-              Upgrade
-            </span>
-          </div>
-        </div>
-      </nav> */}
+    <div className="bg-[#1C1C1C] text-white min-h-screen">
       <div class="flex-1 border-t border-[#3F3F3F] border-[0.61px]"></div>
       <div className="w-[825px] mt-7 mx-auto">
         <h1 className={`${style.heading} text-4xl font-bold text-center mb-2`}>
@@ -65,21 +85,31 @@ const DocumentCreationSecond = () => {
         <textarea
           className="w-full bg-[#2C2C2C] text-white p-7 text-[14px] rounded-lg mb-4 resize-none min-h-[112px] max-h-[300px]"
           rows="3"
-          placeholder="What services could merge finance and health for better personal management?"
+          placeholder="Enter a prompt to generate a document"
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
         ></textarea>
 
         <button
+          onClick={handleGenerateDocument}
           className={`${style.icon} w-full text-white font-[300] text-[13px] py-2 px-4 rounded-lg flex items-center justify-center mb-8`}
+          disabled={loading}
         >
           <Image
             src={sparkle}
             alt="star-icon"
-            width={19.41} // Adjust width as needed
-            height={40} // Adjust height as needed
-            className="rounded-lg mr-1" // Optional: to maintain the rounded look
+            width={19.41} 
+            height={40} 
+            className="rounded-lg mr-1"
           />
           Generate Document
         </button>
+        {editorContent && (
+          <div className="bg-[#2C2C2C] text-white p-4 rounded-lg mt-4">
+            <h2 className="text-2xl font-bold mb-2">Generated Document:</h2>
+            <p>{editorContent}</p>
+          </div>
+        )}
       </div>
     </div>
   );
