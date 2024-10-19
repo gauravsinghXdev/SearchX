@@ -13,11 +13,12 @@
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100vh;
+  position: relative;
 }
 
 .logo {
-  margin-top: 20px;
+  margin-top: 10px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -26,6 +27,8 @@
   color: #ffffff;
   font-size: 24px;
   font-weight: bold;
+
+  
 }
 .logoHeading {
   font-size: 20px;
@@ -39,8 +42,20 @@
 }
 
 .navLinks {
-  margin-top: 20px;
+  
+  margin-top: 30px;
+  flex-grow: 1;
+  overflow-y: auto; 
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  scrollbar-width: none; 
 }
+
+.navLinks::-webkit-scrollbar {
+  display: none;
+}
+
 
 .navLinks li {
   margin-bottom: 6px;
@@ -52,11 +67,11 @@
   background: #171717;
 }
 .listItem {
-  display: flex; /* Use flexbox to arrange items in a row */
-  align-items: center; /* Vertically center items */
-  padding: 10px; /* Add padding for spacing */
+  display: flex; 
+  align-items: center;
+  padding: 10px; 
   cursor: pointer;
-  gap: 15px; /* Change cursor on hover */
+  gap: 15px; 
   color: #686567;
   font-size: 13px;
   font-weight: 500;
@@ -66,10 +81,10 @@
 }
 
 .listItem svg {
-  /* Style for the icon */
-  margin-right: 8px; /* Space between icon and text */
-  width: 20px; /* Set width for the icon */
-  height: 20px; /* Set height for the icon */
+ 
+  margin-right: 8px;
+  width: 20px; 
+  height: 20px; 
 }
 
 .headingss {
@@ -103,12 +118,14 @@
 }
 .dropdown {
   display: flex;
-  align-items: center; /* Vertical alignment */
+  align-items: center; 
   justify-content: space-between;
-  gap: 5px; /* Space between the h2 and the select */
+  gap: 5px;
 }
 
 .upgradeSection {
+  margin-top: 10px;
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -121,6 +138,7 @@
   border: 0.1px solid #535353;
   border-bottom: none;
   border-right: none;
+  z-index: 10;
 }
 
 .upgradeButton {
@@ -192,10 +210,22 @@
 
 /* Main Content */
 .mainContent {
-  /* flex: 1; */
-  padding: 20px;
   color: white;
+  height: 100vh; 
+  overflow-y: auto; 
 }
+
+.mainContent::-webkit-scrollbar {
+  display: none;
+}
+
+.mainContent {
+  scrollbar-width: none;
+}
+.middlesection{
+  padding: 0px 20px;
+}
+
 .crown {
   display: flex;
   justify-content: center;
@@ -341,12 +371,18 @@
   text-align: left;
 }
 
-/* top bar */
 .topBar {
+  background: #1c1c1c;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden; 
+  width: 100%; 
+  border-bottom: 0.5px solid #3f3f3f;
 }
 
 .paragraphss {
@@ -399,7 +435,7 @@
 }
 
 .searchIcon {
-  font-size: 18px; /* You can adjust the size of the icon */
+  font-size: 18px;
   color: #686567;
 }
 
@@ -445,6 +481,7 @@
   gap: 0px;
   border: 0px 0px 0.7px 0px;
 }
+
 
 /* Container for the text */
 .textContainer {
@@ -494,13 +531,14 @@
   margin: 0;
 }
 .roboimage {
-  width: 300px; /* Increase the width as needed */
-  height: 120px; /* Use auto to maintain aspect ratio, or set a specific height */
+  width: 300px; 
+  height: 120px; 
   gap: 0px;
   opacity: 1;
 }
 
 .profileContainer {
+  position: sticky;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -520,11 +558,9 @@
   font-weight: 500;
   line-height: 19.53px;
   text-align: left;
-
   display: flex;
   align-items: center;
-
-  cursor: pointer; /* Change cursor to pointer on hover */
+  cursor: pointer; 
 }
 
 /* drop down */
@@ -541,7 +577,7 @@
 .profileContainer {
   display: flex;
   align-items: center;
-  position: relative; /* Needed for dropdown positioning */
+  position: relative;
 }
 
 .profileImage {
@@ -550,10 +586,10 @@
 }
 
 .icon {
-  color: #ffffff; /* Adjust color as needed */
-  margin-left: 10px; /* Spacing between name and dropdown icon */
-  width: 15px; /* Adjust color as needed */
-  height: 15px;
+  color: #ffffff; 
+  margin-left: 10px;
+  width: 12px;
+  height: 12px;
   margin-right: 10px;
 }
 
@@ -630,4 +666,4 @@
   transform: translateY(-50%);
 }
 
-/* drop down */
+/* scroll*/

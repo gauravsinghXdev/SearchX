@@ -3,9 +3,10 @@
   display: flex;
   background: #1c1c1c;
   font-family: "Inter", sans-serif;
-}
+ }
 
 .navsection {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,8 +16,8 @@
   height: 72px;
   gap: 0px;
   border-bottom: 0.7px solid #3F3F3F;
-
-}
+  
+  }
 
 .logo {
   padding: 40px;
@@ -42,11 +43,14 @@
 .sidebar {
   background: #1c1c1c;
   border-right: 0.5px solid #3f3f3f;
-  max-width: 100%; /* Test with a fixed width */
+  max-width: 15%; 
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* height: 100vh; */
+  overflow-y: auto;
+
 }
 .arrow {
   margin-right: 10px;
@@ -90,18 +94,17 @@
 }
 
 .listItem {
-  display: flex; /* Use flexbox to arrange items in a row */
-  align-items: center; /* Vertically center items */
-  padding: 10px; /* Add padding for spacing */
+  display: flex; 
+  align-items: center; 
+  padding: 10px;
   cursor: pointer;
-  gap: 20px; /* Change cursor on hover */
+  gap: 20px; 
 }
 
 .listItem svg {
-  /* Style for the icon */
-  margin-right: 8px; /* Space between icon and text */
-  width: 20px; /* Set width for the icon */
-  height: 20px; /* Set height for the icon */
+  margin-right: 8px; 
+  width: 20px;
+  height: 20px;
 }
 
 .headingss {
@@ -164,12 +167,16 @@
   width: 100%;
   max-width: 600px;
 }
-
-/* Main Content */
 .mainContent {
-  flex: 1;
-  padding: 0px 20px;
-  color: #ffffff;
+  padding: 20px;
+  height: calc(100vh - 60px); 
+  overflow-y: auto; 
+  color: #FFFFFF;
+ }
+
+
+.mainContent::-webkit-scrollbar {
+  display: none;
 }
 
 .crown {
@@ -566,7 +573,8 @@ linear-gradient(128.33deg, #171C5E 28.92%, #855DFC 72.08%);
 
 .icon {
   margin-left: 10px; /* Space between name and dropdown icon */
-  color: #555; /* Adjust color as needed */
+  color: #FFFFFF; /* Adjust color as needed */
+  font-size: 12px;
 }
 
 .dropdownList {
