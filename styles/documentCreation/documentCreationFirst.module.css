@@ -6,15 +6,23 @@
 }
 
 .heading {
-  background: linear-gradient(128.33deg, #35418f 28.92%, #5d8afc 72.08%);
+  background: linear-gradient(285deg, #C0B3FF 46.52%, #6949FF 54.91%);
   -webkit-background-clip: text;
   color: transparent;
+  font-weight: 500;
 }
 
 .docsIcon, .templateIcon {
   background: linear-gradient(128.33deg, #171c5e 28.92%, #855dfc 72.08%);
 }
-
+.icon {
+  background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+  margin-top: 20px;
+  width: 92%;
+  border-top: 1px solid #C5C5C5;
+  border-right: 1px solid #C5C5C5 ;
+  border-left: 1px solid #C5C5C5;
+}
 .clipcontainer {
   display: flex;
   justify-content: center;
