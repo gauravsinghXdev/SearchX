@@ -30,21 +30,21 @@ import { VscRegex } from "react-icons/vsc";
 import { RxCross1 } from "react-icons/rx";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { GrShareOption } from "react-icons/gr";
+import { SlStar } from "react-icons/sl";
 
 const myCreationsData = [
   {
     title: "Crypto Ai Illustration with coins flying around red and gold as the theme color adds a crypto human robot",
     prompt: "Generate creative AI-based illustrations for crypto marketing.",
     images: [
-      frame1, frame1, frame1,frame1
-    ]
+      frame1, frame1, frame1,frame1 ]
   },
   {
     title: "A image showing a black female wearing vr headset in front of a cyberpunk city environment, layered gestures, dark purple and light amber, industrialization, realistic perspective, glass as material, high resolution -",
-    prompt: "VR headset futuristic illustrations.",
-    images: [
-      frame2, frame2, frame2, frame2,
-    ]
+    prompt: "A image showing a black female wearing vr headset in front of a cyberpunk city environment, layered gestures, dark purple and light amber",
+    images:[ frame2, frame2, frame2, frame2]
+
+    
   },
   {
     title: "Cat concept mobile app",
@@ -75,7 +75,8 @@ const ImageCreation = () => {
 
 
 const handleCloseModal = () => {
-  setIsModalOpen(false); // Hides the modal when clicked
+  // setIsModalOpen(false); 
+  setSelectedImage(null); 
 };
 
   return (
@@ -173,14 +174,13 @@ const handleCloseModal = () => {
 
      <div className={styles.contentSection}>
     <div>
-      {isModalOpen && (
+    
         <div className={styles.modal}>
           <div className={styles.crossIcon} onClick={handleCloseModal}>
-            <RxCross1 />
+           <RxCross1 />
           </div>
-          <p>This is the modal content!</p>
         </div>
-      )}
+    
       </div>
 
         <h1>Cat Concept Mobile App</h1>
@@ -191,12 +191,13 @@ const handleCloseModal = () => {
         <FiCopy /> Copy Prompt
       </button>
       <button className={styles.secondaryButton}>
-        <VscRegex /> Regenerate
+      <SlStar /> Regenerate
       </button>
     </div>
 
 <h2 className={styles.mainHeading}>Rendering Preferences</h2>
 <div className={styles.flexContainers}>
+
   <p className={styles.para}>
     <span className={styles.labelText}>Style</span> 
     <span className={styles.valueText}>Resolution</span>

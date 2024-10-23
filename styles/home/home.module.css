@@ -51,6 +51,25 @@ text-align: center;
 .button1:hover {
   background: linear-gradient(110.25deg, #6949ff 14.25%, #8a71ff 47.06%);
 }
+.button12 {
+  background: linear-gradient(110.25deg, #8a71ff 14.25%, #6949ff 47.06%);
+  width: 156px;
+  height: 38px;
+  padding: 8px 25px 8px 25px;
+  gap: 6.41px;
+  border-radius: 20px;
+  border: 0.8px 0px 0px 0px;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.73px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+.button12:hover {
+  background: linear-gradient(110.25deg, #6949ff 14.25%, #8a71ff 47.06%);
+}
 .listitem {
   border-radius: 24px;
   /* other styles */
