@@ -95,21 +95,17 @@ const VideoCreationPage = () => {
         Sanusilamide
         <FaChevronDown className={styles.icon} /> 
       </h1>
-      {isDropdownOpen && (
+      {/* {isDropdownOpen && (
         <ul className={styles.dropdownList}>
           <li className={styles.dropdownItem}>Option 1</li>
           <li className={styles.dropdownItem}>Option 2</li>
           <li className={styles.dropdownItem}>Option 3</li>
         </ul>
-      )}
+      )} */}
     </div>
-
-    </nav>
-
-
+ </nav>
 
 <main className={styles.mainContent}>
-     
 <header className={styles.header}>
   <div className={styles.textContainer}>
     <h1>Ready to start your next<br></br> visual project?</h1>
@@ -139,7 +135,6 @@ const VideoCreationPage = () => {
             <h1 className={styles.design}>Webside Design</h1></div>
             <div className={styles.toolCard}><Image src={ dataVisualization} className={styles.toolsimage} alt="Image"/>
             <h1 className={styles.design}>Data Visualization</h1></div>
-            
           </div>
         </section>
 

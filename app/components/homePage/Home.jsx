@@ -847,7 +847,7 @@ const Home = () => {
                 One search. One touch. Endless possibilities
               </p>
               <button
-                className={`${style.button1} w-[179px] h-[48px] rounded-[39px] py-3 px-2 text-[16px] font-[400]`}
+                className={`${style.button12} w-[179px] h-[48px] rounded-[39px] py-3 px-2 text-[16px] font-[400]`}
               >
                 Get Started Today
               </button>

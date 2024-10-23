@@ -108,7 +108,6 @@
   align-items: center;
   justify-content: space-between;
   background-color: #2c2c2e;
-  /* background-color: red; */
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -124,7 +123,7 @@
   letter-spacing: -0.02em;
   text-align: left;
 }
-.optionButtoncolor{
+.optionButtoncolor {
   flex: 1;
   padding: 8px;
   display: flex;
@@ -148,8 +147,8 @@
   text-align: left;
 }
 .ioiosicon {
-  color: #FFFFFF;
-  font-size: 14px; 
+  color: #ffffff;
+  font-size: 14px;
 }
 .optionButtons {
   flex: 1;
@@ -241,12 +240,11 @@
   justify-content: center;
   margin-bottom: 10px;
 }
-.moreoption{
+.moreoption {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-right: 70px;
-  
 }
 .sidebar .counterButton {
   padding: 6px;
@@ -424,7 +422,6 @@
 }
 
 .optionButton svg {
-  margin-left: 130px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -590,9 +587,14 @@
   background: #2d2d2d;
   padding: 20px 20px;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
-  /* margin-right: 10px; */
+  color: #c9c9c9;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  text-align: left;
 }
 
 .buttonscopy {
@@ -654,8 +656,9 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-
   color: #555;
+}
+.headings {
 }
 
 .flexContainers h1 {
@@ -683,6 +686,10 @@
   line-height: 9.68px;
   letter-spacing: -0.02em;
   text-align: right;
+  display: flex;
+  align-items: right;
+  justify-content: space-around;
+  margin-bottom: 5px;
 }
 
 .labelText1 {
@@ -768,4 +775,15 @@
   line-height: 9.68px;
   letter-spacing: -0.02em;
   text-align: left;
+}
+.buttonscopy {
+  border-bottom: 0.7px solid gray;
+  margin-bottom: 10px;
+}
+
+.crownicon {
+ margin-top: -20px;
+}
+.arowicons{
+ 
 }

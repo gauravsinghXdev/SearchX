@@ -4,15 +4,19 @@ import DocumentCreationSecond from "../components/documentCreation/DocumentCreat
 import DocumentCreationFourth from "../components/documentCreation/DocumentCreationFourth";
 import DocumentCreation from "../components/Layouts/DocumentCreation";
 import DocumentCreationThird from "../components/documentCreation/DocumentCreationThird";
+
+
 const page = () => {
   return (
     <>
       <DocumentCreation>
         <div>
-          {/* <DocumentCreationFirst /> */}
-          <DocumentCreationSecond />
+               <DocumentCreationFirst />
+            
+          {/* <DocumentCreationSecond /> */}
           {/* <DocumentCreationFourth /> */}
-          {/* <DocumentCreationThird /> */}
+          {/* <DocumentCreationThird />  */}
+           
         </div>
       </DocumentCreation>
     </>

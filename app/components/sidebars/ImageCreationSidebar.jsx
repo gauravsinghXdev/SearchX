@@ -137,10 +137,11 @@ const ImageCreationSidebar = () => {
 
        <div className={styles.section}>
         <label className={styles.label}>Mood</label>
-        <button className={styles.optionButton} >cheerful<MdKeyboardArrowRight/>
-       
+        <button className={styles.optionButton} >cheerful<MdKeyboardArrowRight className={styles.arowicons}/>
+        {/* <Image src={crownn} alt='crowwn' className={styles.crownicon}/> */}
         </button>
        </div>
+       
       </div>
     </div>
   );

@@ -159,7 +159,8 @@ export default function ToolsHomeSidebar() {
             Data VisualiZation
           </li>
         </ul>
-
+        
+        <div className={styles.middleContainer}>
         <div className={styles.upgradeSection}>
           <Image src={crown} className={styles.crown} alt="Image"/>
           <h1 className={styles.headingss}>
@@ -177,13 +178,14 @@ export default function ToolsHomeSidebar() {
             Sanusilamide
             <FaChevronDown className={styles.icon} />
           </h1>
-          {isDropdownOpen && (
+          {/* {isDropdownOpen && (
             <ul className={styles.dropdownList}>
               <li className={styles.dropdownItem}>Option 1</li>
               <li className={styles.dropdownItem}>Option 2</li>
               <li className={styles.dropdownItem}>Option 3</li>
             </ul>
-          )}
+          )} */}
+         </div>
         </div>
       </nav>
 
@@ -224,6 +226,8 @@ export default function ToolsHomeSidebar() {
             </button>
           </div>
         </div>
+      
+      <div className={styles.middlesection}>
         <header className={styles.header}>
           <div className={styles.textContainer}>
             <h1>
@@ -401,8 +405,11 @@ export default function ToolsHomeSidebar() {
               <p>3 days go</p>
             </div>
           </div>
+        
         </section>
+        </div>
       </main>
+    
     </div>
   );
 }
