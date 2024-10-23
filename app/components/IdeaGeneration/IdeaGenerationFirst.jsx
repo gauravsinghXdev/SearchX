@@ -4,12 +4,11 @@ import Image from "next/image";
 import styles from "@/styles/Ideageneration/IdeaGenerationFirst.module.css";
 import element from "@/public/SlideCreationImg/elements.png";
 
-
 const IdeaGenerationFirst = () => {
   const [hasText, setHasText] = useState(false);
   const [prompt, setPrompt] = useState(""); // State for the prompt text
   const [loading, setLoading] = useState(false); // Loading state for the button
-  const [result,setResult] = useState("")
+  const [result, setResult] = useState("");
   // Handle input change to update prompt state
   const handleChange = (e) => {
     const value = e.target.value;
@@ -40,14 +39,13 @@ const IdeaGenerationFirst = () => {
       if (contentType && contentType.includes("application/json")) {
         const result = await response.json();
         console.log("RESULT => ", result);
-        JSON.stringify(data),
-        setResult(JSON.stringify(result))
+        JSON.stringify(data), setResult(JSON.stringify(result));
         // Handle the result, e.g., set image URL or display the result
       } else {
         // If not JSON, treat as text
         const textResult = await response.text();
         console.log("Text Result => ", textResult);
-        setResult(textResult)
+        setResult(textResult);
       }
     } catch (error) {
       console.error("Error generating the idea:", error);
@@ -81,7 +79,6 @@ const IdeaGenerationFirst = () => {
                 onChange={handleChange} // Update prompt on input change
               />
             </div>
-            
           </div>
 
           {!hasText && (
@@ -153,22 +150,20 @@ const IdeaGenerationFirst = () => {
                   height={40}
                   className="rounded-lg mr-1"
                 />
-                {loading ? "Generating..." : "Generate Idea"} {/* Show loading */}
+                {loading ? "Generating..." : "Generate Idea"}{" "}
+                {/* Show loading */}
               </button>
             </div>
           )}
-    
 
           {loading && (
-          <div className={styles.resultContainer}>
-            <h3 className={styles.resultTitle}>Generated Idea:</h3>
-            <p className={styles.resultText}>{result}</p>
-          </div>
+            <div className={styles.resultContainer}>
+              <h3 className={styles.resultTitle}>Generated Idea:</h3>
+              <p className={styles.resultText}>{result}</p>
+            </div>
           )}
-           </div>
+        </div>
       </div>
-
- 
     </>
   );
 };
