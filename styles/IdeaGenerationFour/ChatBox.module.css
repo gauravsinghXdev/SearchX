@@ -1,60 +1,232 @@
 .sidebar {
-
     max-width: 804px;
-    min-height: 298px;
-    padding: 26px 12px; /* Fixed the padding */
-    border: 0.5px solid #3F3F3F;
-  border-radius: 9.72px;
-    gap: 0px;
-    opacity: 1; /* Make it visible */
-    align-items: center;
-  }
-  
-  .inputBoxWrapper {
-    /* display: flex; */
-    align-items: center;
-    justify-content: space-between;
-   
-    padding: 10px;
-    border-radius: 8px;
-  }
-  .inputBoxWrapper {
+    max-height: 650px;
+    padding: 26px 12px;
+    border-radius: 9.72px;
+    opacity: 1;
+    /* align-items: center; */
+}
 
+  
+
+.inputBoxWrapper {
+    position: relative;
     align-items: center;
     justify-content: space-between;
-    /* background-color: rgba(0, 0, 0, 0.2); Transparent background for input box area */
     padding: 10px;
-    width: 10   0%; /* Ensures it takes up the full available width */
+    width: 85%;
     border-radius: 8px;
-    box-sizing: border-box; /* Include padding in the width calculation */
-  }
-  
-  .inputBox {
-    flex: 1; /* Makes the input box take up the available space */
+}
+
+.inputBox {
+    flex: 1;
     padding: 8px 12px;
-    background-color: transparent; /* Transparent input box */
-    color: white;
-    border: 1px solid #3F3F3F;
-    border-radius: 4px;
+    background-color: #3F3F3F;
+    color: #686567;
     outline: none;
-    min-width: 0; /* Prevents the input from overflowing */
-  }
-  
-  .sendButton {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent button */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    margin-left: 10px;
+    min-width: 0;
+    height: 72px;
+    
+}
+
+.inputBoxWrapper input:focus {
+    outline: none;
+    border-color: #3F3F3F;
+}
+
+.iconcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 8px;
+    width: 160px;
+    height: 80px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    white-space: nowrap; /* Prevents the button text from breaking */
+    margin-left: 8px;
+    margin-right: 20px;
+    opacity: 1;
+    gap: 8px;
+    background-color: #575757;
+}
+
+.iconcontainer:hover {
+    background-color: #575757;
+}
+
+.icon {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: #FFFFFF;
+}
+
+.attachmenticon {
+    font-size: 19px;
+    margin-left: 6px;
+    cursor: pointer;
+    color: #575757;
+}
+
+.attachmenticon:hover {
+    color: #FFFFFF;
+}
+
+.icon2 {
+    background-color: #6949FF;
+   
+    margin-right: 10px;
+    /* margin-left: 10px; */
+    border-radius: 24px;
+    color: #686567;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.icon2:hover {
+    color: #FFFFFF;
+}
+
+.edithover {
+    margin-right: 0.5rem; /* Equivalent to 'mr-2' in Tailwind */
+    color: #d1d5db; /* Default gray text (gray-400) */
+    cursor: pointer;
+    font-size: 25px;
+    border-radius: 25px;
+    display: none;
+    transition: color 0.3s, background-color 0.3s;
   }
   
-  .sendButton:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Darker hover effect */
+  .edithover:hover {
+    display: block;
+   border-radius: 25px;
+    color: white;
+    background-color: #2B2A2A; /* Background color when hovered */
+  }
+  .avatarImage{
+    margin-right: -100px;
   }
   
 
   
+
+  
+
+  
+/* Media Queries */
+
+/* Large desktop screens */
+@media screen and (min-width: 1400px) {
+    .sidebar {
+        max-width: 900px;
+    }
+}
+
+/* Medium screens (typical laptops) */
+@media screen and (max-width: 1200px) {
+    .sidebar {
+        max-width: 700px;
+        padding: 20px 10px;
+    }
+    
+    .inputBoxWrapper {
+        width: 90%;
+    }
+    
+    .iconcontainer {
+        width: 140px;
+        height: 70px;
+    }
+}
+
+/* Tablet and small laptop screens */
+@media screen and (max-width: 992px) {
+    .sidebar {
+        max-width: 600px;
+        max-height: 600px;
+    }
+    
+    .inputBox {
+        height: 60px;
+    }
+    
+    .iconcontainer {
+        width: 120px;
+        height: 60px;
+        margin-right: 10px;
+    }
+}
+
+/* Large mobile devices and small tablets */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        max-width: 100%;
+        /* max-height: none; */
+        padding: 15px 8px;
+    }
+    
+    .inputBoxWrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .inputBox {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .iconcontainer {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .avatarImage {
+        margin-right: 0;
+    }
+    .sidebar{
+        gap: 0px;
+    }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+    .sidebar {
+        padding: 10px 5px;
+    }
+    
+    .inputBox {
+        height: 50px;
+    }
+    
+    .icon, .attachmenticon {
+        font-size: 16px;
+    }
+    
+    .edithover {
+        font-size: 20px;
+    }
+    .sidebar{
+        gap: 0px;
+    }
+    
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 320px) {
+    .inputBox {
+        padding: 6px 8px;
+    }
+    
+    .iconcontainer {
+        height: 50px;
+    }
+    .sidebar{
+        gap: 0px;
+    }
+}
