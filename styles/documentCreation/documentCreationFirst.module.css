@@ -9,7 +9,10 @@
   background: linear-gradient(285deg, #C0B3FF 46.52%, #6949FF 54.91%);
   -webkit-background-clip: text;
   color: transparent;
-  font-weight: 500;
+}
+
+.docsIcon, .templateIcon {
+  background: linear-gradient(128.33deg, #171c5e 28.92%, #855dfc 72.08%);
 }
 
 .docsIcon, .templateIcon {
