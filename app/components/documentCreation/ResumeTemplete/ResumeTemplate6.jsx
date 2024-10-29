@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } from "docx";
 import { FaTrash } from "react-icons/fa"; // Importing the trash icon
 
-const ResumeTemplate5 = ({ resumeText }) => {
+const ResumeTemplate6 = ({ resumeText }) => {
   const sectionsInitial = resumeText ? resumeText.split("\n\n") : [];
   const [editedSections, setEditedSections] = useState(sectionsInitial);
   const [currentlyEditing, setCurrentlyEditing] = useState({ sectionIndex: null, lineIndex: null });
@@ -44,7 +44,7 @@ const ResumeTemplate5 = ({ resumeText }) => {
     }
   };
 
-  // Download logic for ResumeTemplate5
+  // Download logic for ResumeTemplate6
   const downloadDOCX = async () => {
     const doc = new Document({
       sections: [
@@ -53,12 +53,12 @@ const ResumeTemplate5 = ({ resumeText }) => {
             const [title, ...content] = section.split("\n").filter(Boolean);
             const sectionContent = [];
 
-            // Add title (center-aligned, minimalist)
+            // Add title (left-aligned, modern look)
             sectionContent.push(
               new Paragraph({
-                children: [new TextRun({ text: title, bold: true, size: 28, color: "000000" })],
+                children: [new TextRun({ text: title, bold: true, size: 32, color: "4A90E2" })],
                 heading: HeadingLevel.HEADING_1,
-                alignment: AlignmentType.CENTER,
+                alignment: AlignmentType.LEFT,
                 spacing: {
                   before: 300,
                   after: 100,
@@ -66,7 +66,7 @@ const ResumeTemplate5 = ({ resumeText }) => {
               })
             );
 
-            // Add content (left-aligned, minimalist with spacing)
+            // Add content (left-aligned, modern look with spacing)
             content.forEach((line) => {
               sectionContent.push(
                 new Paragraph({
@@ -90,7 +90,7 @@ const ResumeTemplate5 = ({ resumeText }) => {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
       a.href = url;
-      a.download = "resume_template5.docx"; // Template 5 file name
+      a.download = "resume_template6.docx"; // Template 6 file name
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -101,18 +101,18 @@ const ResumeTemplate5 = ({ resumeText }) => {
   return (
     <div>
       {/* Preview Section */}
-      <div style={{ padding: "20px", border: "1px solid #ddd", backgroundColor: "#ffffff", textAlign: "left" }}>
-        <h3 style={{ color: "#000000", textAlign: "center" }}>Resume Preview (Template 5)</h3>
+      <div style={{ padding: "20px", border: "1px solid #ddd", backgroundColor: "#f9f9f9", textAlign: "left", borderRadius: "8px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
+        <h3 style={{ color: "#4A90E2", textAlign: "center" }}>Resume Preview (Template 6)</h3>
         {editedSections.map((section, index) => {
           const [title, ...content] = section.split("\n");
           return (
-            <div key={index} style={{ marginBottom: "30px", textAlign: "left" }}>
+            <div key={index} style={{ marginBottom: "30px", textAlign: "left", borderBottom: "1px solid #ccc", paddingBottom: "20px" }}>
               {/* Title Input */}
               <input
                 type="text"
                 value={title}
                 onChange={(e) => handleChange(index, "title", e.target.value)}
-                style={{ color: "#000000", fontWeight: "bold", width: "100%", padding: "5px", textAlign: "center" }}
+                style={{ color: "#4A90E2", fontWeight: "bold", width: "100%", padding: "10px", fontSize: "20px", border: "1px solid #4A90E2", borderRadius: "5px", marginBottom: "10px" }}
               />
               {content.map((line, lineIndex) => (
                 <div key={lineIndex} style={{ display: 'flex', alignItems: 'center', marginTop: '5px' }}>
@@ -120,17 +120,15 @@ const ResumeTemplate5 = ({ resumeText }) => {
                     value={line}
                     onChange={(e) => handleChange(index, lineIndex, e.target.value)}
                     style={{
-                      color: "#000000",
+                      color: "#333333",
                       width: "100%",
-                      padding: "5px",
+                      padding: "10px",
                       resize: "none",
-                      overflow: "hidden",
-                      height: "auto",
-                    }}
-                    rows={1}
-                    onInput={(e) => {
-                      e.target.style.height = 'auto';
-                      e.target.style.height = `${e.target.scrollHeight}px`;
+                      border: "1px solid #ddd",
+                      borderRadius: "5px",
+                      height: "40px", // Fixed height for uniformity
+                      overflow: "hidden", // Prevents scrollbars
+                      boxSizing: "border-box", // Ensures padding and border are included in the element's total width and height
                     }}
                     onFocus={() => setCurrentlyEditing({ sectionIndex: index, lineIndex })} // Set the editing state
                   />
@@ -161,17 +159,19 @@ const ResumeTemplate5 = ({ resumeText }) => {
         onClick={downloadDOCX}
         style={{
           padding: "10px 20px",
-          backgroundColor: "#000000",
+          backgroundColor: "#4A90E2",
           color: "white",
           border: "none",
           borderRadius: "5px",
           cursor: "pointer",
+          marginTop: "20px",
+          fontSize: "18px",
         }}
       >
-        Download Resume (Template 5)
+        Download Resume (Template 6)
       </button>
     </div>
   );
 };
 
-export default ResumeTemplate5;
+export default ResumeTemplate6;
