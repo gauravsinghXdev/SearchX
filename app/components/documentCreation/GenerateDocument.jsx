@@ -1,4 +1,5 @@
-"use client";
+"use client"
+
 import { useState } from "react";
 
 const GenerateDocument = () => {
@@ -25,12 +26,15 @@ const GenerateDocument = () => {
         formData.append("description", inputValue);
         formData.append("file", selectedFile);
 
+        console.log([...formData]); // Log to verify contents
+
         response = await fetch(`${backendURL}/document_generation/`, {
           method: "POST",
           body: formData,
         });
       } else {
         const data = { prompt: inputValue };
+        console.log("Request data => ", data); // Log the data object
 
         response = await fetch(`${backendURL}/document_generation/`, {
           method: "POST",
@@ -39,7 +43,12 @@ const GenerateDocument = () => {
         });
       }
 
+      console.log("Response => ", response);
+
+      // Get the text content from the response
       const responseText = await response.text();
+      console.log("Generated Text => ", responseText);
+
       setResponseText(responseText);
     } catch (error) {
       console.error("Error generating document:", error);
@@ -47,21 +56,6 @@ const GenerateDocument = () => {
     } finally {
       setIsGenerating(false);
     }
-  };
-
-  // Handle downloading the generated text as a .txt file
-  const handleDownload = () => {
-    const blob = new Blob([responseText], { type: "text/plain" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "generated_document.txt";
-    link.click();
-  };
-
-  // Handle moving the generated text back into the input area for editing
-  const handleEdit = () => {
-    setInputValue(responseText);
-    setResponseText("");
   };
 
   return (
@@ -94,81 +88,47 @@ const GenerateDocument = () => {
         <div className="output-section">
           <h2>Generated Text:</h2>
           <pre>{responseText}</pre>
-
-          {/* Download and Edit Buttons */}
-          <div className="action-buttons">
-            <button onClick={handleDownload} className="action-button">
-              Download
-            </button>
-            <button onClick={handleEdit} className="action-button">
-              Edit
-            </button>
-          </div>
         </div>
       )}
 
       <style jsx>{`
         .container {
-          background:red;
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
           padding: 20px;
-          background-color: #f0f4f8;
-          min-height: 100vh;
-          box-sizing: border-box;
         }
         h1 {
-          font-size: 2.5rem;
+          font-size: 2rem;
           margin-bottom: 20px;
-          color: #333;
-          text-align: start;
         }
         .input-section {
           display: flex;
           flex-direction: column;
           width: 100%;
-          max-width: 824px;
+          max-width: 600px;
           margin-bottom: 20px;
         }
         .input-box {
           width: 100%;
-          padding: 15px;
-          margin-bottom: 20px;
+          padding: 10px;
+          margin-bottom: 10px;
           font-size: 1rem;
-          background-color: black;
-          color: white;
           border: 1px solid #ccc;
-          border-radius: 8px;
-          outline: none;
-          white-space: pre-wrap;
-          word-wrap: break-word;
-        }
-        .input-box::placeholder {
-          color: #888;
+          border-radius: 5px;
         }
         .file-input {
-          color: white;
-          background-color: black;
-          padding: 10px;
-          border-radius: 5px;
           margin-bottom: 20px;
-          font-size: 1rem;
-          border: 1px solid #ccc;
         }
         .generate-button {
           background-color: #4caf50;
           color: white;
           padding: 10px 20px;
-          font-size: 1.2rem;
+          font-size: 1rem;
           border: none;
-          border-radius: 8px;
+          border-radius: 5px;
           cursor: pointer;
-          transition: background-color 0.3s;
-        }
-        .generate-button:hover {
-          background-color: #45a049;
         }
         .generate-button:disabled {
           background-color: #ddd;
@@ -177,36 +137,16 @@ const GenerateDocument = () => {
         .output-section {
           margin-top: 30px;
           padding: 20px;
-          background-color: #ffffff;
+          background-color: #f4f4f4;
           border-radius: 10px;
           width: 100%;
-          max-width: 824px;
-          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .action-buttons {
-          display: flex;
-          gap: 10px;
-          margin-top: 20px;
-        }
-        .action-button {
-          background-color: #2196f3;
-          color: white;
-          padding: 10px 20px;
-          font-size: 1rem;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-        }
-        .action-button:hover {
-          background-color: #1e88e5;
+          max-width: 600px;
+          white-space: pre-wrap;
         }
         pre {
           font-family: monospace;
           font-size: 1rem;
           line-height: 1.5;
-          white-space: pre-wrap;
-          word-wrap: break-word;
         }
       `}</style>
     </div>

@@ -1,214 +1,413 @@
 /* SearchHistory.module.css */
 
 .sidebar {
-   
-    padding: 26px 12px 938px 12px;
-    border-right: 0.5px solid #3F3F3F;
-    padding: 26px 95px 938px 12px;
-    gap: 0px;
-    border: 0px 0.5px 0px 0px;
-    opacity: 0px;
-    width: Fixed (824px)px;
-height: Hug (1,035px)px;
-padding: 40px 100px 40px 100px;
-gap: 16px;
-border-radius: 9.72px 0px 0px 0px;
-border: 1px 0px 0px 0px;
-opacity: 0px;
 
-  }
-  
-  .newSearchButton {
-    background: linear-gradient(134.14deg, #3C3C3C 46.75%, rgba(147, 147, 147, 0.8) 154.84%);
-    padding: 9px 51px;
-    border-radius: 8px;
-    border: 0px 0px 0px 4px;
-    width: 197px;
-    height: 34px;
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    left: 51px;
-    cursor: pointer;
-    opacity: 0.9;
-    transition: background 0.3s ease;
-  }
-  
-  .newSearchButton:hover {
-    background: linear-gradient(134.14deg, #4C4C4C 46.75%, rgba(147, 147, 147, 1) 154.84%);
-    opacity: 1;
-  }
-  
-  
-  .para {
-    margin-bottom: 8px;
-  }
-  
-  .para p {
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 15.73px;
-    letter-spacing: -0.02em;
-    text-align: left;
-    width: 280px;
-    height: 16px;
-    margin-top: 20px;
-    opacity: 0px;
-    color: #FFFFFF;
-  }
-  
-  .todaychatAll {
-    max-width: 280px; /* Fixed width */
-    min-height: 400px; /* Hug height */
-    top: 155px;
-    left: 12px;
-    gap: 8px;
-    opacity: 0;
-    color: #686567;
+  padding: 26px 12px 938px 12px;
+  border-right: 0.5px solid #3F3F3F;
+  padding: 26px 95px 938px 12px;
+  gap: 0px;
+  border: 0px 0.5px 0px 0px;
+  opacity: 0px;
+  max-width:  (824px)px;
+  height: Hug (1, 035px)px;
+  padding: 40px 100px 40px 100px;
+  gap: 16px;
+  border-radius: 9.72px 0px 0px 0px;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #1C1C1C;
 
-  }
-  
-  .chatpara {
-    display: flex;
-    align-items: center;
-    gap: 6.41px;
-    min-width: 280px;
-    height: 40px;
-    padding: 8px 14px 8px 16px;
-    border-radius: 8px;
+
+}
+
+.newSearchButton {
+  background: linear-gradient(134.14deg, #3C3C3C 46.75%, rgba(147, 147, 147, 0.8) 154.84%);
+  padding: 9px 51px;
+  border-radius: 8px;
+  border: 0px 0px 0px 4px;
+  width: 197px;
+  height: 34px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  left: 51px;
   cursor: pointer;
-    opacity: 0.9;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    white-space: nowrap;
-  }
-  
-  .chatpara:hover {
-    background-color: #171717; /* Dark background on hover */
-    color: #FFFFFF; /* Text color changes to white on hover */
-  }
-  
-  .chatpara img {
-    min-width: 20px;
-    min-height: 20px;
-  }
-  
-  .chatpara p {
-    flex-grow: 1;
-    color: #C9C9C9;
-    font-size: 14px;
-    margin: 0;
-    white-space: nowrap;
-    transition: color 0.3s ease;
-  }
-  
-  .chatpara:hover p {
-    color: #FFFFFF; /* Change text color to white on hover */
-  }
-  
-  .BsThreeDotsVertical {
-    cursor: pointer;
-    color: #C9C9C9;
-    font-size: 24px;
-    width: 24px;
-    height: 24px;
-    padding: 4px 0 0 0;
-    border-radius: 4px 0 0 0;
-    opacity: 0.9;
-    transition: opacity 0.3s ease, color 0.3s ease;
-  }
-  
-  .BsThreeDotsVertical:hover {
-    opacity: 1;
-    color: #FFFFFF; /* Change the color of the three dots to white on hover */
-  }
-  
-  .threeDotsIcon {
-    color: #C9C9C9; /* Initial color */
-    transition: color 0.3s ease;
-  }
-  
-  .threeDotsIcon:hover {
-    color: #FFFFFF; /* White color on hover */
-  }
-  
-  
-  /* Right section */
-  
-  .mainContent {
-    flex: 1;
-    margin-top: 2.5rem;
-  }
-  
-  .questionuser {
-    display: flex;
-    justify-content: right;
-    margin-right: 100px;
-    align-items: center;
-    gap: 10px;
-    min-width: 588px;
-    max-height: 59px;
-    padding: 0px 58px 0px 28px;
-    border-radius: 9.72px 0px 0px 0px;
-    opacity: 0.9;
+  opacity: 0.9;
+  transition: background 0.3s ease;
+}
 
+.newSearchButton:hover {
+  background: linear-gradient(134.14deg, #4C4C4C 46.75%, rgba(147, 147, 147, 1) 154.84%);
+  opacity: 1;
+}
+
+
+.para {
+  margin-bottom: 8px;
+}
+
+.para p {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15.73px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  width: 280px;
+  height: 16px;
+  margin-top: 20px;
+  opacity: 0px;
+  color: #FFFFFF;
+}
+
+.todaychatAll {
+  max-width: 280px;
+  /* Fixed width */
+  min-height: 400px;
+  /* Hug height */
+  top: 155px;
+  left: 12px;
+  gap: 8px;
+  opacity: 0;
+  color: #686567;
+
+}
+
+.chatpara {
+  display: flex;
+  align-items: center;
+  gap: 6.41px;
+  min-width: 280px;
+  height: 40px;
+  padding: 8px 14px 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  position: relative !important;
+  z-index: 1;
+}
+
+.chatpara:hover {
+  background-color: #171717;
+  /* Dark background on hover */
+  color: #FFFFFF;
+  /* Text color changes to white on hover */
+}
+
+.chatpara img {
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.chatpara p {
+  flex-grow: 1;
+  color: #C9C9C9;
+  font-size: 14px;
+  margin: 0;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.chatpara:hover p {
+  color: #FFFFFF;
+  /* Change text color to white on hover */
+}
+
+.BsThreeDotsVertical {
+  cursor: pointer;
+  color: #C9C9C9;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  padding: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+  opacity: 0.9;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.BsThreeDotsVertical:hover {
+  opacity: 1;
+  color: #FFFFFF;
+  /* Change the color of the three dots to white on hover */
+}
+
+.threeDotsIcon {
+  color: #C9C9C9;
+  /* Initial color */
+  transition: color 0.3s ease;
+
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.threeDotsIcon:hover {
+  background-color: #3C3C3C;
+  color: #FFFFFF;
+  /* White color on hover */
+}
+
+
+/* Right section */
+
+.mainContent {
+  flex: 1;
+  position: relative;
+
+  /* margin-top: 2.5rem; */
+}
+
+
+.avatarImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+
+.sidebar {
+
+  padding: 26px 12px;
+  border-right: 0.5px solid #3F3F3F;
+  gap: 0px;
+  opacity: 1;
+  background-color: #1C1C1C;
+}
+
+.inputBoxWrapper {
+
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Transparent background for input box area */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.inputBox {
+  width: 100%;
+  padding: 8px 12px;
+  background-color: transparent;
+  /* Transparent input box */
+  color: white;
+  border: 1px solid #3F3F3F;
+  border-radius: 4px;
+  outline: none;
+}
+
+.sendButton {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Slightly transparent button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sendButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Darker hover effect */
+}
+
+.questionuser {
+  margin-bottom: 20px;
+}
+
+/* styles/ChatBox.module.css */
+.dropdown {
+  position: absolute !important;
+  top: 100% !important;
+  /* Position the dropdown below the icon */
+  right: -85px !important;
+  width: 154px !important;
+  min-height: 128px !important;
+  gap: 4px !important;
+  border-radius: 8px !important;
+  border: 1px solid #000 !important;
+  background-color: red !important;
+  /* Replace with your desired background color */
+  padding: 10px !important;
+  opacity: 1 !important;
+  z-index: 2000 !important;
+  /* Ensure dropdown appears above other content */
+}
+
+.dropdownItem {
+  /* background-color: #1C1C1C; */
+  display: flex;
+  /* Use flexbox to align icon and text */
+  align-items: center;
+  /* Vertically center icon and text */
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  gap: 10px;
+  /* Add space between icon and text */
+  box-shadow: -2px 15px 7.8px 0px #0000001A;
+  /* Add box-shadow */
+  border-radius: 8px;
+  /* Optional: Add some border-radius for rounded corners */
+}
+
+.dropdownItem:hover {
+  background-color: #3F3F3F;
+  /* Highlight on hover */
+
+}
+
+.icon {
+  color: #C9C9C9;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  /* Adjust the icon size */
+}
+
+.text {
+  margin-left: 5px;
+  /* Add some space between icon and text */
+}
+
+/* Apply to the Today chat section for removing scrollbar visibility */
+.todayChatAll {
+
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+/* For Webkit-based browsers like Chrome, Safari, and Edge */
+.todayChatAll::-webkit-scrollbar {
+  display: none;
+  /* Hides the scrollbar */
+}
+
+.dropdownItem:hover {
+  background-color: #333;
+  /* Highlight background on hover */
+  color: white;
+  /* Change text color on hover */
+  cursor: pointer !;
+  /* Change the cursor to pointer on hover */
+  transition: background-color 0.3s ease !important;
+}
+
+/* Base styles (assuming these are in your existing CSS) */
+.sidebar {
+  width: 300px;
+  /* other existing styles */
+}
+
+.mainContent {
+  flex: 1;
+  /* other existing styles */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large desktop screens */
+@media screen and (min-width: 1400px) {
+  .sidebar {
+    width: 350px;
   }
-  
-  .questionText {
-    background-color: #2B2A2A;
-    color: #FFFFFF;
-    padding: 8px;
-    border-radius: 8px;
+}
+
+/* Medium screens (typical laptops) */
+@media screen and (max-width: 1200px) {
+  .mainContent {
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  
-  .avatarImage {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    opacity: 0.9;
+}
+
+/* Tablet and small laptop screens */
+@media screen and (max-width: 992px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .mainContent {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .searchHistoryList {
+    padding: 10px;
+  }
+
+  .todayChat {
+    padding: 10px;
+  }
+}
+
+/* Large mobile devices and small tablets */
+@media screen and (max-width: 768px) {
+  .max-h-screen {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+
+  .mainContent {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .todayChatAll {
+    max-height: 200px !important;
   }
   .sidebar {
-    max-width: 804px;
-    min-height: 198px;
-    padding: 26px 12px; /* Fixed the padding */
-    border-right: 0.5px solid #3F3F3F;
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
     gap: 0px;
-    opacity: 1; /* Make it visible */
+    display: none;
   }
-  
-  .inputBoxWrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.2); /* Transparent background for input box area */
-    padding: 10px;
-    border-radius: 8px;
-  }
-  
-  .inputBox {
-    width: 100%;
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 480px) {
+  .newSearchButton {
+    font-size: 14px;
     padding: 8px 12px;
-    background-color: transparent; /* Transparent input box */
-    color: white;
-    border: 1px solid #3F3F3F;
-    border-radius: 4px;
-    outline: none;
   }
-  
-  .sendButton {
-    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent button */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    margin-left: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+
+  .chatpara {
+    font-size: 12px;
   }
-  
-  .sendButton:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Darker hover effect */
+
+  .dropdown {
+    width: 120px;
   }
-  .questionuser{
-    margin-bottom: 20px;
+
+  .dropdownItem {
+    padding: 6px;
   }
+
+  .sidebar {
+    gap: 0px;
+    display: none;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media screen and (max-width: 320px) {
+  .sidebar {
+    max-height: 250px;
+  }
+
+  .todayChatAll {
+    max-height: 150px !important;
+  }
+
+  .sidebar {
+    gap: 0px;
+    display: none;
+  }
+}
