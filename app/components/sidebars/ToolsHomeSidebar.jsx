@@ -59,7 +59,7 @@ export default function ToolsHomeSidebar() {
             alt="Logo Spad"
             style={{ width: "40px", height: "40px" }}
           />
-          <h1 className={styles.logoHeading}>Searchpad</h1>
+          <h1 className={styles.logoHeading}>SearchX</h1>
           <Image
             src={forwordicon}
             style={{ width: "15px", height: "15px" }}
@@ -166,7 +166,7 @@ export default function ToolsHomeSidebar() {
           <h1 className={styles.headingss}>
             Unlock the full power of Generative AI
           </h1>
-          <p className={styles.paragraphss}>Go limitless with Searchpad</p>
+          <p className={styles.paragraphss}>Go limitless with SearchX</p>
           <button className={styles.upgradeButton}>
             <span className={styles.upgradetext}>Upgrade Plan</span>
           </button>

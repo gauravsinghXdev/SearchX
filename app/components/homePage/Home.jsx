@@ -389,97 +389,97 @@ const Home = () => {
   };
   const testimonials = [
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar:{ avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
     },
     {
-      text: "Searchpad has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
+      text: "SearchX has transformed the way I create content. The video editing and image generation tools are incredibly intuitive. I&apos;ve saved so much time on my ad creatives and graphic design projects!",
       author: "@johnn_94",
       role: "Digital Marketer",
       avatar: { avatarimg },
     },
     {
-      text: "As a small business owner, Searchpad&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
+      text: "As a small business owner, SearchX&apos;s website design feature was a lifesaver. I built a professional-looking site without hiring a developer. The AI suggestions for visuals were spot on too!",
       author: "@sarahbizowner",
       role: "Small Business Owner",
       avatar: { avatarimg },
@@ -495,10 +495,10 @@ const Home = () => {
           
  <div style={{ display: 'flex', alignItems: 'center' }}>
   <Image src={spadlogo} alt="Logo Spad" style={{ width: '40px', height: '40px' }} />
-  <h1 className={style.logoHeading } style={{ marginLeft: '0px' }}>Searchpad</h1>
+  <h1 className={style.logoHeading } style={{ marginLeft: '0px' }}>SearchX</h1>
 </div>
           </span>
-          {/* <span className="text-xl">Searchpad</span> */}
+          {/* <span className="text-xl">SearchX</span> */}
         </div>
         <nav className={style.borderstyle}>
           <ul className="flex space-x-6 font-[400]">
@@ -736,14 +736,14 @@ const Home = () => {
                   />
                 </Link>
                 <Link
-                  href="https://x.com/searchpad_app?s=21&t=ROAHeI0m0fL-67vkOtDSXA"
+                  href="https://x.com/SearchX_app?s=21&t=ROAHeI0m0fL-67vkOtDSXA"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <Image src={x} alt={"x logo"} className="w-[69px] h-[69px]" />
                 </Link>
                 <Link
-                  href="https://www.instagram.com/searchpad?igsh=YnQ0N2xwNDFrOG1u"
+                  href="https://www.instagram.com/SearchX?igsh=YnQ0N2xwNDFrOG1u"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -767,7 +767,7 @@ const Home = () => {
                   />
                 </Link>
                 <Link
-                  href="https://discord.gg/searchpad "
+                  href="https://discord.gg/SearchX "
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -842,7 +842,7 @@ const Home = () => {
             </div>
             <div className={`${style.thirdSectionsecond}`}>
               <p className="text-[#c9c9c9] text-[1rem] font-[400]">
-                Elevate your content game with Searchpad. Create <br /> smarter,
+                Elevate your content game with SearchX. Create <br /> smarter,
                 not harder. <br />
                 One search. One touch. Endless possibilities
               </p>

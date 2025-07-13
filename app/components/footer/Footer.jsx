@@ -49,12 +49,12 @@ const Footer = () => {
             <Image src={logo} alt={logo} width={40} />
         
             <span className="text-[33.93px] font-[500] text-white">
-              Searchpad
+              SearchX
             </span>
           </div> */}
 <div style={{ display: 'flex', alignItems: 'center' }}>
   <Image src={spadlogo} alt="Logo Spad" style={{ width: '40px', height: '40px' }} />
-  <h1 className={style.logoHeading } style={{ marginLeft: '0px' }}>Searchpad</h1>
+  <h1 className={style.logoHeading } style={{ marginLeft: '0px' }}>SearchX</h1>
 </div>
           <div className=" flex justify-center gap-[5rem]">
             <div className="">
@@ -105,7 +105,7 @@ Creation</Link> <br />
           </div>
         </div>
         <div className="flex justify-between items-center pt-14 ">
-          <p className="text-sm">Searchpad ©. All rights reserved.</p>
+          <p className="text-sm">SearchX ©. All rights reserved.</p>
           <div className="flex space-x-6">
             <RiFacebookBoxLine className="w-[24px] h-[24px]" />{" "}
             <FaXTwitter className="w-[24px] h-[24px]" />{" "}

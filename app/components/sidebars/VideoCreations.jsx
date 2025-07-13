@@ -53,7 +53,7 @@ const VideoCreationPage = () => {
     <FaArrowLeftLong style={{ width: '16px', height: '16px' }} className={styles.arrow} />
   </div>
     <Image src={logoss} alt="Logo Spad" style={{ width: '40px', height: '40px' }} />
-    <h1 className={styles.logoHeading}>Searchpad</h1>
+    <h1 className={styles.logoHeading}>SearchX</h1>
   </div>
  
   
@@ -85,7 +85,7 @@ const VideoCreationPage = () => {
 <div className={styles.upgradeSection}>
   <Image src={crown} className={styles.crown} alt="Image"/>
   <h1 className={styles.headingss}>Unlock the full power of Generative AI</h1>
-  <p className={styles.paragraphss}>Go limitless with Searchpad</p>
+  <p className={styles.paragraphss}>Go limitless with SearchX</p>
   <button className={styles.upgradeButton}>Upgrade Plan</button>
 </div>
 

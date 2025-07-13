@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
                     <i className="fal fa-stream"></i>
                   </button>
                   <Link href="/"><a><i className="far fa-long-arrow-left"></i></a></Link>
-                  <Link href="/"><a><img src="/assets/img/logo-icon.svg" alt="logo" /> <span>Searchpad</span></a></Link>
+                  <Link href="/"><a><img src="/assets/img/logo-icon.svg" alt="logo" /> <span>SearchX</span></a></Link>
                 </div>
               </div>
               <div className="col-lg-6 col-md-4 col-4">

@@ -26,7 +26,7 @@ const ImageCreationNavbar = () => {
         </div>
         {/* Logo Image */}
         <Image src={logoss} alt="Logo Spad" width={40} height={40} />
-        <h1 className={styles.logoHeading}>Searchpad</h1>
+        <h1 className={styles.logoHeading}>SearchX</h1>
       </div>
 
       {/* Center Heading */}

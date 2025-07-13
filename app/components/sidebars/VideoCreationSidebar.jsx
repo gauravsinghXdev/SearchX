@@ -55,7 +55,7 @@ const Sidebar = () => {
               Unlock the full power of <br />
               Generative AI
             </p>
-            <p className={styles.upgradeSubText}>Go limitless with Searchpad</p>
+            <p className={styles.upgradeSubText}>Go limitless with SearchX</p>
             <button className={styles.upgradeButton}>Upgrade Plan</button>
           </div>
         </div>

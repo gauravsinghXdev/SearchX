@@ -10,8 +10,8 @@ import pausedgif from "@/public/VoiceOver/pausedgif.png";
 
 const AudioPlayerResult = ({
   audio,
-  voiceName = "SearchPad Voices",
-  promptSnippet = "SearchPad",
+  voiceName = "SearchX Voices",
+  promptSnippet = "SearchX",
 }) => {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -124,10 +124,10 @@ const AudioPlayerResult = ({
       <div className={`${style.audioinfosection}`}>
         {/* Title and Description */}
         <h2 className="text-[16px] font-[500] ">
-          {promptSnippet || "SearchPad"}
+          {promptSnippet || "SearchX"}
         </h2>
         <p className="text-[#ffff] text-[11px] font-[500]">
-          {voiceName || "SearchPad Voices"}
+          {voiceName || "SearchX Voices"}
         </p>
 
         {/* Audio Element */}

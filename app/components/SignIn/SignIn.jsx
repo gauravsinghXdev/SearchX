@@ -25,7 +25,7 @@ const SignIn = () => {
             <div style={styles.createContent}>
               <h1 className={styles.CreateH1}>Welcome back</h1>
               <p className={styles.createPara}>
-                Searchpad the ultimate all-in-one AI solution!
+                SearchX the ultimate all-in-one AI solution!
               </p>
             </div>
             <div className={styles.allbtn}>
@@ -115,7 +115,7 @@ const SignIn = () => {
                   </h3>
                   <p className="text-[0.875rem] text-[#c8c8c8]">
                     Create content with ease and let AI do the heavy <br />{" "}
-                    lifting for you. Searchpad is designed to provide <br />{" "}
+                    lifting for you. SearchX is designed to provide <br />{" "}
                     fast and high-quality results for all your content <br />{" "}
                     needs.
                   </p>
