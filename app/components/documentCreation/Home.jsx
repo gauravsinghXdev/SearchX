@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import DocumentEditor from '../documentCreation/DocumentEditor';
-import Link from 'next/link'; // Make sure to import Link from 'next/link'
+import Link from 'next/link';
 
 export default function Home() {
-    const [inputText, setInputText] = useState(''); // State to hold user input
-    const [editorContent, setEditorContent] = useState(''); // State to hold the document content
+    const [inputText, setInputText] = useState('');
+    const [editorContent, setEditorContent] = useState('');
 
     const handleGenerateDocument = async () => {
         try {
@@ -13,12 +13,12 @@ export default function Home() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ prompt: inputText }), // Send inputText as a prompt to the API
+                body: JSON.stringify({ prompt: inputText }),
             });
 
             if (response.ok) {
                 const data = await response.json();
-                setEditorContent(data.content); // Set the editor content with the response content
+                setEditorContent(data.content);
             } else {
                 console.error('Error fetching document:', response.statusText);
             }
@@ -32,7 +32,7 @@ export default function Home() {
             <h1>Document Generator</h1>
             <textarea
                 value={inputText}
-                onChange={(e) => setInputText(e.target.value)} // Update inputText on change
+                onChange={(e) => setInputText(e.target.value)}
                 placeholder="Enter your prompt..."
                 rows={5}
                 cols={50}
@@ -42,10 +42,10 @@ export default function Home() {
             {editorContent && (
                 <div style={{ marginTop: '20px' }}>
                     <h2>Document Editor</h2>
-                    <DocumentEditor initialContent={editorContent} /> // Render DocumentEditor if editorContent is set
+                    <DocumentEditor initialContent={editorContent} /> 
                 </div>
             )}
-            <Link href="/presentationPage">Go to Presentation Page</Link> // Link to the presentation page
+            <Link href="/presentationPage">Go to Presentation Page</Link>
         </div>
     );
 }

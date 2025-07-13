@@ -119,7 +119,7 @@ const ResumeScanner = () => {
         {/* Dropzone area */}
         <div {...getRootProps({ className: 'dropzone', style: { border: '2px dashed #ccc', padding: '20px', textAlign: 'center', marginTop: '10px' } })}>
           <input {...getInputProps()} />
-          <p>Drag 'n' drop an image, PDF, or DOCX file here, or click to select one</p>
+          <p>Drag &apos;n&apos; drop an image, PDF, or DOCX file here, or click to select one</p>
         </div>
 
         {loading && <p>Loading...</p>}

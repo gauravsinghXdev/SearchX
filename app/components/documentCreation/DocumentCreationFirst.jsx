@@ -325,6 +325,7 @@ const PresentationPage = () => {
                 <div className={styles.templeteImg}>
                   {templates.map((template, index) => (
                     <div>
+                      key={index}
                       <TemplateCard
                         image={template.image}
                         title={template.title}
