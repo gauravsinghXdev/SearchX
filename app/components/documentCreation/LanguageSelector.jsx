@@ -24,15 +24,19 @@ const LanguageSelector = ({ selectedLanguages, setSelectedLanguages }) => {
 
   // Load selected languages from localStorage on component mount
   useEffect(() => {
-    const savedLanguages = localStorage.getItem('selectedLanguages');
-    if (savedLanguages) {
-      setSelectedLanguages(JSON.parse(savedLanguages));
+    if (typeof window !== "undefined") {
+      const savedLanguages = localStorage.getItem('selectedLanguages');
+      if (savedLanguages) {
+        setSelectedLanguages(JSON.parse(savedLanguages));
+      }
     }
   }, [setSelectedLanguages]);
 
   // Save selected languages to localStorage when they change
   useEffect(() => {
-    localStorage.setItem('selectedLanguages', JSON.stringify(selectedLanguages));
+    if (typeof window !== "undefined") {
+      localStorage.setItem('selectedLanguages', JSON.stringify(selectedLanguages));
+    }
   }, [selectedLanguages]);
 
   const handleCheckboxChange = (event) => {

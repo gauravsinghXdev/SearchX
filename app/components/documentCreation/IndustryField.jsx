@@ -6,25 +6,41 @@ const IndustryField = ({ selectedIndustries, setSelectedIndustries }) => {
 
   // Load industries from localStorage or set default industries
   const [industries, setIndustries] = useState(() => {
-    const savedIndustries = localStorage.getItem('industries');
-    return savedIndustries
-      ? JSON.parse(savedIndustries)
-      : [
-          { id: 'logistics', label: 'Logistics and Supply Chain Technology' },
-          { id: 'healthtech', label: 'HealthTech (Healthcare Technology)' },
-          { id: 'edtech', label: 'EdTech (Educational Technology)' },
-          { id: 'fintech', label: 'FinTech (Financial Technology)' },
-          { id: 'retail-tech', label: 'Retail Tech' },
-          { id: 'proptech', label: 'Real Estate Tech (PropTech)' },
-          { id: 'foodtech', label: 'FoodTech' },
-          { id: 'gaming', label: 'Gaming and Entertainment Tech' },
-          { id: 'None', label: 'None' },
-        ];
+    if (typeof window !== "undefined") {
+      const savedIndustries = localStorage.getItem('industries');
+      return savedIndustries
+        ? JSON.parse(savedIndustries)
+        : [
+            { id: 'logistics', label: 'Logistics and Supply Chain Technology' },
+            { id: 'healthtech', label: 'HealthTech (Healthcare Technology)' },
+            { id: 'edtech', label: 'EdTech (Educational Technology)' },
+            { id: 'fintech', label: 'FinTech (Financial Technology)' },
+            { id: 'retail-tech', label: 'Retail Tech' },
+            { id: 'proptech', label: 'Real Estate Tech (PropTech)' },
+            { id: 'foodtech', label: 'FoodTech' },
+            { id: 'gaming', label: 'Gaming and Entertainment Tech' },
+            { id: 'None', label: 'None' },
+          ];
+    } else {
+      return [
+        { id: 'logistics', label: 'Logistics and Supply Chain Technology' },
+        { id: 'healthtech', label: 'HealthTech (Healthcare Technology)' },
+        { id: 'edtech', label: 'EdTech (Educational Technology)' },
+        { id: 'fintech', label: 'FinTech (Financial Technology)' },
+        { id: 'retail-tech', label: 'Retail Tech' },
+        { id: 'proptech', label: 'Real Estate Tech (PropTech)' },
+        { id: 'foodtech', label: 'FoodTech' },
+        { id: 'gaming', label: 'Gaming and Entertainment Tech' },
+        { id: 'None', label: 'None' },
+      ];
+    }
   });
 
   // Save industries to localStorage whenever the industries state is updated
   useEffect(() => {
-    localStorage.setItem('industries', JSON.stringify(industries));
+    if (typeof window !== "undefined") {
+      localStorage.setItem('industries', JSON.stringify(industries));
+    }
   }, [industries]);
 
   // Handle checkbox change for selected industries
